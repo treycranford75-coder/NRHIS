@@ -1,0 +1,23 @@
+schema_version: 1
+stations:
+  - station_id: USGS-08190000
+    agency: USGS
+    agency_id: "08190000"
+    name: Nueces River at Laguna, Texas
+    waterbody: Nueces River
+    role: upstream_calibration
+    status: active
+    parameters:
+      - discharge
+      - gage_height
+
+  - station_id: USGS-08192000
+    agency: USGS
+    agency_id: "08192000"
+    name: Nueces River below Uvalde, Texas
+    waterbody: Nueces River
+    role: downstream_calibration
+    status: active
+    parameters:
+      - discharge
+      - gage_height

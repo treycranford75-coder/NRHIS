@@ -1,0 +1,6 @@
+model_id: MDL-UPPER-NUECES-PASS1
+name: Upper Nueces Pass 1 Legacy Calibration
+version: legacy-preserved
+status: protected
+entry_script: src/nrhis_calibration/legacy/calibrate_pass1.py
+policy: Do not modify the preserved script until a verified replacement passes regression testing.

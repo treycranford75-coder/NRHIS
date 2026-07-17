@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Secrets and local settings
+.env
+.env.*
+*.key
+*.pem
+
+# Generated and downloaded data
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/cache/*
+!data/cache/.gitkeep
+data/snapshots/*
+!data/snapshots/.gitkeep
+reports/generated/*
+gis/generated/*
+
+# Legacy generated outputs
+src/nrhis_calibration/legacy/pass1_output/
+src/nrhis_calibration/legacy/pass1_output.zip
+
+# OS and editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+# Python
+.venv/
+.pytest_cache/
+__pycache__/
+*.pyc
+*.egg-info/

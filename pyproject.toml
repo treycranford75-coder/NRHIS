@@ -1,0 +1,24 @@
+[project]
+name = "nrhis"
+version = "0.1.0"
+description = "Nueces River Hydrologic Intelligence System"
+requires-python = ">=3.11"
+dependencies = [
+  "requests>=2.32",
+  "pandas>=2.2",
+  "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.6",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

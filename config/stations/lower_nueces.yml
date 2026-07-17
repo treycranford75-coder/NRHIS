@@ -1,0 +1,33 @@
+schema_version: 1
+stations:
+  - station_id: USGS-08210000
+    agency: USGS
+    agency_id: "08210000"
+    name: Nueces River near Three Rivers, Texas
+    waterbody: Nueces River
+    role: primary
+    status: active
+
+  - station_id: USGS-08211000
+    agency: USGS
+    agency_id: "08211000"
+    name: Nueces River near Mathis, Texas
+    waterbody: Nueces River
+    role: primary
+    status: active
+
+  - station_id: USGS-08211200
+    agency: USGS
+    agency_id: "08211200"
+    name: Nueces River at Bluntzer, Texas
+    waterbody: Nueces River
+    role: primary
+    status: active
+
+  - station_id: USGS-08211500
+    agency: USGS
+    agency_id: "08211500"
+    name: Nueces River at Calallen, Texas
+    waterbody: Nueces River
+    role: primary
+    status: active

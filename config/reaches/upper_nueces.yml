@@ -1,0 +1,7 @@
+schema_version: 1
+reaches:
+  - reach_id: RCH-NUECES-LAGUNA-UVALDE
+    upstream_station: USGS-08190000
+    downstream_station: USGS-08192000
+    status: calibration
+    notes: Initial Upper Nueces Pass 1 calibration reach.

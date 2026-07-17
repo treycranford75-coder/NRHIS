@@ -1,0 +1,5 @@
+﻿NRHIS legacy migration
+Migration time: 2026-07-17T15:13:21.9480607-05:00
+Source: C:\Users\treyc\Downloads\Upper_Nueces_Pass1_Calibration_Package_v2\pass1_upper_nueces
+Destination: C:\Users\treyc\Downloads\NRHIS_Foundation_v0.1\NRHIS_Foundation_v0.1\src\nrhis_calibration\legacy
+Method: copy only; source not modified
