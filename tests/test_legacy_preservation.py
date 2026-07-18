@@ -1,18 +1,66 @@
-﻿"""Integrity tests for the preserved legacy Pass1 calibration tree."""
+﻿"""Cross-platform integrity tests for tracked legacy Pass1 files."""
 
 from __future__ import annotations
 
 import hashlib
+import subprocess
 from pathlib import Path
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 LEGACY_ROOT = REPOSITORY_ROOT / "src" / "nrhis_calibration" / "legacy"
 MANIFEST_PATH = LEGACY_ROOT / "SHA256SUMS.txt"
 
+TEXT_SUFFIXES = {
+    ".bat",
+    ".csv",
+    ".json",
+    ".md",
+    ".ps1",
+    ".py",
+    ".txt",
+    ".yaml",
+    ".yml",
+}
+
 
 def _normalized_relative_path(path_text: str) -> Path:
-    """Convert manifest paths written on Windows or POSIX to a local Path."""
     return Path(*path_text.replace("\\", "/").split("/"))
+
+
+def _canonical_bytes(path: Path) -> bytes:
+    data = path.read_bytes()
+
+    if path.suffix.lower() in TEXT_SUFFIXES:
+        data = data.replace(b"\r\n", b"\n")
+
+    return data
+
+
+def _sha256(path: Path) -> str:
+    return hashlib.sha256(_canonical_bytes(path)).hexdigest().upper()
+
+
+def _tracked_legacy_paths() -> set[Path]:
+    result = subprocess.run(
+        [
+            "git",
+            "ls-files",
+            "--",
+            "src/nrhis_calibration/legacy",
+        ],
+        cwd=REPOSITORY_ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+
+    return {
+        _normalized_relative_path(line.strip())
+        for line in result.stdout.splitlines()
+        if line.strip()
+        and _normalized_relative_path(line.strip())
+        != MANIFEST_PATH.relative_to(REPOSITORY_ROOT)
+    }
 
 
 def _load_manifest() -> dict[Path, str]:
@@ -42,16 +90,6 @@ def _load_manifest() -> dict[Path, str]:
     return entries
 
 
-def _sha256(path: Path) -> str:
-    digest = hashlib.sha256()
-
-    with path.open("rb") as source:
-        for chunk in iter(lambda: source.read(1024 * 1024), b""):
-            digest.update(chunk)
-
-    return digest.hexdigest().upper()
-
-
 def test_legacy_manifest_exists_and_is_not_empty() -> None:
     assert LEGACY_ROOT.is_dir(), f"Legacy directory missing: {LEGACY_ROOT}"
     assert MANIFEST_PATH.is_file(), f"Legacy manifest missing: {MANIFEST_PATH}"
@@ -73,23 +111,18 @@ def test_all_manifested_legacy_files_exist_and_match_sha256() -> None:
         )
 
 
-def test_legacy_tree_contains_no_unmanifested_files() -> None:
+def test_manifest_matches_tracked_legacy_tree() -> None:
     manifest_paths = set(_load_manifest())
+    tracked_paths = _tracked_legacy_paths()
 
-    actual_paths = {
-        path.relative_to(REPOSITORY_ROOT)
-        for path in LEGACY_ROOT.rglob("*")
-        if path.is_file() and path != MANIFEST_PATH
-    }
+    missing_from_repository = manifest_paths - tracked_paths
+    missing_from_manifest = tracked_paths - manifest_paths
 
-    missing_from_tree = manifest_paths - actual_paths
-    unmanifested_files = actual_paths - manifest_paths
-
-    assert not missing_from_tree, (
-        "Files listed in the legacy manifest are missing: "
-        + ", ".join(str(path) for path in sorted(missing_from_tree))
+    assert not missing_from_repository, (
+        "Manifest contains files not tracked by Git: "
+        + ", ".join(str(path) for path in sorted(missing_from_repository))
     )
-    assert not unmanifested_files, (
-        "Unmanifested files were added to the preserved legacy tree: "
-        + ", ".join(str(path) for path in sorted(unmanifested_files))
+    assert not missing_from_manifest, (
+        "Tracked legacy files are missing from the manifest: "
+        + ", ".join(str(path) for path in sorted(missing_from_manifest))
     )
