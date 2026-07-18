@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   test:
-    name: Python tests and lint
+    name: Python tests, lint, and coverage
     runs-on: ubuntu-latest
 
     steps:
@@ -35,5 +35,18 @@ jobs:
       - name: Run Ruff
         run: python -m ruff check .
 
-      - name: Run tests
-        run: python -m pytest -q
+      - name: Run tests with branch coverage
+        run: >-
+          python -m pytest -q
+          --cov=src
+          --cov-branch
+          --cov-report=term-missing
+          --cov-report=xml
+          --cov-fail-under=80
+
+      - name: Upload coverage XML
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-xml
+          path: coverage.xml
+          if-no-files-found: error
