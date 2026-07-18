@@ -55,3 +55,6 @@ data/processed/usgs/*
 .coverage
 coverage.xml
 htmlcov/
+# Build005 legacy wrapper runtime output
+reports/legacy-pass1/*
+!reports/legacy-pass1/.gitkeep
