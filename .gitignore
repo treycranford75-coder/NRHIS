@@ -51,3 +51,7 @@ reports/logs/*
 !reports/logs/.gitkeep
 data/raw/usgs/*
 data/processed/usgs/*
+# Build004 coverage artifacts
+.coverage
+coverage.xml
+htmlcov/
