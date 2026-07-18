@@ -4,7 +4,7 @@ NRHIS is a version-controlled hydrologic intelligence platform for the Nueces Ri
 
 ## Version
 
-0.1.0-foundation
+0.1.1-rc1+build001
 
 ## Initial Objectives
 
@@ -41,3 +41,13 @@ The migration script copies files. It does not delete or modify the original pac
 - `reports/` generated reports
 - `archive/` frozen release and publication records
 - `docs/` architecture, standards, operations, publications, and research documentation
+
+## USGS Harvest Engine
+
+Run the lower Nueces station registry from PowerShell:
+
+```powershell
+.\scripts\Harvest-USGS.ps1
+```
+
+See `docs/Operations/USGS_Harvest_Runbook.md` for controlled date windows, outputs, and failure behavior.
