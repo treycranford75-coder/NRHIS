@@ -1,0 +1,28 @@
+{
+  "schema_version": 4,
+  "build": "040",
+  "name": "NRHIS Sprint 2 Build040 Resumable Package Discovery",
+  "entry_point": "Apply-Build040.ps1",
+  "branch": "feature/sprint2-build040",
+  "merge_target": "develop",
+  "tag": "v0.1.1-rc40+build040",
+  "features": [
+    "expanded package discovery",
+    "automatic verified root copy",
+    "checksum-matched extraction reuse",
+    "temporary safe extraction",
+    "whitespace-safe package",
+    "noninteractive transient-lock retry"
+  ],
+  "preserves": [
+    "no-prune synchronization",
+    "PowerShell syntax gate",
+    "payload-authoritative reruns",
+    "complete staging",
+    "legacy preservation",
+    "pre-release publication",
+    "authenticated release verification",
+    "external evidence closure",
+    "safe next-build chaining"
+  ]
+}
