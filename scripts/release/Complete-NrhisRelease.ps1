@@ -32,6 +32,7 @@ function Invoke-CheckedCommand {
     Write-Host ""
     Write-Host "==> $Description" -ForegroundColor Cyan
     & $Command
+
     if ($LASTEXITCODE -ne 0) {
         throw "$Description failed with exit code $LASTEXITCODE."
     }
@@ -43,13 +44,16 @@ if (-not (Test-Path $ReleaseNotesFile)) {
 
 $repository = & .\scripts\release\Get-NrhisGitHubRepository.ps1
 
-Invoke-CheckedCommand "Switch to $DevelopBranch" { git switch $DevelopBranch }
-Invoke-CheckedCommand "Update $DevelopBranch" { git pull --ff-only origin $DevelopBranch }
+& .\scripts\release\Update-NrhisDevelop.ps1 `
+    -Branch $DevelopBranch
 
 $mergeCommit = (git rev-parse HEAD).Trim()
-if (-not $mergeCommit) { throw "Unable to resolve the merged commit." }
+if (-not $mergeCommit) {
+    throw "Unable to resolve the merged commit."
+}
 
-& .\scripts\release\Invoke-NrhisReleaseValidation.ps1 -MinimumCoverage $MinimumCoverage
+& .\scripts\release\Invoke-NrhisReleaseValidation.ps1 `
+    -MinimumCoverage $MinimumCoverage
 
 foreach ($cleanupPath in $CleanupPaths) {
     if (Test-Path $cleanupPath) {
@@ -58,7 +62,12 @@ foreach ($cleanupPath in $CleanupPaths) {
     }
 }
 
-$temporaryStarters = Get-ChildItem -Path . -Filter "Start-NRHIS-Build*.ps1" -File -ErrorAction SilentlyContinue
+$temporaryStarters = Get-ChildItem `
+    -Path . `
+    -Filter "Start-NRHIS-Build*.ps1" `
+    -File `
+    -ErrorAction SilentlyContinue
+
 foreach ($starter in $temporaryStarters) {
     Remove-Item $starter.FullName -Force
     Write-Host "Removed temporary starter: $($starter.Name)"
@@ -70,7 +79,8 @@ if ($status) {
     throw "Working tree is not clean after validation and cleanup."
 }
 
-if (git tag --list $Tag) {
+$existingTag = git tag --list $Tag
+if ($existingTag) {
     throw "Tag already exists locally: $Tag"
 }
 
@@ -83,10 +93,14 @@ if ($tagCommit -ne $mergeCommit) {
     throw "Tag $Tag points to $tagCommit instead of $mergeCommit."
 }
 
-Invoke-CheckedCommand "Push tag $Tag" { git push origin $Tag }
+Invoke-CheckedCommand "Push tag $Tag" {
+    git push origin $Tag
+}
 
 $gh = Get-Command gh -ErrorAction SilentlyContinue
-if ($null -ne $gh) { gh auth status *> $null }
+if ($null -ne $gh) {
+    gh auth status *> $null
+}
 
 if (($null -ne $gh) -and ($LASTEXITCODE -eq 0)) {
     Invoke-CheckedCommand "Publish GitHub pre-release" {
@@ -97,6 +111,7 @@ if (($null -ne $gh) -and ($LASTEXITCODE -eq 0)) {
             --prerelease `
             --target $DevelopBranch
     }
+
     Write-Host ""
     Write-Host "Build$BuildNumber release published successfully." -ForegroundColor Green
     exit 0

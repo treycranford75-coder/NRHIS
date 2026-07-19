@@ -20,6 +20,11 @@ function Invoke-Checked {
     }
 }
 
+Invoke-Checked "PowerShell syntax" {
+    & .\scripts\release\Test-NrhisPowerShellSyntax.ps1 `
+        -Paths @("scripts/release")
+}
+
 Invoke-Checked "Ruff" {
     python -m ruff check .
 }
