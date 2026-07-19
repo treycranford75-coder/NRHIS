@@ -40,20 +40,20 @@ catch {
 $expectedNotes = (Get-Content $ExpectedNotesFile -Raw).Trim()
 $actualNotes = ([string]$release.body).Trim()
 
+$prereleasePassed = $true
+if ($RequirePrerelease) {
+    $prereleasePassed = [bool]$release.prerelease
+}
+
 $checks = [ordered]@{
     tag_name = ([string]$release.tag_name -eq $Tag)
     title = ([string]$release.name -eq $ExpectedTitle)
-    prerelease = (
-        if ($RequirePrerelease) {
-            [bool]$release.prerelease
-        }
-        else {
-            $true
-        }
-    )
+    prerelease = $prereleasePassed
     draft_false = (-not [bool]$release.draft)
     notes_exact = ($actualNotes -eq $expectedNotes)
-    published_url_present = (-not [string]::IsNullOrWhiteSpace([string]$release.html_url))
+    published_url_present = (
+        -not [string]::IsNullOrWhiteSpace([string]$release.html_url)
+    )
 }
 
 $failedChecks = @(
@@ -64,7 +64,9 @@ $failedChecks = @(
 
 $evidenceRoot = & .\scripts\release\Get-NrhisReleaseEvidenceRoot.ps1
 $safeTag = $Tag -replace '[^A-Za-z0-9._-]', '_'
-$evidencePath = Join-Path $evidenceRoot "${safeTag}_release_verification.json"
+$evidencePath = Join-Path `
+    $evidenceRoot `
+    "${safeTag}_release_verification.json"
 
 $evidence = [ordered]@{
     schema_version = 1
