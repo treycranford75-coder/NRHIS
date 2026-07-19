@@ -39,7 +39,7 @@ def test_handoff_section_helper_supports_all_sections() -> None:
 
 
 def test_completion_prints_release_title_and_tag() -> None:
-    text = read("scripts/release/Complete-NrhisRelease.ps1")
+    text = read("scripts/release/Open-NrhisManualRelease.ps1")
 
     assert 'Write-Host "Release title: $ReleaseTitle"' in text
     assert 'Write-Host "Release tag: $Tag"' in text

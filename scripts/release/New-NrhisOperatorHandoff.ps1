@@ -36,9 +36,8 @@ foreach ($requiredFile in @($PullRequestBodyFile, $ReleaseNotesFile)) {
 $repository = & .\scripts\release\Get-NrhisGitHubRepository.ps1
 $compareUrl = "https://github.com/$repository/compare/${BaseBranch}...${HeadBranch}?expand=1"
 
-$handoffDirectory = ".\handoff"
-$handoffPath = Join-Path $handoffDirectory "Build${BuildNumber}_Operator_Handoff.md"
-New-Item -ItemType Directory -Path $handoffDirectory -Force | Out-Null
+$handoffRoot = & .\scripts\release\Get-NrhisHandoffRoot.ps1
+$handoffPath = Join-Path $handoffRoot "Build${BuildNumber}_Operator_Handoff.md"
 
 $pullRequestBody = Get-Content $PullRequestBodyFile -Raw
 $releaseNotes = Get-Content $ReleaseNotesFile -Raw
@@ -76,7 +75,8 @@ $releaseNotes
 Set-Clipboard -Value $pullRequestBody
 
 Write-Host ""
-Write-Host "Operator handoff created: $handoffPath" -ForegroundColor Green
+Write-Host "Operator handoff created outside the repository:" -ForegroundColor Green
+Write-Host $handoffPath
 Write-Host "Pull-request description copied to clipboard." -ForegroundColor Green
 Write-Host "PR title: $PullRequestTitle"
 Write-Host "Base: $BaseBranch"
