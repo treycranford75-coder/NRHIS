@@ -25,11 +25,11 @@ def test_pull_request_fallback_uses_explicit_base_and_head() -> None:
 
 
 def test_release_fallback_preserves_markdown_and_prefills_tag() -> None:
-    text = read("scripts/release/Complete-NrhisRelease.ps1")
+    text = read("scripts/release/Open-NrhisManualRelease.ps1")
 
     assert "Get-Content $ReleaseNotesFile -Raw | Set-Clipboard" in text
     assert "releases/new?tag=$encodedTag&title=$encodedTitle" in text
-    assert "--notes-file $ReleaseNotesFile" in text
+    assert "Start-Process $releaseUrl" in text
 
 
 def test_manual_copy_script_uses_raw_content() -> None:

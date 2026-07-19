@@ -25,7 +25,6 @@ function Invoke-CheckedCommand {
     param(
         [Parameter(Mandatory = $true)]
         [string]$Description,
-
         [Parameter(Mandatory = $true)]
         [scriptblock]$Command
     )
@@ -33,7 +32,6 @@ function Invoke-CheckedCommand {
     Write-Host ""
     Write-Host "==> $Description" -ForegroundColor Cyan
     & $Command
-
     if ($LASTEXITCODE -ne 0) {
         throw "$Description failed with exit code $LASTEXITCODE."
     }
@@ -45,21 +43,13 @@ if (-not (Test-Path $ReleaseNotesFile)) {
 
 $repository = & .\scripts\release\Get-NrhisGitHubRepository.ps1
 
-Invoke-CheckedCommand "Switch to $DevelopBranch" {
-    git switch $DevelopBranch
-}
-
-Invoke-CheckedCommand "Update $DevelopBranch" {
-    git pull --ff-only origin $DevelopBranch
-}
+Invoke-CheckedCommand "Switch to $DevelopBranch" { git switch $DevelopBranch }
+Invoke-CheckedCommand "Update $DevelopBranch" { git pull --ff-only origin $DevelopBranch }
 
 $mergeCommit = (git rev-parse HEAD).Trim()
-if (-not $mergeCommit) {
-    throw "Unable to resolve the merged commit."
-}
+if (-not $mergeCommit) { throw "Unable to resolve the merged commit." }
 
-& .\scripts\release\Invoke-NrhisReleaseValidation.ps1 `
-    -MinimumCoverage $MinimumCoverage
+& .\scripts\release\Invoke-NrhisReleaseValidation.ps1 -MinimumCoverage $MinimumCoverage
 
 foreach ($cleanupPath in $CleanupPaths) {
     if (Test-Path $cleanupPath) {
@@ -68,12 +58,7 @@ foreach ($cleanupPath in $CleanupPaths) {
     }
 }
 
-$temporaryStarters = Get-ChildItem `
-    -Path . `
-    -Filter "Start-NRHIS-Build*.ps1" `
-    -File `
-    -ErrorAction SilentlyContinue
-
+$temporaryStarters = Get-ChildItem -Path . -Filter "Start-NRHIS-Build*.ps1" -File -ErrorAction SilentlyContinue
 foreach ($starter in $temporaryStarters) {
     Remove-Item $starter.FullName -Force
     Write-Host "Removed temporary starter: $($starter.Name)"
@@ -85,8 +70,7 @@ if ($status) {
     throw "Working tree is not clean after validation and cleanup."
 }
 
-$existingTag = git tag --list $Tag
-if ($existingTag) {
+if (git tag --list $Tag) {
     throw "Tag already exists locally: $Tag"
 }
 
@@ -99,14 +83,10 @@ if ($tagCommit -ne $mergeCommit) {
     throw "Tag $Tag points to $tagCommit instead of $mergeCommit."
 }
 
-Invoke-CheckedCommand "Push tag $Tag" {
-    git push origin $Tag
-}
+Invoke-CheckedCommand "Push tag $Tag" { git push origin $Tag }
 
 $gh = Get-Command gh -ErrorAction SilentlyContinue
-if ($null -ne $gh) {
-    gh auth status *> $null
-}
+if ($null -ne $gh) { gh auth status *> $null }
 
 if (($null -ne $gh) -and ($LASTEXITCODE -eq 0)) {
     Invoke-CheckedCommand "Publish GitHub pre-release" {
@@ -117,23 +97,15 @@ if (($null -ne $gh) -and ($LASTEXITCODE -eq 0)) {
             --prerelease `
             --target $DevelopBranch
     }
-
     Write-Host ""
     Write-Host "Build$BuildNumber release published successfully." -ForegroundColor Green
-    Write-Host "Merge commit: $mergeCommit"
-    Write-Host "Tag: $Tag"
     exit 0
 }
 
 Write-Warning "GitHub CLI is unavailable or unauthenticated."
 Write-Host "The tag was created and pushed successfully."
-Write-Host ""
-Write-Host "Release title: $ReleaseTitle"
-Write-Host "Release tag: $Tag"
-Write-Host "Release notes copied to the clipboard with Markdown preserved."
-Get-Content $ReleaseNotesFile -Raw | Set-Clipboard
 
-$encodedTag = [uri]::EscapeDataString($Tag)
-$encodedTitle = [uri]::EscapeDataString($ReleaseTitle)
-$releaseUrl = "https://github.com/$repository/releases/new?tag=$encodedTag&title=$encodedTitle"
-Start-Process $releaseUrl
+& .\scripts\release\Open-NrhisManualRelease.ps1 `
+    -Tag $Tag `
+    -ReleaseTitle $ReleaseTitle `
+    -ReleaseNotesFile $ReleaseNotesFile

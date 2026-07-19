@@ -32,7 +32,7 @@ def test_completion_removes_temporary_starter_scripts() -> None:
 
 
 def test_release_url_encodes_tag_and_title() -> None:
-    text = read("scripts/release/Complete-NrhisRelease.ps1")
+    text = read("scripts/release/Open-NrhisManualRelease.ps1")
 
     assert "EscapeDataString($Tag)" in text
     assert "EscapeDataString($ReleaseTitle)" in text

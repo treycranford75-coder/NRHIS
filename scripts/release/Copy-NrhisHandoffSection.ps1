@@ -9,7 +9,9 @@ param(
 
 $ErrorActionPreference = "Stop"
 
-$handoffPath = ".\handoff\Build${BuildNumber}_Operator_Handoff.md"
+$handoffRoot = & .\scripts\release\Get-NrhisHandoffRoot.ps1
+$handoffPath = Join-Path $handoffRoot "Build${BuildNumber}_Operator_Handoff.md"
+
 if (-not (Test-Path $handoffPath)) {
     throw "Operator handoff not found: $handoffPath"
 }
@@ -24,7 +26,7 @@ switch ($Section) {
         $value = [regex]::Match(
             $content,
             '(?s)### Pull-request description\r?\n\r?\n(.*?)\r?\n\r?\n## Release'
-        ).Groups[1].Value
+        ).Groups[1].Value.TrimEnd()
     }
     "ReleaseTitle" {
         $matches = [regex]::Matches($content, '(?m)^- Title: (.+)$')
@@ -44,3 +46,4 @@ if (-not $value) {
 
 Set-Clipboard -Value $value
 Write-Host "$Section copied to clipboard." -ForegroundColor Green
+Write-Host "Source: $handoffPath"
