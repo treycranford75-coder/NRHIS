@@ -1,0 +1,24 @@
+{
+  "schema_version": 18,
+  "build": "054",
+  "name": "NRHIS Sprint 2 Build054 Integrated Basin Operational Snapshot",
+  "entry_point": "Apply-Build054.ps1",
+  "branch": "feature/sprint2-build054",
+  "merge_target": "develop",
+  "tag": "v0.1.1-rc54+build054",
+  "features": [
+    "integrate USGS current observations, USGS data-quality status, and NWPS forecasts",
+    "write basin operational JSON and CSV station summaries",
+    "create forecast and data-quality alert prioritization",
+    "block publication readiness when required observations are stale or missing",
+    "preserve source policy and estimated-TDS labeling"
+  ],
+  "preserves": [
+    "production USGS harvest",
+    "historical and incremental USGS storage",
+    "NWPS forecasts and flood thresholds",
+    "protected repository execution outside OneDrive",
+    "workflow contract and CI parity gates",
+    "pre-release publication, verification, archival, and next-build chaining"
+  ]
+}

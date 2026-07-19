@@ -1,0 +1,10 @@
+{
+  "observed": [
+    {"validTime": "2026-07-19T12:00:00Z", "stage": 10.2, "flow": 85.0}
+  ],
+  "forecast": [
+    {"validTime": "2026-07-19T18:00:00Z", "stage": 11.0, "flow": 100.0},
+    {"validTime": "2026-07-20T00:00:00Z", "stage": 16.5, "flow": 650.0},
+    {"validTime": "2026-07-20T06:00:00Z", "stage": 14.0, "flow": 420.0}
+  ]
+}
