@@ -128,6 +128,8 @@ if (($null -ne $gh) -and ($LASTEXITCODE -eq 0)) {
 Write-Warning "GitHub CLI is unavailable or unauthenticated."
 Write-Host "The tag was created and pushed successfully."
 Write-Host ""
+Write-Host "Release title: $ReleaseTitle"
+Write-Host "Release tag: $Tag"
 Write-Host "Release notes copied to the clipboard with Markdown preserved."
 Get-Content $ReleaseNotesFile -Raw | Set-Clipboard
 
