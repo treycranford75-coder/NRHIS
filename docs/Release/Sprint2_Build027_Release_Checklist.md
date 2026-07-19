@@ -1,0 +1,21 @@
+# Sprint 2 Build027 Release Checklist
+
+- [ ] Operator handoff file is created.
+- [ ] PR base branch is recorded.
+- [ ] PR compare branch is recorded.
+- [ ] PR title is recorded.
+- [ ] PR description is recorded.
+- [ ] Verified compare URL is recorded.
+- [ ] Release tag is recorded.
+- [ ] Release title is recorded.
+- [ ] Release notes are recorded.
+- [ ] PR description is copied automatically.
+- [ ] Handoff section copy helper works.
+- [ ] ES-023 is present.
+- [ ] Full test suite passes.
+- [ ] Ruff passes.
+- [ ] Coverage remains at or above 80%.
+- [ ] Legacy preservation tests pass.
+- [ ] No pre-existing legacy file is modified.
+- [ ] GitHub Actions passes.
+- [ ] Pull request targets `develop`.
