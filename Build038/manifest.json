@@ -1,0 +1,19 @@
+{
+  "schema_version": 3,
+  "project": "NRHIS",
+  "sprint": 2,
+  "build": "038",
+  "branch": "feature/sprint2-build038",
+  "merge_target": "develop",
+  "tag": "v0.1.1-rc38+build038",
+  "entry_point": "Apply-Build038.ps1",
+  "completion_entry_point": "Complete-Build038.ps1",
+  "workflow": "resumable-one-command-full-lifecycle",
+  "publication": "authenticated-private-repository-exact-commit",
+  "synchronization": "no-prune",
+  "payload_authoritative": true,
+  "complete_staging": true,
+  "legacy_preservation": true,
+  "post_publication_verification": true,
+  "external_completion_receipt": true
+}
