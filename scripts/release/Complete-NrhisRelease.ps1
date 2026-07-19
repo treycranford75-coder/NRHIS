@@ -68,6 +68,17 @@ foreach ($cleanupPath in $CleanupPaths) {
     }
 }
 
+$temporaryStarters = Get-ChildItem `
+    -Path . `
+    -Filter "Start-NRHIS-Build*.ps1" `
+    -File `
+    -ErrorAction SilentlyContinue
+
+foreach ($starter in $temporaryStarters) {
+    Remove-Item $starter.FullName -Force
+    Write-Host "Removed temporary starter: $($starter.Name)"
+}
+
 $status = git status --porcelain
 if ($status) {
     Write-Host $status
@@ -120,5 +131,7 @@ Write-Host ""
 Write-Host "Release notes copied to the clipboard with Markdown preserved."
 Get-Content $ReleaseNotesFile -Raw | Set-Clipboard
 
-$releaseUrl = "https://github.com/$repository/releases/new?tag=$Tag&title=$([uri]::EscapeDataString($ReleaseTitle))"
+$encodedTag = [uri]::EscapeDataString($Tag)
+$encodedTitle = [uri]::EscapeDataString($ReleaseTitle)
+$releaseUrl = "https://github.com/$repository/releases/new?tag=$encodedTag&title=$encodedTitle"
 Start-Process $releaseUrl
