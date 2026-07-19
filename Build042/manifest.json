@@ -1,0 +1,28 @@
+{
+  "schema_version": 5,
+  "build": "042",
+  "name": "NRHIS Sprint 2 Build042 Noninteractive Windows Deletion Handling",
+  "entry_point": "Apply-Build042.ps1",
+  "branch": "feature/sprint2-build042",
+  "merge_target": "develop",
+  "tag": "v0.1.1-rc42+build042",
+  "features": [
+    "noninteractive decline of Git for Windows directory-deletion retries",
+    "locked-directory prompt suppression with visible audit output",
+    "two-attempt transient Git retry without pruning",
+    "verified post-completion installer archive",
+    "safe next-build chaining after archival"
+  ],
+  "preserves": [
+    "expanded package discovery",
+    "checksum-matched extraction reuse",
+    "no-prune synchronization",
+    "PowerShell syntax gate",
+    "payload-authoritative reruns",
+    "complete staging",
+    "legacy preservation",
+    "pre-release publication",
+    "authenticated release verification",
+    "external evidence closure"
+  ]
+}
