@@ -1,0 +1,29 @@
+{
+  "schema_version": 12,
+  "build": "049",
+  "name": "NRHIS Sprint 2 Build049 Repository Location Safety",
+  "entry_point": "Apply-Build049.ps1",
+  "branch": "feature/sprint2-build049",
+  "merge_target": "develop",
+  "tag": "v0.1.1-rc49+build049",
+  "features": [
+    "detect OneDrive-managed repository paths",
+    "migrate lifecycle execution to C:\\GitHub\\NRHIS",
+    "copy and revalidate the root ZIP and checksum",
+    "write external repository-migration evidence",
+    "continue the same build automatically from the protected clone"
+  ],
+  "preserves": [
+    "workflow contract preflight gate",
+    "pre-push CI parity gate",
+    "automatic CI diagnostics and repair guidance",
+    "native Git exit-code authority",
+    "no-prune synchronization",
+    "payload-authoritative reruns",
+    "complete staging and legacy preservation",
+    "pre-release publication",
+    "authenticated release verification",
+    "verified installer archival",
+    "safe next-build chaining"
+  ]
+}
