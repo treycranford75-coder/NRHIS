@@ -1,0 +1,31 @@
+{
+  "schema_version": 14,
+  "build": "050",
+  "name": "NRHIS Sprint 2 Build050 Production USGS Basin Harvest",
+  "entry_point": "Apply-Build050.ps1",
+  "branch": "feature/sprint2-build050",
+  "merge_target": "develop",
+  "tag": "v0.1.1-rc50+build050",
+  "features": [
+    "harvest live USGS instantaneous values for six Nueces-Frio basin stations",
+    "normalize discharge, gage height, water temperature, and specific conductance",
+    "archive raw API responses and machine-readable receipts",
+    "append observations without duplicate records on rerun",
+    "flag stale, provisional, missing, and invalid observations",
+    "publish current-condition JSON and CSV plus station status CSV",
+    "calculate explicitly labeled estimated TDS using the locked 0.65 factor"
+  ],
+  "preserves": [
+    "protected repository execution outside OneDrive",
+    "workflow contract preflight gate",
+    "pre-push CI parity gate",
+    "native Git exit-code authority",
+    "no-prune synchronization",
+    "payload-authoritative reruns",
+    "complete staging and legacy preservation",
+    "pre-release publication",
+    "authenticated release verification",
+    "verified installer archival",
+    "safe next-build chaining"
+  ]
+}
