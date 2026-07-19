@@ -1,0 +1,226 @@
+[
+  {
+    "estimated_tds_mg_l": null,
+    "observed_at": "2026-07-19T20:00:00Z",
+    "parameter_code": "00060",
+    "parameter_name": "discharge",
+    "provisional": true,
+    "qualifiers": [
+      "P"
+    ],
+    "site_name": "Nueces Rv at Cotulla, TX",
+    "site_no": "08194000",
+    "source": "USGS Instantaneous Values API",
+    "stale": false,
+    "unit": "ft3/s",
+    "value": 248.0
+  },
+  {
+    "estimated_tds_mg_l": null,
+    "observed_at": "2026-07-19T20:00:00Z",
+    "parameter_code": "00065",
+    "parameter_name": "gage_height",
+    "provisional": true,
+    "qualifiers": [
+      "P"
+    ],
+    "site_name": "Nueces Rv at Cotulla, TX",
+    "site_no": "08194000",
+    "source": "USGS Instantaneous Values API",
+    "stale": false,
+    "unit": "ft",
+    "value": 7.61
+  },
+  {
+    "estimated_tds_mg_l": null,
+    "observed_at": "2026-07-19T20:15:00Z",
+    "parameter_code": "00060",
+    "parameter_name": "discharge",
+    "provisional": true,
+    "qualifiers": [
+      "P"
+    ],
+    "site_name": "Frio Rv at Tilden, TX",
+    "site_no": "08206600",
+    "source": "USGS Instantaneous Values API",
+    "stale": false,
+    "unit": "ft3/s",
+    "value": 261.0
+  },
+  {
+    "estimated_tds_mg_l": null,
+    "observed_at": "2026-07-19T20:15:00Z",
+    "parameter_code": "00065",
+    "parameter_name": "gage_height",
+    "provisional": true,
+    "qualifiers": [
+      "P"
+    ],
+    "site_name": "Frio Rv at Tilden, TX",
+    "site_no": "08206600",
+    "source": "USGS Instantaneous Values API",
+    "stale": false,
+    "unit": "ft",
+    "value": 7.68
+  },
+  {
+    "estimated_tds_mg_l": null,
+    "observed_at": "2026-07-19T20:15:00Z",
+    "parameter_code": "00060",
+    "parameter_name": "discharge",
+    "provisional": true,
+    "qualifiers": [
+      "P"
+    ],
+    "site_name": "Nueces Rv nr Three Rivers, TX",
+    "site_no": "08210000",
+    "source": "USGS Instantaneous Values API",
+    "stale": false,
+    "unit": "ft3/s",
+    "value": 23.6
+  },
+  {
+    "estimated_tds_mg_l": null,
+    "observed_at": "2026-07-19T20:15:00Z",
+    "parameter_code": "00065",
+    "parameter_name": "gage_height",
+    "provisional": true,
+    "qualifiers": [
+      "P"
+    ],
+    "site_name": "Nueces Rv nr Three Rivers, TX",
+    "site_no": "08210000",
+    "source": "USGS Instantaneous Values API",
+    "stale": false,
+    "unit": "ft",
+    "value": 1.3
+  },
+  {
+    "estimated_tds_mg_l": null,
+    "observed_at": "2026-07-19T20:00:00Z",
+    "parameter_code": "00060",
+    "parameter_name": "discharge",
+    "provisional": true,
+    "qualifiers": [
+      "P"
+    ],
+    "site_name": "Nueces Rv nr Mathis, TX",
+    "site_no": "08211000",
+    "source": "USGS Instantaneous Values API",
+    "stale": false,
+    "unit": "ft3/s",
+    "value": 93.0
+  },
+  {
+    "estimated_tds_mg_l": null,
+    "observed_at": "2026-07-19T20:00:00Z",
+    "parameter_code": "00065",
+    "parameter_name": "gage_height",
+    "provisional": true,
+    "qualifiers": [
+      "P"
+    ],
+    "site_name": "Nueces Rv nr Mathis, TX",
+    "site_no": "08211000",
+    "source": "USGS Instantaneous Values API",
+    "stale": false,
+    "unit": "ft",
+    "value": 1.08
+  },
+  {
+    "estimated_tds_mg_l": null,
+    "observed_at": "2026-07-19T20:00:00Z",
+    "parameter_code": "00010",
+    "parameter_name": "water_temperature",
+    "provisional": true,
+    "qualifiers": [
+      "P"
+    ],
+    "site_name": "Nueces Rv at Bluntzer, TX",
+    "site_no": "08211200",
+    "source": "USGS Instantaneous Values API",
+    "stale": false,
+    "unit": "deg C",
+    "value": 31.8
+  },
+  {
+    "estimated_tds_mg_l": null,
+    "observed_at": "2026-07-19T20:00:00Z",
+    "parameter_code": "00060",
+    "parameter_name": "discharge",
+    "provisional": true,
+    "qualifiers": [
+      "P"
+    ],
+    "site_name": "Nueces Rv at Bluntzer, TX",
+    "site_no": "08211200",
+    "source": "USGS Instantaneous Values API",
+    "stale": false,
+    "unit": "ft3/s",
+    "value": 77.4
+  },
+  {
+    "estimated_tds_mg_l": null,
+    "observed_at": "2026-07-19T20:00:00Z",
+    "parameter_code": "00065",
+    "parameter_name": "gage_height",
+    "provisional": true,
+    "qualifiers": [
+      "P"
+    ],
+    "site_name": "Nueces Rv at Bluntzer, TX",
+    "site_no": "08211200",
+    "source": "USGS Instantaneous Values API",
+    "stale": false,
+    "unit": "ft",
+    "value": 7.12
+  },
+  {
+    "estimated_tds_mg_l": 754.0,
+    "observed_at": "2026-07-19T20:00:00Z",
+    "parameter_code": "00095",
+    "parameter_name": "specific_conductance",
+    "provisional": true,
+    "qualifiers": [
+      "P"
+    ],
+    "site_name": "Nueces Rv at Bluntzer, TX",
+    "site_no": "08211200",
+    "source": "USGS Instantaneous Values API",
+    "stale": false,
+    "unit": "uS/cm @25C",
+    "value": 1160.0
+  },
+  {
+    "estimated_tds_mg_l": null,
+    "observed_at": "2026-07-19T20:30:00Z",
+    "parameter_code": "00060",
+    "parameter_name": "discharge",
+    "provisional": true,
+    "qualifiers": [
+      "P"
+    ],
+    "site_name": "Nueces Rv at Calallen, TX",
+    "site_no": "08211500",
+    "source": "USGS Instantaneous Values API",
+    "stale": false,
+    "unit": "ft3/s",
+    "value": 0.0
+  },
+  {
+    "estimated_tds_mg_l": null,
+    "observed_at": "2026-07-19T20:30:00Z",
+    "parameter_code": "00065",
+    "parameter_name": "gage_height",
+    "provisional": true,
+    "qualifiers": [
+      "P"
+    ],
+    "site_name": "Nueces Rv at Calallen, TX",
+    "site_no": "08211500",
+    "source": "USGS Instantaneous Values API",
+    "stale": false,
+    "unit": "ft",
+    "value": 2.64
+  }
+]

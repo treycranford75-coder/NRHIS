@@ -1,5 +1,6 @@
 from __future__ import annotations
-import json, shutil
+import json
+import shutil
 from datetime import datetime, timezone
 from pathlib import Path
 from nrhis_harvest.basin_operational_snapshot import build_snapshot
