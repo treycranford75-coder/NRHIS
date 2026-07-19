@@ -1,0 +1,33 @@
+{
+  "schema_version": 8,
+  "build": "045",
+  "name": "NRHIS Sprint 2 Build045 CI Diagnostics and Resumable Lifecycle",
+  "entry_point": "Apply-Build045.ps1",
+  "branch": "feature/sprint2-build045",
+  "merge_target": "develop",
+  "tag": "v0.1.1-rc45+build045",
+  "features": [
+    "automatic CI failure diagnostic capture after the merge wait window",
+    "external text and JSON evidence for pull-request checks and workflow runs",
+    "automatic opening of the blocked pull request for review",
+    "same-command resumability after CI repair or manual merge",
+    "standard verified-completion next-build prompt"
+  ],
+  "preserves": [
+    "behavior-oriented workflow contract tests",
+    "native Git exit-code authority",
+    "automatic decline of locked-directory deletion retries",
+    "expanded package discovery",
+    "checksum-matched extraction reuse",
+    "no-prune synchronization",
+    "PowerShell syntax gate",
+    "payload-authoritative reruns",
+    "complete staging",
+    "legacy preservation",
+    "pre-release publication",
+    "authenticated release verification",
+    "external evidence closure",
+    "verified installer archival",
+    "safe next-build chaining"
+  ]
+}
