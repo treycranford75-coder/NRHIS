@@ -1,0 +1,19 @@
+{
+  "value": {
+    "timeSeries": [
+      {
+        "sourceInfo": {"siteCode": [{"value": "08211500"}]},
+        "variable": {
+          "variableCode": [{"value": "00060"}],
+          "unit": {"unitCode": "ft3/s"}
+        },
+        "values": [{
+          "value": [
+            {"value": "25.0", "qualifiers": ["P"], "dateTime": "2026-07-17T18:00:00.000-05:00"},
+            {"value": "26.0", "qualifiers": ["P"], "dateTime": "2026-07-17T18:15:00.000-05:00"}
+          ]
+        }]
+      }
+    ]
+  }
+}
