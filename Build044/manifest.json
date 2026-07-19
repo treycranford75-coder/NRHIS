@@ -1,0 +1,32 @@
+{
+  "schema_version": 7,
+  "build": "044",
+  "name": "NRHIS Sprint 2 Build044 Behavior-Based Workflow Tests",
+  "entry_point": "Apply-Build044.ps1",
+  "branch": "feature/sprint2-build044",
+  "merge_target": "develop",
+  "tag": "v0.1.1-rc44+build044",
+  "features": [
+    "behavior-oriented release-workflow contract tests",
+    "stable ZIP discovery and extraction verification",
+    "stable repository-root and checksum verification",
+    "stable extraction-reuse and apply-entry verification",
+    "standard verified-completion next-build prompt"
+  ],
+  "preserves": [
+    "native Git exit-code authority",
+    "automatic decline of locked-directory deletion retries",
+    "expanded package discovery",
+    "checksum-matched extraction reuse",
+    "no-prune synchronization",
+    "PowerShell syntax gate",
+    "payload-authoritative reruns",
+    "complete staging",
+    "legacy preservation",
+    "pre-release publication",
+    "authenticated release verification",
+    "external evidence closure",
+    "verified installer archival",
+    "safe next-build chaining"
+  ]
+}
