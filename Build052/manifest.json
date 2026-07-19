@@ -1,0 +1,27 @@
+{
+  "schema_version": 16,
+  "build": "052",
+  "name": "NRHIS Sprint 2 Build052 Incremental USGS Update and Data Quality Gate",
+  "entry_point": "Apply-Build052.ps1",
+  "branch": "feature/sprint2-build052",
+  "merge_target": "develop",
+  "tag": "v0.1.1-rc52+build052",
+  "features": [
+    "resume USGS historical retrieval from the newest stored observation with a configurable overlap",
+    "run duplicate-safe incremental updates through the selected end date",
+    "detect missing and stale configured station-parameter combinations",
+    "detect observation gaps above a configurable duration",
+    "write basin data-quality JSON and CSV products",
+    "write a machine-readable incremental update receipt for reporting gates"
+  ],
+  "preserves": [
+    "production current-condition USGS harvest from Build050",
+    "restart-safe historical USGS backfill from Build051",
+    "protected repository execution outside OneDrive",
+    "workflow contract preflight and CI parity gates",
+    "no-prune synchronization",
+    "payload-authoritative reruns",
+    "pre-release publication and authenticated verification",
+    "verified installer archival and next-build chaining"
+  ]
+}
