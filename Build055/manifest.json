@@ -1,0 +1,25 @@
+{
+  "schema_version": 19,
+  "build": "055",
+  "name": "NRHIS Sprint 2 Build055 TWDB Reservoir Operations Harvest",
+  "entry_point": "Apply-Build055.ps1",
+  "branch": "feature/sprint2-build055",
+  "merge_target": "develop",
+  "tag": "v0.1.1-rc55+build055",
+  "features": [
+    "harvest Choke Canyon Reservoir and Lake Corpus Christi current conditions from TWDB Water Data for Texas",
+    "normalize storage, capacity, percent full, elevation, volume, and surface area",
+    "calculate prior-snapshot storage changes and combined system storage",
+    "write duplicate-safe reservoir history and raw-source evidence",
+    "flag stale reservoir observations and create a machine-readable harvest receipt"
+  ],
+  "preserves": [
+    "production and historical USGS harvest",
+    "incremental USGS quality gate",
+    "NWPS forecasts and flood thresholds",
+    "integrated basin operational snapshot",
+    "protected repository execution outside OneDrive",
+    "workflow contract and CI parity gates",
+    "pre-release publication, verification, archival, and next-build chaining"
+  ]
+}

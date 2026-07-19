@@ -12,10 +12,10 @@ def _starter_text() -> str:
 
 def test_generic_build_starter_locates_and_extracts_zip() -> None:
     text = _starter_text()
-    assert re.search(r'NRHIS_Sprint2_Build\$\{BuildNumber\}_OneStep\.zip', text)
+    assert re.search(r"NRHIS_Sprint2_Build\$\{BuildNumber\}_OneStep\.zip", text)
     assert 'Join-Path $HOME "Downloads"' in text
     assert "Expand-Archive" in text
-    assert re.search(r'Apply-Build.*BuildNumber.*\.ps1', text)
+    assert re.search(r"Apply-Build.*BuildNumber.*\.ps1", text)
 
 
 def test_generic_build_starter_requires_repository_root() -> None:

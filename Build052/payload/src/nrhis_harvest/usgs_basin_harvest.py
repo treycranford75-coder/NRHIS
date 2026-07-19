@@ -3,6 +3,7 @@
 Build050 deliberately uses only the Python standard library so the operational
 harvester can run on a clean NRHIS workstation without adding a new dependency.
 """
+
 from __future__ import annotations
 
 import csv
@@ -77,7 +78,9 @@ def build_url(site_numbers: Iterable[str], parameter_codes: Iterable[str], perio
 def fetch_json(url: str, timeout_seconds: int = 30) -> bytes:
     request = urllib.request.Request(
         url,
-        headers={"User-Agent": "NRHIS/0.1 Build050 (+https://github.com/treycranford75-coder/NRHIS)"},
+        headers={
+            "User-Agent": "NRHIS/0.1 Build050 (+https://github.com/treycranford75-coder/NRHIS)"
+        },
     )
     with urllib.request.urlopen(request, timeout=timeout_seconds) as response:  # noqa: S310
         if getattr(response, "status", 200) != 200:
@@ -85,7 +88,9 @@ def fetch_json(url: str, timeout_seconds: int = 30) -> bytes:
         return response.read()
 
 
-def parse_usgs_payload(payload: dict[str, Any], *, now: datetime, stale_minutes: int) -> list[Observation]:
+def parse_usgs_payload(
+    payload: dict[str, Any], *, now: datetime, stale_minutes: int
+) -> list[Observation]:
     try:
         series_list = payload["value"]["timeSeries"]
     except (KeyError, TypeError) as exc:
@@ -108,7 +113,10 @@ def parse_usgs_payload(payload: dict[str, Any], *, now: datetime, stale_minutes:
             parameter_code,
             (str(variable.get("variableDescription", parameter_code)), ""),
         )
-        unit = str((variable.get("unit") or {}).get("unitCode", fallback_unit)).strip() or fallback_unit
+        unit = (
+            str((variable.get("unit") or {}).get("unitCode", fallback_unit)).strip()
+            or fallback_unit
+        )
         values = values_groups[0].get("value") or []
         if not values:
             continue
@@ -197,7 +205,9 @@ def write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
             os.unlink(temp_name)
 
 
-def harvest(config_path: Path, output_root: Path, *, period: str = "P2D", timeout_seconds: int = 30) -> dict[str, Any]:
+def harvest(
+    config_path: Path, output_root: Path, *, period: str = "P2D", timeout_seconds: int = 30
+) -> dict[str, Any]:
     config = load_json(config_path)
     sites = config["stations"]
     site_numbers = [str(item["site_no"]) for item in sites]
@@ -220,7 +230,10 @@ def harvest(config_path: Path, output_root: Path, *, period: str = "P2D", timeou
         row["qualifiers"] = ";".join(row["qualifiers"])
     current_json = output_root / "current" / "usgs_current_conditions.json"
     current_csv = output_root / "current" / "usgs_current_conditions.csv"
-    atomic_write_text(current_json, json.dumps([asdict(item) for item in observations], indent=2, sort_keys=True) + "\n")
+    atomic_write_text(
+        current_json,
+        json.dumps([asdict(item) for item in observations], indent=2, sort_keys=True) + "\n",
+    )
     write_csv(current_csv, current_rows)
 
     returned_sites = {item.site_no for item in observations}

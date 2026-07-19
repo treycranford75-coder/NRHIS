@@ -1,8 +1,10 @@
 """CLI for generating Sprint archive retention plans."""
+
 from __future__ import annotations
 import argparse
 from .archive_retention import build_retention_plan, summarize_retention_plan, write_retention_plan
 from .sprint_archive_index import build_sprint_archive_index
+
 
 def main() -> int:
     parser = argparse.ArgumentParser()
@@ -23,6 +25,7 @@ def main() -> int:
         write_retention_plan(plan, args.json_output)
         print(f"Retention plan JSON: {args.json_output}")
     return 0
+
 
 if __name__ == "__main__":
     raise SystemExit(main())

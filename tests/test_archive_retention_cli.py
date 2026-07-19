@@ -4,6 +4,7 @@ import pytest
 from nrhis_calibration import archive_retention_cli
 from nrhis_calibration.sprint_archive_index import SprintArchiveIndex, SprintArchiveIndexEntry
 
+
 def test_archive_retention_cli_generates_plan(
     monkeypatch: pytest.MonkeyPatch,
     tmp_path: Path,
@@ -21,7 +22,9 @@ def test_archive_retention_cli_generates_plan(
             ),
         ),
     )
-    monkeypatch.setattr(archive_retention_cli, "build_sprint_archive_index", lambda archive_root: index)
+    monkeypatch.setattr(
+        archive_retention_cli, "build_sprint_archive_index", lambda archive_root: index
+    )
     monkeypatch.setattr(
         sys,
         "argv",

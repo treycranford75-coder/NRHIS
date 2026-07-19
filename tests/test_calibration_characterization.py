@@ -11,11 +11,7 @@ from nrhis_calibration.characterization import (
     sha256_file,
 )
 
-FIXTURE_ROOT = (
-    Path(__file__).parent
-    / "fixtures"
-    / "calibration_characterization"
-)
+FIXTURE_ROOT = Path(__file__).parent / "fixtures" / "calibration_characterization"
 
 
 def test_reference_fixture_hash_is_stable() -> None:

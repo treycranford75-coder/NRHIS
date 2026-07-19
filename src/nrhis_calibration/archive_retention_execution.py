@@ -43,9 +43,7 @@ def simulate_retention_execution(
     )
 
     if not manifest.dry_run:
-        raise ArchiveRetentionExecutionError(
-            "Build022 accepts dry-run action manifests only"
-        )
+        raise ArchiveRetentionExecutionError("Build022 accepts dry-run action manifests only")
 
     items: list[ArchiveRetentionExecutionItem] = []
     for action in manifest.actions:
@@ -104,13 +102,9 @@ def validate_execution_report(
     document = json.loads(Path(report_path).read_text(encoding="utf-8"))
 
     if document.get("dry_run") is not True:
-        raise ArchiveRetentionExecutionError(
-            "Execution report must be a dry run"
-        )
+        raise ArchiveRetentionExecutionError("Execution report must be a dry run")
     if document.get("executed") is not False:
-        raise ArchiveRetentionExecutionError(
-            "Execution report must not indicate live execution"
-        )
+        raise ArchiveRetentionExecutionError("Execution report must not indicate live execution")
 
     raw_items = document.get("items")
     if not isinstance(raw_items, list):
@@ -127,9 +121,7 @@ def validate_execution_report(
     )
 
     if int(document.get("item_count", -1)) != len(items):
-        raise ArchiveRetentionExecutionError(
-            "Execution item count mismatch"
-        )
+        raise ArchiveRetentionExecutionError("Execution item count mismatch")
 
     return ArchiveRetentionExecutionReport(
         dry_run=True,

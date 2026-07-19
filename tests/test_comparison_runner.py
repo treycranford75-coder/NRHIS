@@ -21,8 +21,7 @@ def _create_case(tmp_path: Path, *, approved: bool = True) -> Path:
     )
     table = case_dir / "observations.csv"
     table.write_text(
-        "station_id,timestamp_utc,flow_cfs\n"
-        "A,2026-07-18T00:00:00Z,25.0\n",
+        "station_id,timestamp_utc,flow_cfs\nA,2026-07-18T00:00:00Z,25.0\n",
         encoding="utf-8",
     )
     manifest = case_dir / "case.json"
@@ -51,8 +50,7 @@ def test_matching_candidate_passes(tmp_path: Path) -> None:
         encoding="utf-8",
     )
     (candidate / "observations.csv").write_text(
-        "station_id,timestamp_utc,flow_cfs\n"
-        "A,2026-07-18T00:00:00Z,25.0\n",
+        "station_id,timestamp_utc,flow_cfs\nA,2026-07-18T00:00:00Z,25.0\n",
         encoding="utf-8",
     )
 
@@ -70,8 +68,7 @@ def test_difference_is_reported(tmp_path: Path) -> None:
         encoding="utf-8",
     )
     (candidate / "observations.csv").write_text(
-        "station_id,timestamp_utc,flow_cfs\n"
-        "A,2026-07-18T00:00:00Z,25.0\n",
+        "station_id,timestamp_utc,flow_cfs\nA,2026-07-18T00:00:00Z,25.0\n",
         encoding="utf-8",
     )
 
@@ -121,8 +118,7 @@ def test_write_comparison_report(tmp_path: Path) -> None:
         encoding="utf-8",
     )
     (candidate / "observations.csv").write_text(
-        "station_id,timestamp_utc,flow_cfs\n"
-        "A,2026-07-18T00:00:00Z,25.0\n",
+        "station_id,timestamp_utc,flow_cfs\nA,2026-07-18T00:00:00Z,25.0\n",
         encoding="utf-8",
     )
     report = compare_reference_case(manifest, candidate_root=candidate)

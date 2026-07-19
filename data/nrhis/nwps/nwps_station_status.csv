@@ -1,0 +1,7 @@
+identifier,usgs_site_no,station_name,metadata_ok,stageflow_ok,forecast_points,forecast_available,observed_points_in_nwps,peak_stage,peak_stage_time,peak_flow,peak_flow_time,forecast_category,error
+08194000,08194000,Nueces River at Cotulla,True,True,0,False,0,,,,,not_defined,
+08194500,08194500,Nueces River near Tilden,True,True,0,False,0,,,,,not_defined,
+08210000,08210000,Nueces River near Three Rivers,True,True,0,False,0,,,,,not_defined,
+08211000,08211000,Nueces River near Mathis,True,True,0,False,0,,,,,not_defined,
+08211200,08211200,Nueces River at Bluntzer,True,True,0,False,0,,,,,not_defined,
+08211500,08211500,Nueces River at Calallen,True,True,0,False,0,,,,,not_defined,

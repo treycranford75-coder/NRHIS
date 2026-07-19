@@ -2,7 +2,11 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
-from nrhis_harvest.usgs_basin_harvest import append_deduplicated_jsonl, build_url, parse_usgs_payload
+from nrhis_harvest.usgs_basin_harvest import (
+    append_deduplicated_jsonl,
+    build_url,
+    parse_usgs_payload,
+)
 
 FIXTURE = Path(__file__).parent / "fixtures" / "usgs_iv_build050.json"
 
@@ -29,7 +33,9 @@ def test_parser_normalizes_latest_values_and_estimated_tds():
 
 def test_history_append_is_duplicate_safe(tmp_path):
     payload = json.loads(FIXTURE.read_text(encoding="utf-8"))
-    observations = parse_usgs_payload(payload, now=datetime(2026, 7, 20, 0, 30, tzinfo=timezone.utc), stale_minutes=90)
+    observations = parse_usgs_payload(
+        payload, now=datetime(2026, 7, 20, 0, 30, tzinfo=timezone.utc), stale_minutes=90
+    )
     path = tmp_path / "history.jsonl"
     assert append_deduplicated_jsonl(path, observations) == 2
     assert append_deduplicated_jsonl(path, observations) == 0

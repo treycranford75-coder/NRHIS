@@ -55,7 +55,9 @@ def test_subprocess_success_is_captured(monkeypatch: pytest.MonkeyPatch, tmp_pat
     assert Path(result.stdout_path).read_text(encoding="utf-8") == "ok\n"
 
 
-def test_timeout_is_recorded_as_exit_code_124(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
+def test_timeout_is_recorded_as_exit_code_124(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path
+) -> None:
     def fake_run(*args: object, **kwargs: object) -> object:
         raise compat.subprocess.TimeoutExpired(
             cmd=kwargs.get("args", args[0] if args else "legacy"),

@@ -49,10 +49,7 @@ def test_release_gate_rejects_mismatch(tmp_path: Path) -> None:
     )
 
     assert report.accepted is False
-    assert any(
-        check.name == "comparison_matched" and not check.passed
-        for check in report.checks
-    )
+    assert any(check.name == "comparison_matched" and not check.passed for check in report.checks)
 
 
 def test_release_gate_rejects_missing_required_artifact(tmp_path: Path) -> None:
@@ -72,8 +69,7 @@ def test_release_gate_rejects_missing_required_artifact(tmp_path: Path) -> None:
 
     assert report.accepted is False
     assert any(
-        check.name == "required_artifact:dual_run_summary.json"
-        and not check.passed
+        check.name == "required_artifact:dual_run_summary.json" and not check.passed
         for check in report.checks
     )
 

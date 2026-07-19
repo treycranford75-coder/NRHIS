@@ -53,8 +53,7 @@ def create_evidence_bundle(
 
     if bundle_directory.exists():
         raise EvidenceBundleError(
-            f"Evidence bundle already exists and will not be overwritten: "
-            f"{bundle_directory}"
+            f"Evidence bundle already exists and will not be overwritten: {bundle_directory}"
         )
 
     artifact_directory = bundle_directory / "artifacts"
@@ -141,17 +140,11 @@ def validate_evidence_bundle(manifest_path: str | Path) -> tuple[str, ...]:
 
         artifact_path = bundle_directory / relative_path
         if not artifact_path.is_file():
-            raise EvidenceBundleError(
-                f"Evidence artifact is missing: {relative_path}"
-            )
+            raise EvidenceBundleError(f"Evidence artifact is missing: {relative_path}")
         if artifact_path.stat().st_size != expected_size:
-            raise EvidenceBundleError(
-                f"Evidence artifact size mismatch: {relative_path}"
-            )
+            raise EvidenceBundleError(f"Evidence artifact size mismatch: {relative_path}")
         if _sha256(artifact_path) != expected_hash.upper():
-            raise EvidenceBundleError(
-                f"Evidence artifact hash mismatch: {relative_path}"
-            )
+            raise EvidenceBundleError(f"Evidence artifact hash mismatch: {relative_path}")
 
         verified.append(relative_path)
 

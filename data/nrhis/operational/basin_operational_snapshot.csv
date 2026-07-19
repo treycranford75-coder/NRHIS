@@ -1,0 +1,7 @@
+site_no,station_name,river_segment,display_order,observed_discharge_cfs,observed_stage_ft,specific_conductance_us_cm,estimated_tds_mg_l,latest_observed_at,observation_stale,missing_required_parameters,forecast_available,forecast_category,forecast_peak_stage_ft,forecast_peak_stage_time,forecast_peak_flow_cfs,forecast_peak_flow_time,quality_status,alert_score
+08194000,Nueces River at Cotulla,Upper Nueces,10,248.0,7.61,,,2026-07-19T20:00:00Z,False,,False,not_defined,,,,,unknown,0
+08194500,Nueces River near Tilden,Middle Nueces,20,,,,,,False,00060;00065,False,not_defined,,,,,unknown,10
+08210000,Nueces River near Three Rivers,Reservoir inflow,30,23.6,1.3,,,2026-07-19T20:15:00Z,False,,False,not_defined,,,,,unknown,0
+08211000,Nueces River near Mathis,Below Wesley Seale Dam,40,93.0,1.08,,,2026-07-19T20:00:00Z,False,,False,not_defined,,,,,unknown,0
+08211200,Nueces River at Bluntzer,Lower Nueces,50,77.4,7.12,1160.0,754.0,2026-07-19T20:00:00Z,False,,False,not_defined,,,,,unknown,0
+08211500,Nueces River at Calallen,Lower Nueces / saltwater barrier,60,0.0,2.64,,,2026-07-19T20:30:00Z,False,00095,False,not_defined,,,,,unknown,5

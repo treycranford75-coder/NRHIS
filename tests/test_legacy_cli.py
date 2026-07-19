@@ -1,4 +1,4 @@
-﻿"""Tests for the legacy Pass1 command-line adapter."""
+"""Tests for the legacy Pass1 command-line adapter."""
 
 from __future__ import annotations
 
@@ -70,5 +70,3 @@ def test_cli_propagates_nonzero_return_code(
     )
 
     assert legacy_cli.main() == 7
-
-

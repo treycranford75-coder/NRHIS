@@ -124,9 +124,7 @@ def capture_reference_case(
         artifacts=[
             (
                 path,
-                "application/json"
-                if path.suffix.lower() == ".json"
-                else "text/plain",
+                "application/json" if path.suffix.lower() == ".json" else "text/plain",
             )
             for path in copied
         ],

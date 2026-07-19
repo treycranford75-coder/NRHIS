@@ -1,4 +1,4 @@
-﻿import json
+import json
 from pathlib import Path
 
 import pytest
@@ -89,11 +89,7 @@ def test_detects_archive_tampering(tmp_path: Path) -> None:
         metadata={},
     )
 
-    copied_inventory = (
-        Path(archive.archive_directory)
-        / "artifacts"
-        / "release_inventory.json"
-    )
+    copied_inventory = Path(archive.archive_directory) / "artifacts" / "release_inventory.json"
     copied_inventory.write_text("[]\n", encoding="utf-8")
 
     with pytest.raises(SprintArchiveError, match="mismatch"):

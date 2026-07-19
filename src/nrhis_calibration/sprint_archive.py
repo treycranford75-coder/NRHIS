@@ -1,4 +1,4 @@
-﻿"""Immutable Sprint closeout archive controls."""
+"""Immutable Sprint closeout archive controls."""
 
 from __future__ import annotations
 
@@ -53,32 +53,21 @@ def create_sprint_archive(
     report = Path(closeout_report).resolve()
 
     if not inventory.is_file():
-        raise SprintArchiveError(
-            f"Release inventory is missing: {inventory}"
-        )
+        raise SprintArchiveError(f"Release inventory is missing: {inventory}")
 
     if not report.is_file():
-        raise SprintArchiveError(
-            f"Closeout report is missing: {report}"
-        )
+        raise SprintArchiveError(f"Closeout report is missing: {report}")
 
-    report_document = json.loads(
-        report.read_text(encoding="utf-8")
-    )
+    report_document = json.loads(report.read_text(encoding="utf-8"))
 
     if report_document.get("accepted") is not True:
-        raise SprintArchiveError(
-            "Closeout report is not accepted"
-        )
+        raise SprintArchiveError("Closeout report is not accepted")
 
-    archive_directory = (
-        Path(destination_root).resolve() / archive_id
-    )
+    archive_directory = Path(destination_root).resolve() / archive_id
 
     if archive_directory.exists():
         raise SprintArchiveError(
-            "Sprint archive already exists and will not be "
-            f"overwritten: {archive_directory}"
+            f"Sprint archive already exists and will not be overwritten: {archive_directory}"
         )
 
     artifact_directory = archive_directory / "artifacts"
@@ -97,26 +86,19 @@ def create_sprint_archive(
 
         artifacts.append(
             SprintArchiveArtifact(
-                relative_path=destination.relative_to(
-                    archive_directory
-                ).as_posix(),
+                relative_path=destination.relative_to(archive_directory).as_posix(),
                 sha256=_sha256(destination),
                 size_bytes=destination.stat().st_size,
             )
         )
 
-    manifest_path = (
-        archive_directory / "sprint_archive_manifest.json"
-    )
+    manifest_path = archive_directory / "sprint_archive_manifest.json"
 
     manifest_document = {
         "archive_id": archive_id,
         "metadata": metadata,
         "artifact_count": len(artifacts),
-        "artifacts": [
-            asdict(item)
-            for item in artifacts
-        ],
+        "artifacts": [asdict(item) for item in artifacts],
     }
 
     manifest_path.write_text(
@@ -143,73 +125,44 @@ def validate_sprint_archive(
     manifest = Path(manifest_path).resolve()
 
     if not manifest.is_file():
-        raise SprintArchiveError(
-            f"Sprint archive manifest is missing: {manifest}"
-        )
+        raise SprintArchiveError(f"Sprint archive manifest is missing: {manifest}")
 
-    document = json.loads(
-        manifest.read_text(encoding="utf-8")
-    )
+    document = json.loads(manifest.read_text(encoding="utf-8"))
 
     artifacts = document.get("artifacts")
 
     if not isinstance(artifacts, list) or not artifacts:
-        raise SprintArchiveError(
-            "'artifacts' must be a non-empty list"
-        )
+        raise SprintArchiveError("'artifacts' must be a non-empty list")
 
     verified: list[str] = []
 
     for index, item in enumerate(artifacts):
         if not isinstance(item, dict):
-            raise SprintArchiveError(
-                f"Artifact {index} must be an object"
-            )
+            raise SprintArchiveError(f"Artifact {index} must be an object")
 
         relative_path = item.get("relative_path")
         expected_hash = item.get("sha256")
         expected_size = item.get("size_bytes")
 
         if not isinstance(relative_path, str) or not relative_path:
-            raise SprintArchiveError(
-                f"Artifact {index} has an invalid path"
-            )
+            raise SprintArchiveError(f"Artifact {index} has an invalid path")
 
-        if (
-            not isinstance(expected_hash, str)
-            or len(expected_hash) != 64
-        ):
-            raise SprintArchiveError(
-                f"Artifact {index} has an invalid SHA-256"
-            )
+        if not isinstance(expected_hash, str) or len(expected_hash) != 64:
+            raise SprintArchiveError(f"Artifact {index} has an invalid SHA-256")
 
-        if (
-            not isinstance(expected_size, int)
-            or expected_size < 0
-        ):
-            raise SprintArchiveError(
-                f"Artifact {index} has an invalid size"
-            )
+        if not isinstance(expected_size, int) or expected_size < 0:
+            raise SprintArchiveError(f"Artifact {index} has an invalid size")
 
         artifact = manifest.parent / relative_path
 
         if not artifact.is_file():
-            raise SprintArchiveError(
-                "Sprint archive artifact is missing: "
-                f"{relative_path}"
-            )
+            raise SprintArchiveError(f"Sprint archive artifact is missing: {relative_path}")
 
         if artifact.stat().st_size != expected_size:
-            raise SprintArchiveError(
-                "Sprint archive artifact size mismatch: "
-                f"{relative_path}"
-            )
+            raise SprintArchiveError(f"Sprint archive artifact size mismatch: {relative_path}")
 
         if _sha256(artifact) != expected_hash.upper():
-            raise SprintArchiveError(
-                "Sprint archive artifact hash mismatch: "
-                f"{relative_path}"
-            )
+            raise SprintArchiveError(f"Sprint archive artifact hash mismatch: {relative_path}")
 
         verified.append(relative_path)
 
@@ -219,9 +172,6 @@ def validate_sprint_archive(
     }
 
     if set(verified) != required:
-        raise SprintArchiveError(
-            "Sprint archive contents differ from required set: "
-            f"{verified}"
-        )
+        raise SprintArchiveError(f"Sprint archive contents differ from required set: {verified}")
 
     return tuple(sorted(verified))

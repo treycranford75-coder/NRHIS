@@ -10,7 +10,7 @@ def read(path: str) -> str:
 def test_release_evidence_root_is_outside_repository() -> None:
     text = read("scripts/release/Get-NrhisReleaseEvidenceRoot.ps1")
     assert "LOCALAPPDATA" in text
-    assert 'NRHIS\\release-evidence' in text
+    assert "NRHIS\\release-evidence" in text
 
 
 def test_published_release_verifier_checks_required_fields() -> None:

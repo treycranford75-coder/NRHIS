@@ -40,9 +40,7 @@ def test_approve_valid_case(tmp_path: Path) -> None:
 
     assert record.action == "approve"
     assert load_reference_case(manifest).approved is True
-    approval_record = json.loads(
-        (tmp_path / "approval_record.json").read_text(encoding="utf-8")
-    )
+    approval_record = json.loads((tmp_path / "approval_record.json").read_text(encoding="utf-8"))
     assert approval_record["reviewer"] == "Reviewer One"
 
 

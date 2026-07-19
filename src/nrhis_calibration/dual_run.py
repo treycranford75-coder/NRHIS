@@ -53,9 +53,7 @@ def run_dual_verification(
     )
 
     if not run_result.succeeded or run_result.return_code != 0:
-        raise DualRunError(
-            f"Calibration run failed with return code {run_result.return_code}"
-        )
+        raise DualRunError(f"Calibration run failed with return code {run_result.return_code}")
 
     candidate_root = Path(run_result.metadata_path).resolve().parent
     comparison_report = compare_reference_case(

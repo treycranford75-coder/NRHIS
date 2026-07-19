@@ -1,4 +1,4 @@
-﻿"""Cross-platform integrity tests for tracked legacy Pass1 files."""
+"""Cross-platform integrity tests for tracked legacy Pass1 files."""
 
 from __future__ import annotations
 
@@ -58,8 +58,7 @@ def _tracked_legacy_paths() -> set[Path]:
         _normalized_relative_path(line.strip())
         for line in result.stdout.splitlines()
         if line.strip()
-        and _normalized_relative_path(line.strip())
-        != MANIFEST_PATH.relative_to(REPOSITORY_ROOT)
+        and _normalized_relative_path(line.strip()) != MANIFEST_PATH.relative_to(REPOSITORY_ROOT)
     }
 
 
@@ -82,9 +81,7 @@ def _load_manifest() -> dict[Path, str]:
             ) from exc
 
         relative_path = _normalized_relative_path(path_text.strip())
-        assert relative_path not in entries, (
-            f"Duplicate manifest entry: {relative_path}"
-        )
+        assert relative_path not in entries, f"Duplicate manifest entry: {relative_path}"
         entries[relative_path] = expected_hash.upper()
 
     return entries
@@ -118,9 +115,8 @@ def test_manifest_matches_tracked_legacy_tree() -> None:
     missing_from_repository = manifest_paths - tracked_paths
     missing_from_manifest = tracked_paths - manifest_paths
 
-    assert not missing_from_repository, (
-        "Manifest contains files not tracked by Git: "
-        + ", ".join(str(path) for path in sorted(missing_from_repository))
+    assert not missing_from_repository, "Manifest contains files not tracked by Git: " + ", ".join(
+        str(path) for path in sorted(missing_from_repository)
     )
     assert not missing_from_manifest, (
         "Tracked legacy files are missing from the manifest: "

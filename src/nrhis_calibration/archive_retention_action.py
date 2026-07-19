@@ -59,9 +59,7 @@ def build_action_manifest(
     actions: list[ArchiveRetentionAction] = []
     for decision in plan.decisions:
         if decision.action not in approval.approved_actions:
-            raise ArchiveRetentionActionError(
-                f"Action is not approved: {decision.action}"
-            )
+            raise ArchiveRetentionActionError(f"Action is not approved: {decision.action}")
 
         executable = decision.action in {"retain", "review", "quarantine"}
         actions.append(
@@ -112,9 +110,7 @@ def validate_action_manifest(
     manifest_file = Path(action_manifest_path).resolve()
 
     if not manifest_file.is_file():
-        raise ArchiveRetentionActionError(
-            f"Action manifest is missing: {manifest_file}"
-        )
+        raise ArchiveRetentionActionError(f"Action manifest is missing: {manifest_file}")
 
     document = json.loads(manifest_file.read_text(encoding="utf-8"))
     if document.get("plan_sha256", "").upper() != _sha256(plan_file):

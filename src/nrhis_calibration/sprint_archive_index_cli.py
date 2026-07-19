@@ -31,10 +31,7 @@ def main() -> int:
 
     for entry in index.entries:
         status = "valid" if entry.valid else "invalid"
-        print(
-            f"- {entry.archive_id} | {status} | "
-            f"artifacts={entry.artifact_count}"
-        )
+        print(f"- {entry.archive_id} | {status} | artifacts={entry.artifact_count}")
         if entry.validation_error:
             print(f"  error: {entry.validation_error}")
 

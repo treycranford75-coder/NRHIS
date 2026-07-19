@@ -73,9 +73,7 @@ def approve_reference_case(
 
     record_path = manifest.parent / "approval_record.json"
     if record_path.exists():
-        raise ReferenceApprovalError(
-            f"approval record already exists: {record_path}"
-        )
+        raise ReferenceApprovalError(f"approval record already exists: {record_path}")
 
     timestamp = _timestamp()
     record = {
@@ -135,15 +133,11 @@ def revoke_reference_case(
     )
 
     if not reference_case.approved:
-        raise ReferenceApprovalError(
-            f"reference case {reference_case.case_id!r} is not approved"
-        )
+        raise ReferenceApprovalError(f"reference case {reference_case.case_id!r} is not approved")
 
     revocation_path = manifest.parent / "revocation_record.json"
     if revocation_path.exists():
-        raise ReferenceApprovalError(
-            f"revocation record already exists: {revocation_path}"
-        )
+        raise ReferenceApprovalError(f"revocation record already exists: {revocation_path}")
 
     timestamp = _timestamp()
     record = {
