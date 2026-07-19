@@ -10,7 +10,6 @@ $ErrorActionPreference = "Stop"
 
 $resolvedPayloadRoot = (Resolve-Path $PayloadRoot).Path
 $repoRoot = (Get-Location).Path
-
 $files = [System.Collections.Generic.List[string]]::new()
 
 Get-ChildItem $resolvedPayloadRoot -Recurse -File | ForEach-Object {
