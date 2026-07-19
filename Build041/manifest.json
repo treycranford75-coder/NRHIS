@@ -1,0 +1,29 @@
+{
+  "schema_version": 5,
+  "build": "041",
+  "name": "NRHIS Sprint 2 Build041 Verified Installer Archival",
+  "entry_point": "Apply-Build041.ps1",
+  "branch": "feature/sprint2-build041",
+  "merge_target": "develop",
+  "tag": "v0.1.1-rc41+build041",
+  "features": [
+    "verified post-completion installer archive",
+    "external archive manifest and SHA-256 evidence",
+    "tracked-artifact preservation",
+    "untracked transient extraction cleanup",
+    "NoArchive opt-out",
+    "safe next-build chaining after archival"
+  ],
+  "preserves": [
+    "expanded package discovery",
+    "checksum-matched extraction reuse",
+    "no-prune synchronization",
+    "PowerShell syntax gate",
+    "payload-authoritative reruns",
+    "complete staging",
+    "legacy preservation",
+    "pre-release publication",
+    "authenticated release verification",
+    "external evidence closure"
+  ]
+}
