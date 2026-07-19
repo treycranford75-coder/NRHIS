@@ -1,0 +1,21 @@
+# Sprint 2 Build025 Release Checklist
+
+- [ ] Git installation is checked.
+- [ ] Python installation is checked.
+- [ ] Repository identity is checked.
+- [ ] Active branch is checked.
+- [ ] Working-tree cleanliness is checked.
+- [ ] GitHub CLI installation requires `-Install`.
+- [ ] GitHub authentication requires `-Authenticate`.
+- [ ] Existing local tag is verified.
+- [ ] Existing remote tag is verified.
+- [ ] Duplicate GitHub release is rejected.
+- [ ] Existing-tag release publisher exists.
+- [ ] ES-021 is present.
+- [ ] Full test suite passes.
+- [ ] Ruff passes.
+- [ ] Coverage remains at or above 80%.
+- [ ] Legacy preservation tests pass.
+- [ ] No pre-existing legacy file is modified.
+- [ ] GitHub Actions passes.
+- [ ] Pull request targets `develop`.
