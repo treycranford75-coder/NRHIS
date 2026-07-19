@@ -1,4 +1,0 @@
-# Build004 coverage artifacts
-.coverage
-coverage.xml
-htmlcov/

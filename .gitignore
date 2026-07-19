@@ -40,21 +40,3 @@ Thumbs.db
 __pycache__/
 *.pyc
 *.egg-info/
-# Local release and transfer artifacts
-*.bundle
-NRHIS_*_Implementation.zip
-NRHIS_*_Review.zip
-NRHIS_*_WorkingTree.zip
-
-# Operational runtime output
-reports/logs/*
-!reports/logs/.gitkeep
-data/raw/usgs/*
-data/processed/usgs/*
-# Build004 coverage artifacts
-.coverage
-coverage.xml
-htmlcov/
-# Build005 legacy wrapper runtime output
-reports/legacy-pass1/*
-!reports/legacy-pass1/.gitkeep

@@ -1,4 +1,0 @@
-station_id,timestamp_utc,flow_cfs,status
-08210000,2026-07-18T12:00:00Z,25.000,approved
-08211000,2026-07-18T12:00:00Z,60.000,approved
-08211000,2026-07-18T13:00:00Z,42.500,approved
