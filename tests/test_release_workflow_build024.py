@@ -28,7 +28,7 @@ def test_release_fallback_preserves_markdown_and_prefills_tag() -> None:
     text = read("scripts/release/Complete-NrhisRelease.ps1")
 
     assert "Get-Content $ReleaseNotesFile -Raw | Set-Clipboard" in text
-    assert "releases/new?tag=$Tag" in text
+    assert "releases/new?tag=$encodedTag&title=$encodedTitle" in text
     assert "--notes-file $ReleaseNotesFile" in text
 
 
