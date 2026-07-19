@@ -23,7 +23,7 @@ def test_pull_request_script_does_not_merge() -> None:
 
     assert "gh pr create" in text
     assert "gh pr merge" not in text
-    assert "compare/$BaseBranch...$HeadBranch?expand=1" in text
+    assert "compare/${BaseBranch}...${HeadBranch}?expand=1" in text
 
 
 def test_release_completion_requires_clean_tree_and_publishes_prerelease() -> None:
