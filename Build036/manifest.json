@@ -1,0 +1,18 @@
+{
+  "project": "NRHIS",
+  "sprint": 2,
+  "build": "036",
+  "theme": "Automated pre-release publication and verification closure",
+  "branch": "feature/sprint2-build036",
+  "merge_target": "develop",
+  "tag": "v0.1.1-rc36+build036",
+  "starter": ".\\scripts\\release\\Start-NrhisBuild.ps1 -BuildNumber \"036\"",
+  "post_merge_command": ".\\Build036\\Complete-Build036.ps1",
+  "no_prune": true,
+  "prerelease": true,
+  "latest": false,
+  "payload_authoritative": true,
+  "complete_staging": true,
+  "legacy_pass1_modified": false,
+  "evidence_location": "external to repository"
+}
