@@ -1,0 +1,33 @@
+{
+  "schema_version": 9,
+  "build": "046",
+  "name": "NRHIS Sprint 2 Build046 Automated CI Repair Guidance",
+  "entry_point": "Apply-Build046.ps1",
+  "branch": "feature/sprint2-build046",
+  "merge_target": "develop",
+  "tag": "v0.1.1-rc46+build046",
+  "features": [
+    "capture failed GitHub Actions step logs after a blocked merge",
+    "extract failing pytest node IDs when available",
+    "generate a ready-to-run local CI reproduction PowerShell script",
+    "store repair guidance beside CI diagnostic evidence",
+    "resume the same build after repair without rebuilding"
+  ],
+  "preserves": [
+    "behavior-oriented workflow contract tests",
+    "native Git exit-code authority",
+    "automatic decline of locked-directory deletion retries",
+    "expanded package discovery",
+    "checksum-matched extraction reuse",
+    "no-prune synchronization",
+    "PowerShell syntax gate",
+    "payload-authoritative reruns",
+    "complete staging",
+    "legacy preservation",
+    "pre-release publication",
+    "authenticated release verification",
+    "external evidence closure",
+    "verified installer archival",
+    "safe next-build chaining"
+  ]
+}
