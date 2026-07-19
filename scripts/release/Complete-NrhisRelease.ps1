@@ -112,8 +112,14 @@ if (($null -ne $gh) -and ($LASTEXITCODE -eq 0)) {
             --target $DevelopBranch
     }
 
+    & .\scripts\release\Wait-NrhisPublishedRelease.ps1 `
+        -Tag $Tag `
+        -ExpectedTitle $ReleaseTitle `
+        -ExpectedNotesFile $ReleaseNotesFile `
+        -TimeoutMinutes 15
+
     Write-Host ""
-    Write-Host "Build$BuildNumber release published successfully." -ForegroundColor Green
+    Write-Host "Build$BuildNumber release published and verified successfully." -ForegroundColor Green
     exit 0
 }
 
@@ -124,3 +130,10 @@ Write-Host "The tag was created and pushed successfully."
     -Tag $Tag `
     -ReleaseTitle $ReleaseTitle `
     -ReleaseNotesFile $ReleaseNotesFile
+
+& .\scripts\release\New-NrhisReleaseVerificationHandoff.ps1 `
+    -BuildNumber $BuildNumber `
+    -Tag $Tag `
+    -ReleaseTitle $ReleaseTitle `
+    -ReleaseNotesFile $ReleaseNotesFile `
+    -TimeoutMinutes 15
