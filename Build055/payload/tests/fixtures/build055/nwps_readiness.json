@@ -1,0 +1,23 @@
+{
+  "ready_for_reporting": true,
+  "stations": [
+    {
+      "usgs_site_no": "08210000",
+      "forecast_available": true,
+      "forecast_category": "minor",
+      "peak_stage": 12.0,
+      "peak_stage_time": "2026-07-20T10:00:00Z",
+      "peak_flow": 5000,
+      "peak_flow_time": "2026-07-20T10:00:00Z"
+    },
+    {
+      "usgs_site_no": "08211200",
+      "forecast_available": true,
+      "forecast_category": "action",
+      "peak_stage": 10.0,
+      "peak_stage_time": "2026-07-21T10:00:00Z",
+      "peak_flow": 2000,
+      "peak_flow_time": "2026-07-21T10:00:00Z"
+    }
+  ]
+}

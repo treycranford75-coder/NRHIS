@@ -1,0 +1,107 @@
+{
+  "api_base": "https://api.water.noaa.gov/nwps/v1",
+  "build": "053",
+  "products": {
+    "forecast_csv": "C:\\GitHub\\NRHIS\\data\\nrhis\\nwps\\nwps_forecasts.csv",
+    "forecast_json": "C:\\GitHub\\NRHIS\\data\\nrhis\\nwps\\nwps_forecasts.json",
+    "readiness_json": "C:\\GitHub\\NRHIS\\data\\nrhis\\nwps\\nwps_readiness.json",
+    "station_status_csv": "C:\\GitHub\\NRHIS\\data\\nrhis\\nwps\\nwps_station_status.csv",
+    "threshold_csv": "C:\\GitHub\\NRHIS\\data\\nrhis\\nwps\\nwps_flood_thresholds.csv"
+  },
+  "raw_responses": [
+    {
+      "bytes": 32599,
+      "endpoint": "metadata",
+      "identifier": "08194000",
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260719T211010Z\\08194000_metadata.json",
+      "sha256": "578e81a9304a25af108466cc22967e78de3bce8263e8d8563ef6bf95c6d46217"
+    },
+    {
+      "bytes": 448099,
+      "endpoint": "stageflow",
+      "identifier": "08194000",
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260719T211010Z\\08194000_stageflow.json",
+      "sha256": "5f1529b89fbd6475ba4196fd955722a9ce8484dcef95fd562bb561c0071bca2e"
+    },
+    {
+      "bytes": 42648,
+      "endpoint": "metadata",
+      "identifier": "08194500",
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260719T211010Z\\08194500_metadata.json",
+      "sha256": "63d2045d0ec9687fa9ddebcc7408499292cfa50e5ae7add59c200401edb67f8a"
+    },
+    {
+      "bytes": 469868,
+      "endpoint": "stageflow",
+      "identifier": "08194500",
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260719T211010Z\\08194500_stageflow.json",
+      "sha256": "a5f5f8db0ce61e62e7cc72f8ae591929a33370a90cb2752c27455739c6d22014"
+    },
+    {
+      "bytes": 38718,
+      "endpoint": "metadata",
+      "identifier": "08210000",
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260719T211010Z\\08210000_metadata.json",
+      "sha256": "01584890d238eac8c30cc538e4844641bba67adf3f166ac338360c94b67ca1d1"
+    },
+    {
+      "bytes": 459735,
+      "endpoint": "stageflow",
+      "identifier": "08210000",
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260719T211010Z\\08210000_stageflow.json",
+      "sha256": "3915aeba59b5f217e52f0e9a19bd5ad69b766e2a91653dd720aff18923242fda"
+    },
+    {
+      "bytes": 26955,
+      "endpoint": "metadata",
+      "identifier": "08211000",
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260719T211010Z\\08211000_metadata.json",
+      "sha256": "102b0b58354114843d3c32bb3758b8c59ac31e3177e917d439b2af590db88335"
+    },
+    {
+      "bytes": 400159,
+      "endpoint": "stageflow",
+      "identifier": "08211000",
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260719T211010Z\\08211000_stageflow.json",
+      "sha256": "0a2ebce99c85377055f8dcc2ab3ec16dcc88919eb8e663357b08faae2810186a"
+    },
+    {
+      "bytes": 31706,
+      "endpoint": "metadata",
+      "identifier": "08211200",
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260719T211010Z\\08211200_metadata.json",
+      "sha256": "752cbb9afc614c8c7f4d67cb6bc8e0bc34cebdc48bc3dbb12e5e314073048c6c"
+    },
+    {
+      "bytes": 467660,
+      "endpoint": "stageflow",
+      "identifier": "08211200",
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260719T211010Z\\08211200_stageflow.json",
+      "sha256": "eca9959eff2f6c8201f3daab110c942a2e1750e83f0f8c9ff9e3d535bf160911"
+    },
+    {
+      "bytes": 34502,
+      "endpoint": "metadata",
+      "identifier": "08211500",
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260719T211010Z\\08211500_metadata.json",
+      "sha256": "18662b3718bbd93d8cc5cc22dcaf2a5147474f2de6ff8abbe50f754792529257"
+    },
+    {
+      "bytes": 466590,
+      "endpoint": "stageflow",
+      "identifier": "08211500",
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260719T211010Z\\08211500_stageflow.json",
+      "sha256": "e1dd1cc7b7c99d5a745cfc11bd391862a1e8db58b2215e629a8355e9e06030f0"
+    }
+  ],
+  "retrieved_at": "2026-07-19T21:10:10.470265Z",
+  "schema_version": 1,
+  "summary": {
+    "configured_gauges": 6,
+    "forecast_points": 0,
+    "gauges_with_forecasts": 0,
+    "ready_for_reporting": true,
+    "successful_gauges": 6,
+    "threshold_records": 24
+  }
+}

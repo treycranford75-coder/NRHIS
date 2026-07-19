@@ -1,0 +1,12 @@
+{
+  "build": "054",
+  "generated_at": "2026-07-19T21:10:19.936382Z",
+  "products": {
+    "alerts_csv": "C:\\GitHub\\NRHIS\\data\\nrhis\\operational\\basin_operational_alerts.csv",
+    "readiness_json": "C:\\GitHub\\NRHIS\\data\\nrhis\\operational\\basin_reporting_readiness.json",
+    "snapshot_csv": "C:\\GitHub\\NRHIS\\data\\nrhis\\operational\\basin_operational_snapshot.csv",
+    "snapshot_json": "C:\\GitHub\\NRHIS\\data\\nrhis\\operational\\basin_operational_snapshot.json"
+  },
+  "ready_for_reporting": false,
+  "schema_version": 1
+}
