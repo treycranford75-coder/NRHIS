@@ -1,0 +1,27 @@
+{
+  "schema_version": 17,
+  "build": "053",
+  "name": "NRHIS Sprint 2 Build053 NOAA NWPS Forecast and Flood Threshold Harvest",
+  "entry_point": "Apply-Build053.ps1",
+  "branch": "feature/sprint2-build053",
+  "merge_target": "develop",
+  "tag": "v0.1.1-rc53+build053",
+  "features": [
+    "harvest NOAA/NWS National Water Prediction Service gauge metadata and stage-flow products",
+    "capture official NWS forecast series separately from USGS observations",
+    "normalize action, minor, moderate, and major flood thresholds for configured Nueces Basin gauges",
+    "calculate forecast peak timing and threshold exceedance status",
+    "archive raw NOAA API responses with SHA-256 evidence",
+    "write forecast, threshold, station-status, readiness, and run-receipt products"
+  ],
+  "preserves": [
+    "USGS as the primary source for current observed discharge, stage, and water-quality values",
+    "production USGS current-condition harvest from Build050",
+    "restart-safe historical backfill from Build051",
+    "incremental updates and data-quality gates from Build052",
+    "protected repository execution outside OneDrive",
+    "workflow contract preflight and CI parity gates",
+    "no-prune synchronization and payload-authoritative reruns",
+    "pre-release publication, verification, archival, and next-build chaining"
+  ]
+}
