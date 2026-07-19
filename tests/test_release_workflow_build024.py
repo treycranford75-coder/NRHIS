@@ -19,7 +19,7 @@ def test_repository_parser_supports_common_github_remotes() -> None:
 def test_pull_request_fallback_uses_explicit_base_and_head() -> None:
     text = read("scripts/release/New-NrhisPullRequest.ps1")
 
-    assert "compare/$BaseBranch...$HeadBranch?expand=1" in text
+    assert "compare/${BaseBranch}...${HeadBranch}?expand=1" in text
     assert "--base $BaseBranch" in text
     assert "--head $HeadBranch" in text
 

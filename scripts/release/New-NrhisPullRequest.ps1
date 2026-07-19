@@ -20,7 +20,7 @@ if (-not (Test-Path $BodyFile)) {
 }
 
 $repository = & .\scripts\release\Get-NrhisGitHubRepository.ps1
-$compareUrl = "https://github.com/$repository/compare/$BaseBranch...$HeadBranch?expand=1"
+$compareUrl = "https://github.com/$repository/compare/${BaseBranch}...${HeadBranch}?expand=1"
 
 $gh = Get-Command gh -ErrorAction SilentlyContinue
 if ($null -eq $gh) {
