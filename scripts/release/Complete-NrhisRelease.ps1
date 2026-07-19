@@ -43,6 +43,8 @@ if (-not (Test-Path $ReleaseNotesFile)) {
     throw "Release notes file not found: $ReleaseNotesFile"
 }
 
+$repository = & .\scripts\release\Get-NrhisGitHubRepository.ps1
+
 Invoke-CheckedCommand "Switch to $DevelopBranch" {
     git switch $DevelopBranch
 }
@@ -98,6 +100,7 @@ if ($null -ne $gh) {
 if (($null -ne $gh) -and ($LASTEXITCODE -eq 0)) {
     Invoke-CheckedCommand "Publish GitHub pre-release" {
         gh release create $Tag `
+            --repo $repository `
             --title $ReleaseTitle `
             --notes-file $ReleaseNotesFile `
             --prerelease `
@@ -113,4 +116,9 @@ if (($null -ne $gh) -and ($LASTEXITCODE -eq 0)) {
 
 Write-Warning "GitHub CLI is unavailable or unauthenticated."
 Write-Host "The tag was created and pushed successfully."
-Start-Process "https://github.com/treycranford75-coder/NRHIS/releases/new"
+Write-Host ""
+Write-Host "Release notes copied to the clipboard with Markdown preserved."
+Get-Content $ReleaseNotesFile -Raw | Set-Clipboard
+
+$releaseUrl = "https://github.com/$repository/releases/new?tag=$Tag&title=$([uri]::EscapeDataString($ReleaseTitle))"
+Start-Process $releaseUrl
