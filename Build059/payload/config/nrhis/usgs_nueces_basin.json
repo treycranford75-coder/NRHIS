@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "stale_minutes": 90,
+  "parameter_codes": ["00060", "00065", "00010", "00095"],
+  "stations": [
+    {"site_no": "08194000", "name": "Nueces River at Cotulla, TX", "segment": "Upper Nueces"},
+    {"site_no": "08206600", "name": "Frio River at Tilden, TX", "segment": "Frio"},
+    {"site_no": "08210000", "name": "Nueces River near Three Rivers, TX", "segment": "Middle Nueces"},
+    {"site_no": "08211000", "name": "Nueces River near Mathis, TX", "segment": "Lake Corpus Christi outlet"},
+    {"site_no": "08211200", "name": "Nueces River at Bluntzer, TX", "segment": "Lower Nueces"},
+    {"site_no": "08211500", "name": "Nueces River at Calallen, TX", "segment": "Lower Nueces"}
+  ]
+}

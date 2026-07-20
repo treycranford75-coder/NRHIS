@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "build": "059",
+  "api_base": "https://waterdatafortexas.org/coastal/api",
+  "station_code": "SALT03",
+  "station_name": "SALT03 Nueces Bay",
+  "lookback_hours": 72,
+  "stale_hours": 6,
+  "preferred_parameters": [
+    "seawater_salinity",
+    "water_dissolved_oxygen_concentration",
+    "water_temperature",
+    "water_specific_conductance"
+  ],
+  "required_parameters": [
+    "seawater_salinity"
+  ],
+  "binning": "hour",
+  "timeout_seconds": 60
+}

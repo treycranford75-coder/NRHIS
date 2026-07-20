@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "build": "056",
+  "daily_evaporation_path": "data/nrhis/meteorology/reservoir_evaporation_daily.json",
+  "daily_fluxes_path": "data/nrhis/reservoirs/reservoir_fluxes_daily.json",
+  "history_path": "data/nrhis/reservoirs/reservoir_water_budget_history.jsonl",
+  "monthly_climatology_inches_per_day": {
+    "1": 0.10, "2": 0.12, "3": 0.16, "4": 0.20, "5": 0.24, "6": 0.28,
+    "7": 0.30, "8": 0.29, "9": 0.23, "10": 0.18, "11": 0.13, "12": 0.10
+  },
+  "reservoirs": {
+    "ChokeCanyon": {"display_name": "Choke Canyon Reservoir"},
+    "CorpusChristi": {"display_name": "Lake Corpus Christi"}
+  }
+}
