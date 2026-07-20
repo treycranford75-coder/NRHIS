@@ -1,0 +1,8 @@
+station_id,station_name,station_type,observed_at,discharge_cfs,gage_height_ft,salinity_psu,dissolved_oxygen_mg_l,water_temperature_c,specific_conductance_us_cm,estimated_tds_mg_l,forecast_category,forecast_peak_value,forecast_peak_at,stale,status,status_reasons
+08194000,Nueces River at Cotulla,river,,,,,,,,,unavailable,,,False,not_ready,current river observation missing
+08194500,Nueces River near Tilden,river,,,,,,,,,unavailable,,,False,not_ready,current river observation missing
+08210000,Nueces River near Three Rivers,river,,,,,,,,,unavailable,,,False,not_ready,current river observation missing
+08211000,Nueces River near Mathis,river,,,,,,,,,unavailable,,,False,not_ready,current river observation missing
+08211200,Nueces River at Bluntzer,river,,,,,,,1160.0,754.0,unavailable,,,False,not_ready,current river observation missing
+08211500,Nueces River at Calallen,river,,,,,,,,,unavailable,,,False,not_ready,current river observation missing
+SALT03,SALT03 Nueces Bay,coastal,,,,,,,,,not_applicable,,,True,not_ready,required SALT03 salinity observation missing; SALT03 salinity observation stale

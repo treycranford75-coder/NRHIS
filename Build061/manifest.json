@@ -1,0 +1,14 @@
+{
+  "schema_version": 25,
+  "build": "061",
+  "name": "NRHIS Sprint 2 Build061 Twice-Daily Publication Bundle",
+  "entry_point": "Apply-Build061.ps1",
+  "branch": "feature/sprint2-build061",
+  "merge_target": "develop",
+  "tag": "v0.1.1-rc61+build061",
+  "features": [
+    "twice-daily publication data bundle for 0700 and 1800 operations reports",
+    "mandatory two-pass source and narrative QA release gate",
+    "post-generation visual QA requirement and machine-readable receipt"
+  ]
+}

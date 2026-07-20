@@ -1,6 +1,6 @@
 {
   "build": "059",
-  "completed_at": "2026-07-20T03:33:51.750979Z",
+  "completed_at": "2026-07-20T03:38:06.356553Z",
   "files": {
     "current_csv": "data\\nrhis\\coastal\\salt03_current_conditions.csv",
     "current_json": "data\\nrhis\\coastal\\salt03_current_conditions.json",
@@ -13,7 +13,7 @@
   "raw_records": [
     {
       "endpoint": "parameters",
-      "path": "data\\nrhis\\raw\\coastal\\salt03\\20260720T033351Z\\parameters.json",
+      "path": "data\\nrhis\\raw\\coastal\\salt03\\20260720T033806Z\\parameters.json",
       "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
     }
   ],

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "build": "061",
+  "source_snapshot": "data/nrhis/operational/integrated_operations_snapshot.json",
+  "output_directory": "data/nrhis/publication",
+  "required_sections": ["river", "forecast", "reservoirs", "coastal"],
+  "required_qa_passes": 2,
+  "release_statuses": ["ready", "conditional", "not_ready"],
+  "publication_windows": ["0700", "1800"],
+  "timezone": "America/Chicago"
+}

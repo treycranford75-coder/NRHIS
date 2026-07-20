@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "reservoir_order": ["ChokeCanyon", "CorpusChristi"],
+  "display_names": {
+    "ChokeCanyon": "Choke Canyon Reservoir",
+    "CorpusChristi": "Lake Corpus Christi"
+  }
+}

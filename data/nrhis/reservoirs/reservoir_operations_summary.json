@@ -5,7 +5,7 @@
     "calculated_net_change_acft": null,
     "conservation_capacity_acft": 662820.0,
     "current_percent_full": 8.0,
-    "current_storage_acft": 52846.0,
+    "current_storage_acft": 52792.0,
     "environmental_releases_acft": null,
     "estimated_event_gain_central_acft": null,
     "estimated_event_gain_high_acft": null,
@@ -27,7 +27,7 @@
     "response_caveat": "Estimate based on the latest available hydrographs, routing assumptions, reservoir conditions, and forecasts; values will change as new data arrive.",
     "response_confidence": "low",
     "status_reasons": "24-hour water budget incomplete; estimated reservoir response confidence is low; water-budget record missing",
-    "surface_area_acres": 5430.0
+    "surface_area_acres": 5426.1
   },
   {
     "budget_complete": false,
@@ -35,7 +35,7 @@
     "calculated_net_change_acft": null,
     "conservation_capacity_acft": 256062.0,
     "current_percent_full": 33.1,
-    "current_storage_acft": 84825.0,
+    "current_storage_acft": 84714.0,
     "environmental_releases_acft": null,
     "estimated_event_gain_central_acft": null,
     "estimated_event_gain_high_acft": null,
@@ -57,6 +57,6 @@
     "response_caveat": "Estimate based on the latest available hydrographs, routing assumptions, reservoir conditions, and forecasts; values will change as new data arrive.",
     "response_confidence": "low",
     "status_reasons": "24-hour water budget incomplete; estimated reservoir response confidence is low; water-budget record missing",
-    "surface_area_acres": 11032.89
+    "surface_area_acres": 11024.07
   }
 ]
