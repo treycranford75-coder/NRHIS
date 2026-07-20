@@ -1,0 +1,1 @@
+Build074 makes NRHIS release automation safely resumable. Operators can continue a release after CI corrections, an interrupted shell, an already-merged pull request, or a partially completed closeout without recreating release evidence.
