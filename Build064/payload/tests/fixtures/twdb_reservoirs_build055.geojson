@@ -1,0 +1,35 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-98.2458, 28.4838]},
+      "properties": {
+        "condensed_name": "ChokeCanyon",
+        "full_name": "Choke Canyon Reservoir",
+        "timestamp": "2026-07-18",
+        "elevation": 180.0,
+        "conservation_storage": 55000,
+        "conservation_capacity": 662820,
+        "percent_full": 8.3,
+        "area": 5600,
+        "volume": 55010
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-97.8711, 28.0383]},
+      "properties": {
+        "condensed_name": "CorpusChristi",
+        "full_name": "Lake Corpus Christi",
+        "timestamp": "2026-07-18",
+        "elevation": 83.5,
+        "conservation_storage": 88000,
+        "conservation_capacity": 256062,
+        "percent_full": 34.4,
+        "area": 11300,
+        "volume": 88300
+      }
+    }
+  ]
+}

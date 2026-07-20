@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "build": "064",
+  "task_prefix": "NRHIS Operations",
+  "timezone": "America/Chicago",
+  "repository_root": "C:\\GitHub\\NRHIS",
+  "morning": {
+    "enabled": true,
+    "time": "07:00",
+    "cycle_name_template": "{date}-morning"
+  },
+  "evening": {
+    "enabled": true,
+    "time": "18:00",
+    "cycle_name_template": "{date}-evening"
+  },
+  "qa_passes_completed": 0,
+  "execution_time_limit_minutes": 45,
+  "start_when_available": true,
+  "allow_on_battery": true
+}
