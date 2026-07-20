@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "source": {
+    "name": "Texas A&M AgriLife Extension TexasET Network",
+    "base_url": "https://texaset.tamu.edu",
+    "method": "ASCE standardized Penman-Monteith reference evapotranspiration",
+    "units": {"eto": "in", "rainfall": "in"}
+  },
+  "regions": {
+    "coastal_bend": {
+      "display_name": "Coastal Bend",
+      "stations": [
+        {"name": "Corpus Christi AgriLife", "priority": 1},
+        {"name": "Corpus Christi North", "priority": 2},
+        {"name": "Corpus Christi South", "priority": 3},
+        {"name": "Driscoll", "priority": 4},
+        {"name": "Kingsville", "priority": 5},
+        {"name": "Sinton", "priority": 6},
+        {"name": "Refugio", "priority": 7},
+        {"name": "Hebbronville", "priority": 8},
+        {"name": "Freer", "priority": 9}
+      ]
+    },
+    "winter_garden": {
+      "display_name": "Winter Garden",
+      "stations": [
+        {"name": "Uvalde", "priority": 1},
+        {"name": "Eagle Pass", "priority": 2},
+        {"name": "Carrizo Springs", "priority": 3},
+        {"name": "Crystal City", "priority": 4},
+        {"name": "Pearsall", "priority": 5},
+        {"name": "Dilley", "priority": 6}
+      ]
+    }
+  },
+  "qa": {
+    "maximum_age_hours": 36,
+    "minimum_reporting_stations_per_region": 1,
+    "reject_negative_eto": true,
+    "reject_negative_rainfall": true
+  }
+}

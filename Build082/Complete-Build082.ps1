@@ -5,8 +5,8 @@ param(
 $ErrorActionPreference = 'Stop'
 $repo = (Resolve-Path $RepositoryRoot).Path
 & (Join-Path $repo 'scripts/release/Complete-NrhisBuild.ps1') `
-    -BuildNumber '081' `
-    -Tag 'v0.1.1-rc81+build081' `
-    -ReleaseTitle 'NRHIS Sprint 2 Build081 - Automatic PR Resolution' `
-    -NotesFile (Join-Path $repo 'docs/releases/BUILD081_RELEASE_NOTES.md') `
+    -BuildNumber '082' `
+    -Tag 'v0.1.1-rc82+build082' `
+    -ReleaseTitle 'NRHIS Sprint 2 Build082 - TexasET Regional ET' `
+    -NotesFile (Join-Path $repo 'docs/releases/BUILD082_RELEASE_NOTES.md') `
     -RepositoryRoot $repo
