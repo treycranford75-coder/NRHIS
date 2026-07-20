@@ -1,0 +1,1150 @@
+{
+  "lid": "CAAT2",
+  "usgsId": "08211500",
+  "reachId": "3171902",
+  "name": "Nueces River at Calallen",
+  "description": "",
+  "rfc": {
+    "abbreviation": "WGRFC",
+    "name": "West Gulf River Forecast Center"
+  },
+  "wfo": {
+    "abbreviation": "CRP",
+    "name": "Corpus Christi"
+  },
+  "state": {
+    "abbreviation": "TX",
+    "name": "Texas"
+  },
+  "county": "San Patricio",
+  "timeZone": "CST6CDT",
+  "latitude": 27.883,
+  "longitude": -97.625,
+  "pedts": {
+    "observed": "HGIRG",
+    "forecast": "HGIFF"
+  },
+  "status": {
+    "observed": {
+      "primary": 2.45,
+      "primaryUnit": "ft",
+      "secondary": -999,
+      "secondaryUnit": "kcfs",
+      "floodCategory": "no_flooding",
+      "validTime": "2026-07-20T02:30:00Z"
+    },
+    "forecast": {
+      "primary": -999,
+      "primaryUnit": "",
+      "secondary": -999,
+      "secondaryUnit": "",
+      "floodCategory": "fcst_not_current",
+      "validTime": "0001-01-01T00:00:00Z"
+    }
+  },
+  "flood": {
+    "stageUnits": "ft",
+    "flowUnits": "cfs",
+    "categories": {
+      "major": {
+        "stage": 8.5,
+        "flow": -9999
+      },
+      "moderate": {
+        "stage": 7.5,
+        "flow": -9999
+      },
+      "minor": {
+        "stage": 7,
+        "flow": -9999
+      },
+      "action": {
+        "stage": 6,
+        "flow": -9999
+      }
+    },
+    "lro": {
+      "minorCS": "0.2804",
+      "moderateCS": "0.2685",
+      "majorCS": "0.0731",
+      "producedTime": "2026-06-28T17:12:09Z",
+      "interval": "JAS"
+    },
+    "crests": {
+      "historic": [
+        {
+          "occurredTime": "1967-09-24T00:00:00Z",
+          "stage": 16,
+          "flow": 138000,
+          "preliminary": "R",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2002-09-15T23:00:00Z",
+          "stage": 12.97,
+          "flow": 7358,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2002-07-18T09:00:00Z",
+          "stage": 12.24,
+          "flow": 6646,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2007-07-16T00:15:00Z",
+          "stage": 10.63,
+          "flow": 5077,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1987-06-26T00:00:00Z",
+          "stage": 9.53,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1987-06-11T00:00:00Z",
+          "stage": 9.25,
+          "flow": 3780,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2003-10-24T15:15:00Z",
+          "stage": 9.24,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2002-07-12T11:00:00Z",
+          "stage": 9,
+          "flow": 3488,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1984-10-20T00:00:00Z",
+          "stage": 8.99,
+          "flow": 3520,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1992-05-25T09:00:00Z",
+          "stage": 8.94,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2015-05-24T06:30:00Z",
+          "stage": 8.7,
+          "flow": 1035,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2004-05-17T04:30:00Z",
+          "stage": 8.48,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2018-11-05T21:30:00Z",
+          "stage": 8.28,
+          "flow": 7657,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1990-07-24T14:00:00Z",
+          "stage": 8.21,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2004-07-15T16:15:00Z",
+          "stage": 8.13,
+          "flow": 2685,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2004-07-15T13:15:00Z",
+          "stage": 8.13,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1993-07-03T08:00:00Z",
+          "stage": 8.08,
+          "flow": 2450,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2004-05-02T02:15:00Z",
+          "stage": 8.08,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1985-11-01T00:00:00Z",
+          "stage": 8.06,
+          "flow": 2630,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2015-06-06T21:45:00Z",
+          "stage": 8.02,
+          "flow": 6204,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1997-06-26T18:00:00Z",
+          "stage": 7.76,
+          "flow": 2350,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2004-04-10T06:15:00Z",
+          "stage": 7.48,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2004-11-26T03:30:00Z",
+          "stage": 7.43,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2015-06-20T00:30:00Z",
+          "stage": 7.36,
+          "flow": 3702,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2004-09-04T23:15:00Z",
+          "stage": 7.3,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2018-11-14T18:30:00Z",
+          "stage": 7.2,
+          "flow": 3161,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2004-06-30T03:30:00Z",
+          "stage": 7.19,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2010-09-21T19:15:00Z",
+          "stage": 7.19,
+          "flow": 3130,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2004-12-01T09:45:00Z",
+          "stage": 7.05,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2018-10-18T22:30:00Z",
+          "stage": 7.04,
+          "flow": 2687,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2004-12-11T03:00:00Z",
+          "stage": 7.03,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2017-10-17T00:00:00Z",
+          "stage": 6.97,
+          "flow": 2510,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1994-10-08T07:00:00Z",
+          "stage": 6.88,
+          "flow": 1410,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2021-07-08T12:45:00Z",
+          "stage": 6.83,
+          "flow": 2168,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2021-07-10T11:00:00Z",
+          "stage": 6.81,
+          "flow": 2123,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2021-05-19T13:30:00Z",
+          "stage": 6.8,
+          "flow": 2100,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1994-05-01T14:00:00Z",
+          "stage": 6.52,
+          "flow": 1110,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2010-01-17T01:45:00Z",
+          "stage": 6.48,
+          "flow": 1480,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2021-05-20T19:30:00Z",
+          "stage": 6.23,
+          "flow": 1157,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1991-05-19T17:00:00Z",
+          "stage": 6.19,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2013-10-28T08:30:00Z",
+          "stage": 6.11,
+          "flow": 991,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2021-10-02T18:30:00Z",
+          "stage": 6.1,
+          "flow": 1009,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2021-06-05T08:15:00Z",
+          "stage": 6,
+          "flow": 899,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2010-09-10T01:30:00Z",
+          "stage": 6,
+          "flow": 867,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1995-10-29T21:00:00Z",
+          "stage": 5.86,
+          "flow": 740,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2016-10-06T18:15:00Z",
+          "stage": 5.81,
+          "flow": 707,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2020-09-11T00:00:00Z",
+          "stage": 5.79,
+          "flow": 698,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2015-11-08T00:00:00Z",
+          "stage": 5.64,
+          "flow": 557,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2017-05-29T09:30:00Z",
+          "stage": 5.61,
+          "flow": 508,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2015-03-22T23:30:00Z",
+          "stage": 5.59,
+          "flow": 492,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2015-03-19T13:00:00Z",
+          "stage": 5.54,
+          "flow": 452,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2016-09-20T14:00:00Z",
+          "stage": 5.38,
+          "flow": 349,
+          "preliminary": "O",
+          "olddatum": false
+        }
+      ],
+      "recent": [
+        {
+          "occurredTime": "2021-10-02T18:30:00Z",
+          "stage": 6.1,
+          "flow": 1009,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2021-07-10T11:00:00Z",
+          "stage": 6.81,
+          "flow": 2123,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2021-07-08T12:45:00Z",
+          "stage": 6.83,
+          "flow": 2168,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2021-06-05T08:15:00Z",
+          "stage": 6,
+          "flow": 899,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2021-05-20T19:30:00Z",
+          "stage": 6.23,
+          "flow": 1157,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2021-05-19T13:30:00Z",
+          "stage": 6.8,
+          "flow": 2100,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2020-09-11T00:00:00Z",
+          "stage": 5.79,
+          "flow": 698,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2018-11-14T18:30:00Z",
+          "stage": 7.2,
+          "flow": 3161,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2018-11-05T21:30:00Z",
+          "stage": 8.28,
+          "flow": 7657,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2018-10-18T22:30:00Z",
+          "stage": 7.04,
+          "flow": 2687,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2017-10-17T00:00:00Z",
+          "stage": 6.97,
+          "flow": 2510,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2017-05-29T09:30:00Z",
+          "stage": 5.61,
+          "flow": 508,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2016-10-06T18:15:00Z",
+          "stage": 5.81,
+          "flow": 707,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2016-09-20T14:00:00Z",
+          "stage": 5.38,
+          "flow": 349,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2015-11-08T00:00:00Z",
+          "stage": 5.64,
+          "flow": 557,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2015-06-20T00:30:00Z",
+          "stage": 7.36,
+          "flow": 3702,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2015-06-06T21:45:00Z",
+          "stage": 8.02,
+          "flow": 6204,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2015-05-24T06:30:00Z",
+          "stage": 8.7,
+          "flow": 1035,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2015-03-22T23:30:00Z",
+          "stage": 5.59,
+          "flow": 492,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2015-03-19T13:00:00Z",
+          "stage": 5.54,
+          "flow": 452,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2013-10-28T08:30:00Z",
+          "stage": 6.11,
+          "flow": 991,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2010-09-21T19:15:00Z",
+          "stage": 7.19,
+          "flow": 3130,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2010-09-10T01:30:00Z",
+          "stage": 6,
+          "flow": 867,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2010-01-17T01:45:00Z",
+          "stage": 6.48,
+          "flow": 1480,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2007-07-16T00:15:00Z",
+          "stage": 10.63,
+          "flow": 5077,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2004-12-11T03:00:00Z",
+          "stage": 7.03,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2004-12-01T09:45:00Z",
+          "stage": 7.05,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2004-11-26T03:30:00Z",
+          "stage": 7.43,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2004-09-04T23:15:00Z",
+          "stage": 7.3,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2004-07-15T13:15:00Z",
+          "stage": 8.13,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2004-07-15T16:15:00Z",
+          "stage": 8.13,
+          "flow": 2685,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2004-06-30T03:30:00Z",
+          "stage": 7.19,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2004-05-17T04:30:00Z",
+          "stage": 8.48,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2004-05-02T02:15:00Z",
+          "stage": 8.08,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2004-04-10T06:15:00Z",
+          "stage": 7.48,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2003-10-24T15:15:00Z",
+          "stage": 9.24,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2002-09-15T23:00:00Z",
+          "stage": 12.97,
+          "flow": 7358,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2002-07-18T09:00:00Z",
+          "stage": 12.24,
+          "flow": 6646,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "2002-07-12T11:00:00Z",
+          "stage": 9,
+          "flow": 3488,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1997-06-26T18:00:00Z",
+          "stage": 7.76,
+          "flow": 2350,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1995-10-29T21:00:00Z",
+          "stage": 5.86,
+          "flow": 740,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1994-10-08T07:00:00Z",
+          "stage": 6.88,
+          "flow": 1410,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1994-05-01T14:00:00Z",
+          "stage": 6.52,
+          "flow": 1110,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1993-07-03T08:00:00Z",
+          "stage": 8.08,
+          "flow": 2450,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1992-05-25T09:00:00Z",
+          "stage": 8.94,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1991-05-19T17:00:00Z",
+          "stage": 6.19,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1990-07-24T14:00:00Z",
+          "stage": 8.21,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1987-06-26T00:00:00Z",
+          "stage": 9.53,
+          "flow": 0,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1987-06-11T00:00:00Z",
+          "stage": 9.25,
+          "flow": 3780,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1985-11-01T00:00:00Z",
+          "stage": 8.06,
+          "flow": 2630,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1984-10-20T00:00:00Z",
+          "stage": 8.99,
+          "flow": 3520,
+          "preliminary": "O",
+          "olddatum": false
+        },
+        {
+          "occurredTime": "1967-09-24T00:00:00Z",
+          "stage": 16,
+          "flow": 138000,
+          "preliminary": "R",
+          "olddatum": false
+        }
+      ]
+    },
+    "lowWaters": {
+      "historic": []
+    },
+    "impacts": [
+      {
+        "stage": 12,
+        "statement": "Widespread long-lived residential flooding of hundreds of homes above Calallen occurs. This requires residents to be evacuated.  Roads into the flood prone areas flood for miles, cutting off large residential areas for weeks. Massive flooding of roads near and around Calallen. Subdivisions evacuated include: County Road 73 in Riverside Addition 1 and 2, Riverside Annex, Twin Lakes, Riverside Acres, and homes in the Nueces River Estates and Lindgreen Estates. Hazel Bazemore Park and Labonte Park flood."
+      },
+      {
+        "stage": 9.5,
+        "statement": "Residents are isolated upstream on the west side of the river for as much as six weeks. Widespread lowland flooding occurs, requiring evacuations. This includes the subdivisions of County Road 73 in Riverside Addition 1 and 2, Riverside Annex, Twin Lakes, Riverside Acres and homes in the Nueces River Estates and Lindgreen Estates. Hazel Bazemore Park and Labonte Park are inundated, and roads near the parks are flooded."
+      },
+      {
+        "stage": 9,
+        "statement": "Widespread lowland flooding occurs, closing roads and cutting off many residences at times for weeks. Flooding of roads and residential areas near Calallen is widespread. Evacautions are required for the subdivisions of County Road 73 in Riverside Addition 1 and 2, Riverside Annex, Twin Lakes, Riverside Acres and homes in the Nueces River Estates and Lindgreen Estates. Hazel Bazemore Park and Labonte Park will are inundated."
+      },
+      {
+        "stage": 8.5,
+        "statement": "Major lowland flooding occurs. Roads flood through residential areas, cutting off homes near Calallen at times for weeks. Evacuations are required in the subdivisions of County Road 73 in Riverside Addition 1 and 2, Riverside Annex, Twin Lakes, Riverside Acres and homes in the Nueces River Estates and Lindgreen Estates. Hazel Bazemore Park is flooded, and Labonte Park is inundated."
+      },
+      {
+        "stage": 8.19,
+        "statement": "Roads flood in residential areas, cutting off homes near Calallen, and requiring evacuations. This includes the subdivisions of County Road 73 in Riverside Addition 1 and 2, Riverside Annex, Twin Lakes, Riverside Acres and homes in the Nueces River Estates and Lindgreen Estates. Hazel Bazemore Park and Labonte Park will also flood, with a good part of the park under water. Roads near the park and river are closed, and the soccer field is inundated."
+      },
+      {
+        "stage": 7.7,
+        "statement": "Roads flood through the lowest residential areas, cutting off homes near Calallen, and requiring evacuations. This includes the subdivisions of County Road 73 in Riverside Addition 1 and 2, Riverside Annex, Twin Lakes, Riverside Acres and homes in the Nueces River Estates and Lindgreen Estates. Hazel Bazemore Park and Labonte Park will also flood, with a good part of the park under water. Roads near the park and river are closed."
+      },
+      {
+        "stage": 7.5,
+        "statement": "Moderate lowland flooding occurs. Roads flood through the lowest residential areas...cutting off homes near Calallen, and requiring evacuations. This includes the subdivisions of County Road 73 in Riverside Addition 1 and 2, Riverside Annex, Twin Lakes, Riverside Acres and homes in the Nueces River Estates and Lindgreen Estates. Hazel Bazemore Park and Labonte Park will also flood."
+      },
+      {
+        "stage": 7,
+        "statement": "Minor lowland flooding occurs. The flow above Calallen impacts residential areas in the following subdivisions, Sandy Hallow, Los Dos Palomas, Los Escondido, and along Oak Lane in Rio Encinos. Roads in some of the lowest residential areas near Calallen are threatened, including the subdivisions of County Road 73 in Riverside Addition 1 and 2, Riverside Annex, Twin Lakes, Riverside Acres and homes in the Nueces River Estates and Lindgreen Estates. Flow gets into the lowest areas of Labonte Park."
+      },
+      {
+        "stage": 6,
+        "statement": "Overbank conditions occur with no significant impacts."
+      }
+    ]
+  },
+  "images": {
+    "probability": {
+      "weekint": {
+        "stage": "https://water.noaa.gov/resources/probabilistic/exceedance/CAAT2.SSTG.prob.weekint.gif",
+        "flow": "https://water.noaa.gov/resources/probabilistic/exceedance/CAAT2.QINE.prob.weekint.gif",
+        "volume": "https://water.noaa.gov/resources/probabilistic/exceedance/CAAT2.volume.prob.weekint.gif"
+      },
+      "entperiod": {
+        "stage": "https://water.noaa.gov/resources/probabilistic/exceedance/CAAT2.SSTG.exceed.90day.gif",
+        "flow": "https://water.noaa.gov/resources/probabilistic/exceedance/CAAT2.QINE.exceed.90day.gif",
+        "volume": "https://water.noaa.gov/resources/probabilistic/exceedance/CAAT2.volume.exceed.90day.gif"
+      },
+      "shortrange": "https://water.noaa.gov/resources/probabilistic/short_term/CAAT2.shortrange.hefs.png"
+    },
+    "hydrograph": {
+      "default": "https://water.noaa.gov/resources/hydrographs/caat2_hg.png",
+      "floodcat": "https://water.noaa.gov/resources/hydrographs/caat2_record.png"
+    },
+    "photos": [
+      {
+        "id": "5647647965346796014",
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            27.883,
+            -97.625
+          ]
+        },
+        "properties": {
+          "image": "https://water.noaa.gov/resources/photos/caat2/5647647965346796014.jpeg",
+          "caption": "2002 Flood: Areal View of Calallen Floodplain"
+        }
+      },
+      {
+        "id": "5653211584377655790",
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            27.883,
+            -97.625
+          ]
+        },
+        "properties": {
+          "image": "https://water.noaa.gov/resources/photos/caat2/5653211584377655790.jpeg",
+          "caption": "Flooding Around Calallen July 2002 - 2"
+        }
+      },
+      {
+        "id": "5659092210649666030",
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            27.883,
+            -97.625
+          ]
+        },
+        "properties": {
+          "image": "https://water.noaa.gov/resources/photos/caat2/5659092210649666030.jpeg",
+          "caption": "Flooding Around Calallen July 2002"
+        }
+      },
+      {
+        "id": "5665638741536149998",
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            27.883,
+            -97.625
+          ]
+        },
+        "properties": {
+          "image": "https://water.noaa.gov/resources/photos/caat2/5665638741536149998.jpeg",
+          "caption": "More Flooding During July 2002"
+        }
+      },
+      {
+        "id": "5672277098823422446",
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            27.883,
+            -97.625
+          ]
+        },
+        "properties": {
+          "image": "https://water.noaa.gov/resources/photos/caat2/5672277098823422446.jpeg",
+          "caption": "Floodplain During July 2002"
+        }
+      },
+      {
+        "id": "5678510608198406638",
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            27.883,
+            -97.625
+          ]
+        },
+        "properties": {
+          "image": "https://water.noaa.gov/resources/photos/caat2/5678510608198406638.jpeg",
+          "caption": "Labonte Park Flooding During July 2002"
+        }
+      },
+      {
+        "id": "5684922960011596270",
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            27.883,
+            -97.625
+          ]
+        },
+        "properties": {
+          "image": "https://water.noaa.gov/resources/photos/caat2/5684922960011596270.jpeg",
+          "caption": "July 2002 Flood: Labonte Park"
+        }
+      },
+      {
+        "id": "5692017515840147950",
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            27.883,
+            -97.625
+          ]
+        },
+        "properties": {
+          "image": "https://water.noaa.gov/resources/photos/caat2/5692017515840147950.jpeg",
+          "caption": "July 2002 Flood: Labonte Park"
+        }
+      },
+      {
+        "id": "5698193073221407214",
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            27.883,
+            -97.625
+          ]
+        },
+        "properties": {
+          "image": "https://water.noaa.gov/resources/photos/caat2/5698193073221407214.jpeg",
+          "caption": "2002 Flooding: Nueces River Flood Plain"
+        }
+      },
+      {
+        "id": "5705049297019736558",
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            27.883,
+            -97.625
+          ]
+        },
+        "properties": {
+          "image": "https://water.noaa.gov/resources/photos/caat2/5705049297019736558.jpeg",
+          "caption": "Portion of Nueces River At Calallen"
+        }
+      },
+      {
+        "id": "5711018506992226798",
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            27.883,
+            -97.625
+          ]
+        },
+        "properties": {
+          "image": "https://water.noaa.gov/resources/photos/caat2/5711018506992226798.jpeg",
+          "caption": "Homes on Stilts Near Calallen"
+        }
+      },
+      {
+        "id": "5716937607581274606",
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            27.883,
+            -97.625
+          ]
+        },
+        "properties": {
+          "image": "https://water.noaa.gov/resources/photos/caat2/5716937607581274606.jpeg",
+          "caption": "Homes in the Calallen Area Subjet to Flooding - 2"
+        }
+      },
+      {
+        "id": "5724298228043878894",
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            27.883,
+            -97.625
+          ]
+        },
+        "properties": {
+          "image": "https://water.noaa.gov/resources/photos/caat2/5724298228043878894.jpeg",
+          "caption": "Homes Around Calallen Area"
+        }
+      },
+      {
+        "id": "5729669282216022510",
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            27.883,
+            -97.625
+          ]
+        },
+        "properties": {
+          "image": "https://water.noaa.gov/resources/photos/caat2/5729669282216022510.jpeg",
+          "caption": "Home on Stilts in Calallen Area"
+        }
+      }
+    ]
+  },
+  "dataAttribution": [
+    {
+      "abbrev": "US Geological Survey",
+      "text": "USGS--Water Resources of the United States",
+      "title": "US Geological Survey",
+      "url": "https://waterdata.usgs.gov/nwis"
+    },
+    {
+      "abbrev": "USGS",
+      "text": "08211500",
+      "title": "Observations courtesy of U.S. Geological Survey",
+      "url": "https://waterdata.usgs.gov/nwis/inventory/?site_no=08211500"
+    }
+  ],
+  "impactsLowWaters": [],
+  "normalThreshold": {
+    "value": 0,
+    "units": "ft"
+  },
+  "hydronotes": [
+    {
+      "statement": "River forecasts for this location take into account past precipitation and the precipitation amounts expected approximately 24 hours into the future from the forecast issuance time.",
+      "effective": "0101",
+      "expiration": "1231"
+    }
+  ],
+  "datums": {
+    "vertical": {
+      "value": [
+        {
+          "label": "North American Vertical Datum of 1988",
+          "abbrev": "NAVD88",
+          "description": "A fixed reference for elevations determined by geodetic leveling. The datum was derived from a general adjustment of the first-order terrestrial leveling nets of the United States, Canada, and Mexico. In the adjustment, only the height of the primary tidal bench mark, referenced to the International Great Lakes Datum of 1985 (IGLD 85) local mean sea level height value, at Father Point, Rimouski, Quebec, Canada was held fixed, thus providing minimum constraint. NAVD 88 and IGLD 85 are identical. However, NAVD 88 bench mark values are given in Helmert orthometric height units while IGLD 85 values are in dynamic heights. See International Great Lakes Datum of 1985, National Geodetic Vertical Datum of 1929, and geopotential difference. NAVD 88 should not be used as Mean Sea Level.",
+          "value": 0.384
+        },
+        {
+          "label": "National Geodetic Vertical Datum of 1929",
+          "abbrev": "NGVD29",
+          "description": "A fixed reference adopted as a standard geodetic datum for elevations determined by leveling. The datum was derived for surveys from a general adjustment of the first-order leveling nets of both the United States and Canada. In the adjustment, mean sea level was held fixed as observed at 21 tide stations in the United States and 5 in Canada. The year indicates the time of the general adjustment. A synonym for Sea-level Datum of 1929. The geodetic datum is fixed and does not take into account the changing stands of sea level. Because there are many variables affecting sea level, and because the geodetic datum represents a best fit over a broad area, the relationship between the geodetic datum and local mean sea level is not consistent from one location to another in either time or space. For this reason, the National Geodetic Vertical Datum should not be confused with mean sea level. See North American Vertical Datum of 1988 (NAVD 88). NGVD 29 should not be used as Mean Sea Level. NGVD 29 is no longer supported by NGS.",
+          "value": 0.38
+        }
+      ]
+    },
+    "horizontal": {
+      "value": []
+    },
+    "notes": {
+      "value": []
+    }
+  },
+  "inundation": {
+    "enabled": false,
+    "url": "",
+    "zeroDatum": null,
+    "downloads": null,
+    "siteSpecificInfo": "",
+    "dataAttribution": []
+  },
+  "upstreamLid": "CBVT2",
+  "downstreamLid": "",
+  "inService": {
+    "enabled": true,
+    "message": ""
+  },
+  "lowThreshold": null,
+  "forecastReliability": "Forecasts are issued routinely year-round.",
+  "TruncateObs": "-1",
+  "TruncateFcst": "5",
+  "ObservedFloodCategory": "no_flooding",
+  "ForecastFloodCategory": "fcst_not_current"
+}

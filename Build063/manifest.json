@@ -1,0 +1,15 @@
+{
+  "schema_version": 27,
+  "build": "063",
+  "name": "NRHIS Sprint 2 Build063 Operations-Cycle Reliability Hardening",
+  "entry_point": "Apply-Build063.ps1",
+  "branch": "feature/sprint2-build063",
+  "merge_target": "develop",
+  "tag": "v0.1.1-rc63+build063",
+  "features": [
+    "runtime-safe USGS wrapper path initialization",
+    "bounded retry and exponential backoff for current USGS harvest",
+    "recent-window incremental USGS updates",
+    "noninteractive time-bounded operations-cycle child execution"
+  ]
+}

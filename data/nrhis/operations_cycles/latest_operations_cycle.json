@@ -1,0 +1,186 @@
+{
+  "blocked": false,
+  "build": "062",
+  "completed_at": "2026-07-20T04:18:21.764225Z",
+  "cycle_id": "2026-07-20-evening",
+  "publication_authorized": true,
+  "qa_passes_completed": 2,
+  "required_failures": [],
+  "schema_version": 1,
+  "started_at": "2026-07-20T04:18:03.306335Z",
+  "status": "completed",
+  "steps": [
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "C:\\GitHub\\NRHIS\\scripts\\Harvest-USGS-Production.ps1"
+      ],
+      "completed_at": "2026-07-20T04:18:04.557627Z",
+      "exit_code": 0,
+      "log_path": "C:\\GitHub\\NRHIS\\data\\nrhis\\operations_cycles\\2026-07-20-evening\\logs\\usgs_current.log",
+      "name": "usgs_current",
+      "required": true,
+      "started_at": "2026-07-20T04:18:03.306436Z",
+      "status": "passed"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "C:\\GitHub\\NRHIS\\scripts\\Update-USGS-Incremental.ps1"
+      ],
+      "completed_at": "2026-07-20T04:18:10.391907Z",
+      "exit_code": 0,
+      "log_path": "C:\\GitHub\\NRHIS\\data\\nrhis\\operations_cycles\\2026-07-20-evening\\logs\\usgs_incremental.log",
+      "name": "usgs_incremental",
+      "required": true,
+      "started_at": "2026-07-20T04:18:04.559393Z",
+      "status": "passed"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "C:\\GitHub\\NRHIS\\scripts\\Harvest-NWPS-Forecasts.ps1"
+      ],
+      "completed_at": "2026-07-20T04:18:16.949773Z",
+      "exit_code": 0,
+      "log_path": "C:\\GitHub\\NRHIS\\data\\nrhis\\operations_cycles\\2026-07-20-evening\\logs\\nwps_forecasts.log",
+      "name": "nwps_forecasts",
+      "required": true,
+      "started_at": "2026-07-20T04:18:10.393296Z",
+      "status": "passed"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "C:\\GitHub\\NRHIS\\scripts\\Harvest-TWDB-Reservoirs.ps1"
+      ],
+      "completed_at": "2026-07-20T04:18:17.875619Z",
+      "exit_code": 0,
+      "log_path": "C:\\GitHub\\NRHIS\\data\\nrhis\\operations_cycles\\2026-07-20-evening\\logs\\twdb_reservoirs.log",
+      "name": "twdb_reservoirs",
+      "required": true,
+      "started_at": "2026-07-20T04:18:16.951202Z",
+      "status": "passed"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "C:\\GitHub\\NRHIS\\scripts\\Build-Reservoir-Water-Budget.ps1"
+      ],
+      "completed_at": "2026-07-20T04:18:18.504161Z",
+      "exit_code": 0,
+      "log_path": "C:\\GitHub\\NRHIS\\data\\nrhis\\operations_cycles\\2026-07-20-evening\\logs\\reservoir_water_budget.log",
+      "name": "reservoir_water_budget",
+      "required": true,
+      "started_at": "2026-07-20T04:18:17.876635Z",
+      "status": "passed"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "C:\\GitHub\\NRHIS\\scripts\\Estimate-Reservoir-Response.ps1"
+      ],
+      "completed_at": "2026-07-20T04:18:19.091022Z",
+      "exit_code": 0,
+      "log_path": "C:\\GitHub\\NRHIS\\data\\nrhis\\operations_cycles\\2026-07-20-evening\\logs\\reservoir_response.log",
+      "name": "reservoir_response",
+      "required": true,
+      "started_at": "2026-07-20T04:18:18.505344Z",
+      "status": "passed"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "C:\\GitHub\\NRHIS\\scripts\\Build-Reservoir-Operations-Summary.ps1"
+      ],
+      "completed_at": "2026-07-20T04:18:19.680786Z",
+      "exit_code": 0,
+      "log_path": "C:\\GitHub\\NRHIS\\data\\nrhis\\operations_cycles\\2026-07-20-evening\\logs\\reservoir_operations.log",
+      "name": "reservoir_operations",
+      "required": true,
+      "started_at": "2026-07-20T04:18:19.092237Z",
+      "status": "passed"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "C:\\GitHub\\NRHIS\\scripts\\Harvest-SALT03-Coastal.ps1"
+      ],
+      "completed_at": "2026-07-20T04:18:20.579758Z",
+      "exit_code": 0,
+      "log_path": "C:\\GitHub\\NRHIS\\data\\nrhis\\operations_cycles\\2026-07-20-evening\\logs\\salt03_coastal.log",
+      "name": "salt03_coastal",
+      "required": true,
+      "started_at": "2026-07-20T04:18:19.681892Z",
+      "status": "passed"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "C:\\GitHub\\NRHIS\\scripts\\Build-Integrated-Operations-Snapshot.ps1"
+      ],
+      "completed_at": "2026-07-20T04:18:21.173024Z",
+      "exit_code": 0,
+      "log_path": "C:\\GitHub\\NRHIS\\data\\nrhis\\operations_cycles\\2026-07-20-evening\\logs\\integrated_snapshot.log",
+      "name": "integrated_snapshot",
+      "required": true,
+      "started_at": "2026-07-20T04:18:20.580941Z",
+      "status": "passed"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "C:\\GitHub\\NRHIS\\scripts\\Build-Publication-Bundle.ps1",
+        "-QaPassesCompleted",
+        "2"
+      ],
+      "completed_at": "2026-07-20T04:18:21.763062Z",
+      "exit_code": 0,
+      "log_path": "C:\\GitHub\\NRHIS\\data\\nrhis\\operations_cycles\\2026-07-20-evening\\logs\\publication_bundle.log",
+      "name": "publication_bundle",
+      "required": true,
+      "started_at": "2026-07-20T04:18:21.174199Z",
+      "status": "passed"
+    }
+  ]
+}

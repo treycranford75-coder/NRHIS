@@ -1,0 +1,113 @@
+{
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          -98.24584198,
+          28.483881
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 5426.1,
+        "condensed_name": "ChokeCanyon",
+        "conservation_capacity": 662820.0,
+        "conservation_pool_elevation": 220.5,
+        "conservation_storage": 52792.0,
+        "dead_pool_elevation": 136.4,
+        "elevation": 179.29,
+        "flood_control_lake": null,
+        "full_name": "Choke Canyon Reservoir",
+        "percent_full": 8.0,
+        "short_name": "Choke Canyon",
+        "tags": [
+          "climate_south",
+          "monitored",
+          "municipal_corpus_christi",
+          "region_coastal_bend",
+          "water_supply",
+          "texas",
+          "major",
+          "basin_nueces"
+        ],
+        "timestamp": "2026-07-19",
+        "volume": 52793.0,
+        "volume_under_conservation_pool_elevation": 662820.98
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -97.87110901,
+          28.03834724
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 11024.07,
+        "condensed_name": "CorpusChristi",
+        "conservation_capacity": 256062.0,
+        "conservation_pool_elevation": 94.0,
+        "conservation_storage": 84714.0,
+        "dead_pool_elevation": 55.5,
+        "elevation": 83.14,
+        "flood_control_lake": null,
+        "full_name": "Lake Corpus Christi",
+        "percent_full": 33.1,
+        "short_name": "Corpus Christi",
+        "tags": [
+          "climate_south",
+          "monitored",
+          "municipal_corpus_christi",
+          "region_coastal_bend",
+          "water_supply",
+          "texas",
+          "major",
+          "basin_nueces"
+        ],
+        "timestamp": "2026-07-19",
+        "volume": 84992.0,
+        "volume_under_conservation_pool_elevation": 256339.476033
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -96.57775116,
+          28.89193153
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "area": 10329.01,
+        "condensed_name": "Texana",
+        "conservation_capacity": 158975.0,
+        "conservation_pool_elevation": 44.0,
+        "conservation_storage": 158975.0,
+        "dead_pool_elevation": 14.0,
+        "elevation": 44.03,
+        "flood_control_lake": null,
+        "full_name": "Lake Texana",
+        "percent_full": 100.0,
+        "short_name": "Texana",
+        "tags": [
+          "climate_upper_coast",
+          "monitored",
+          "municipal_corpus_christi",
+          "region_lavaca",
+          "water_supply",
+          "texas",
+          "major",
+          "basin_lavaca"
+        ],
+        "timestamp": "2026-07-19",
+        "volume": 164587.0,
+        "volume_under_conservation_pool_elevation": 164188.222957
+      },
+      "type": "Feature"
+    }
+  ],
+  "type": "FeatureCollection"
+}

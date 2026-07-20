@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "build": "058",
+  "completed_at": "2026-07-20T04:16:41.161807Z",
+  "reservoir_count": 2,
+  "overall_status": "conditional",
+  "files": {
+    "json": "data\\nrhis\\reservoirs\\reservoir_operations_summary.json",
+    "csv": "data\\nrhis\\reservoirs\\reservoir_operations_summary.csv",
+    "readiness": "data\\nrhis\\reservoirs\\reservoir_operations_readiness.json"
+  },
+  "receipt_path": "data\\nrhis\\receipts\\reservoir_operations_summary_receipt.json"
+}

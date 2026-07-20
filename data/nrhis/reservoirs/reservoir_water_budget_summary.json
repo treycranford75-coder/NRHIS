@@ -1,0 +1,53 @@
+{
+  "all_budgets_complete": false,
+  "build": "056",
+  "combined_evaporation_acft_per_day": 411.255,
+  "combined_evaporation_mgd": 134.008,
+  "report_date": "2026-07-20",
+  "reservoir_count": 2,
+  "reservoirs": [
+    {
+      "budget_complete": false,
+      "budget_residual_acft": null,
+      "calculated_net_change_acft": null,
+      "environmental_releases_acft": null,
+      "evaporation_7day_acft": 271.306,
+      "evaporation_acft_per_day": 135.653,
+      "evaporation_inches_per_day": 0.3,
+      "evaporation_method": "monthly climatology for month 7; estimate",
+      "evaporation_mgd": 44.203,
+      "evaporation_month_to_date_acft": 271.306,
+      "evaporation_source": "configured monthly climatology fallback",
+      "inflow_acft": null,
+      "municipal_diversions_acft": null,
+      "observed_storage_change_acft": 0.0,
+      "other_outflow_acft": 0.0,
+      "report_date": "2026-07-20",
+      "reservoir_id": "ChokeCanyon",
+      "reservoir_name": "Choke Canyon Reservoir",
+      "surface_area_acres": 5426.1
+    },
+    {
+      "budget_complete": false,
+      "budget_residual_acft": null,
+      "calculated_net_change_acft": null,
+      "environmental_releases_acft": null,
+      "evaporation_7day_acft": 551.204,
+      "evaporation_acft_per_day": 275.602,
+      "evaporation_inches_per_day": 0.3,
+      "evaporation_method": "monthly climatology for month 7; estimate",
+      "evaporation_mgd": 89.805,
+      "evaporation_month_to_date_acft": 551.204,
+      "evaporation_source": "configured monthly climatology fallback",
+      "inflow_acft": null,
+      "municipal_diversions_acft": null,
+      "observed_storage_change_acft": 0.0,
+      "other_outflow_acft": 0.0,
+      "report_date": "2026-07-20",
+      "reservoir_id": "CorpusChristi",
+      "reservoir_name": "Lake Corpus Christi",
+      "surface_area_acres": 11024.07
+    }
+  ],
+  "schema_version": 1
+}

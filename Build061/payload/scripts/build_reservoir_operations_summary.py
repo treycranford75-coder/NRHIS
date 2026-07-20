@@ -10,7 +10,7 @@ SRC = REPO_ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
-from nrhis_harvest.reservoir_operations_summary import run
+from nrhis_harvest.reservoir_operations_summary import run  # noqa: E402
 
 
 def main() -> int:

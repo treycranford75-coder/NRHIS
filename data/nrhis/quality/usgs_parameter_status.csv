@@ -1,0 +1,25 @@
+site_no,station_name,parameter_code,observations_in_window,latest_observed_at,age_minutes,missing,stale,gap_count
+08194000,"Nueces River at Cotulla, TX",00060,0,,,True,True,0
+08194000,"Nueces River at Cotulla, TX",00065,0,,,True,True,0
+08194000,"Nueces River at Cotulla, TX",00010,0,,,True,True,0
+08194000,"Nueces River at Cotulla, TX",00095,0,,,True,True,0
+08206600,"Frio River at Tilden, TX",00060,0,,,True,True,0
+08206600,"Frio River at Tilden, TX",00065,0,,,True,True,0
+08206600,"Frio River at Tilden, TX",00010,0,,,True,True,0
+08206600,"Frio River at Tilden, TX",00095,0,,,True,True,0
+08210000,"Nueces River near Three Rivers, TX",00060,0,,,True,True,0
+08210000,"Nueces River near Three Rivers, TX",00065,0,,,True,True,0
+08210000,"Nueces River near Three Rivers, TX",00010,0,,,True,True,0
+08210000,"Nueces River near Three Rivers, TX",00095,0,,,True,True,0
+08211000,"Nueces River near Mathis, TX",00060,0,,,True,True,0
+08211000,"Nueces River near Mathis, TX",00065,0,,,True,True,0
+08211000,"Nueces River near Mathis, TX",00010,0,,,True,True,0
+08211000,"Nueces River near Mathis, TX",00095,0,,,True,True,0
+08211200,"Nueces River at Bluntzer, TX",00060,0,,,True,True,0
+08211200,"Nueces River at Bluntzer, TX",00065,0,,,True,True,0
+08211200,"Nueces River at Bluntzer, TX",00010,0,,,True,True,0
+08211200,"Nueces River at Bluntzer, TX",00095,0,,,True,True,0
+08211500,"Nueces River at Calallen, TX",00060,0,,,True,True,0
+08211500,"Nueces River at Calallen, TX",00065,0,,,True,True,0
+08211500,"Nueces River at Calallen, TX",00010,0,,,True,True,0
+08211500,"Nueces River at Calallen, TX",00095,0,,,True,True,0

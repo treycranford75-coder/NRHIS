@@ -1,0 +1,108 @@
+{
+  "api_base": "https://api.water.noaa.gov/nwps/v1",
+  "build": "053",
+  "products": {
+    "forecast_csv": "C:\\GitHub\\NRHIS\\data\\nrhis\\nwps\\nwps_forecasts.csv",
+    "forecast_json": "C:\\GitHub\\NRHIS\\data\\nrhis\\nwps\\nwps_forecasts.json",
+    "readiness_json": "C:\\GitHub\\NRHIS\\data\\nrhis\\nwps\\nwps_readiness.json",
+    "station_status_csv": "C:\\GitHub\\NRHIS\\data\\nrhis\\nwps\\nwps_station_status.csv",
+    "threshold_csv": "C:\\GitHub\\NRHIS\\data\\nrhis\\nwps\\nwps_flood_thresholds.csv"
+  },
+  "raw_responses": [
+    {
+      "bytes": 32599,
+      "endpoint": "metadata",
+      "identifier": "08194000",
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T041631Z\\08194000_metadata.json",
+      "sha256": "481639c65d430229e668af131fb92dc88d39c5488fa7924cee9d7b9c9e648799"
+    },
+    {
+      "bytes": 447910,
+      "endpoint": "stageflow",
+      "identifier": "08194000",
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T041631Z\\08194000_stageflow.json",
+      "sha256": "f096fdafd5b3f319ea077ef3b84f0d9c07b1cebcad590729e0e0f9fc6d026812"
+    },
+    {
+      "bytes": 42647,
+      "endpoint": "metadata",
+      "identifier": "08194500",
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T041631Z\\08194500_metadata.json",
+      "sha256": "8357dccc65c900ad111a7c673777847805bdb99d45027bf9bb9524f0418a5e38"
+    },
+    {
+      "bytes": 469694,
+      "endpoint": "stageflow",
+      "identifier": "08194500",
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T041631Z\\08194500_stageflow.json",
+      "sha256": "6281ce1b5d6d50ff936f313f3109ce32447c3c6671e3b377136682974c78c552"
+    },
+    {
+      "bytes": 38720,
+      "endpoint": "metadata",
+      "identifier": "08210000",
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T041631Z\\08210000_metadata.json",
+      "sha256": "946dcef66171a03706013b4d9db049ec1b15c5f5b8d6eb9489998014379a8625"
+    },
+    {
+      "bytes": 458934,
+      "endpoint": "stageflow",
+      "identifier": "08210000",
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T041631Z\\08210000_stageflow.json",
+      "sha256": "c9d61f880afa7829236e2e99f9204c1fa39f153a3ef3921bc83f0f714210f049"
+    },
+    {
+      "bytes": 26955,
+      "endpoint": "metadata",
+      "identifier": "08211000",
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T041631Z\\08211000_metadata.json",
+      "sha256": "713c15f4d2a6f88b6b677a01227fab649b893b5107aa493b303417cd998ebe14"
+    },
+    {
+      "bytes": 400648,
+      "endpoint": "stageflow",
+      "identifier": "08211000",
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T041631Z\\08211000_stageflow.json",
+      "sha256": "e6beb76c0d55cbc5f4fe31d9a0c5917b863937d927227e311e914a1794304f43"
+    },
+    {
+      "bytes": 31706,
+      "endpoint": "metadata",
+      "identifier": "08211200",
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T041631Z\\08211200_metadata.json",
+      "sha256": "f944c001ffc8009f4445d3fc41c72803203a4510af77097769d86efab777f952"
+    },
+    {
+      "bytes": 467507,
+      "endpoint": "stageflow",
+      "identifier": "08211200",
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T041631Z\\08211200_stageflow.json",
+      "sha256": "b1b45e0051c29722854fcb0f6ef429cfa06b30fc17996fc7239c41d364f4964b"
+    },
+    {
+      "bytes": 34502,
+      "endpoint": "metadata",
+      "identifier": "08211500",
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T041631Z\\08211500_metadata.json",
+      "sha256": "4a3b474ea45f4c0303c1c6f09aef413f93d5233f7089480651a1b8c7b035c673"
+    },
+    {
+      "bytes": 466375,
+      "endpoint": "stageflow",
+      "identifier": "08211500",
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T041631Z\\08211500_stageflow.json",
+      "sha256": "6f557609a4701420ca668c3d000b6a2f873746eb23ddc7999d4d5d44b915d5e7"
+    }
+  ],
+  "receipt_path": "C:\\GitHub\\NRHIS\\data\\nrhis\\receipts\\nwps_forecast_harvest_receipt.json",
+  "retrieved_at": "2026-07-20T04:16:31.406139Z",
+  "schema_version": 1,
+  "summary": {
+    "configured_gauges": 6,
+    "forecast_points": 0,
+    "gauges_with_forecasts": 0,
+    "ready_for_reporting": true,
+    "successful_gauges": 6,
+    "threshold_records": 24
+  }
+}
