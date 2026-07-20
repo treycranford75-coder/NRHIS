@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "trailing_days": 7,
+  "required_reservoirs": [
+    "Lake Corpus Christi",
+    "Choke Canyon Reservoir"
+  ],
+  "daily_operations_section": "Reservoir Evaporation Losses",
+  "display_units": [
+    "acre_feet_per_day",
+    "million_gallons_per_day",
+    "trailing_7_day_total",
+    "month_to_date_total"
+  ],
+  "preserve_method_and_source": true
+}
