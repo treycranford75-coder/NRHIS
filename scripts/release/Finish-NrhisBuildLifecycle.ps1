@@ -8,6 +8,27 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
+
+# Build081 automatic pull-request resolution
+$placeholderValues = @(
+    'PASTE_ACTUAL_PR_URL_HERE',
+    'PASTE_THE_PR_URL_RETURNED_ABOVE',
+    'PASTE_PR_URL_HERE'
+)
+
+$needsResolution = [string]::IsNullOrWhiteSpace($PullRequestUrl) -or ($placeholderValues -contains $PullRequestUrl.Trim())
+if ($needsResolution) {
+    $resolver = Join-Path $RepositoryRoot 'scripts/release/Resolve-NrhisPullRequest.ps1'
+    if (-not (Test-Path $resolver -PathType Leaf)) {
+        throw "Pull-request resolver not found: $resolver"
+    }
+
+    $PullRequestUrl = & $resolver -BuildNumber $BuildNumber -RepositoryRoot $RepositoryRoot
+}
+
+if ($PullRequestUrl -notmatch '^https://github\.com/[^/]+/[^/]+/pull/\d+$') {
+    throw "Invalid pull-request URL: $PullRequestUrl"
+}
 Set-StrictMode -Version Latest
 
 $repo = (Resolve-Path $RepositoryRoot).Path
