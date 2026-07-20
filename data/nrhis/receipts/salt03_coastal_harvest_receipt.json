@@ -1,0 +1,24 @@
+{
+  "build": "059",
+  "completed_at": "2026-07-20T03:33:51.750979Z",
+  "files": {
+    "current_csv": "data\\nrhis\\coastal\\salt03_current_conditions.csv",
+    "current_json": "data\\nrhis\\coastal\\salt03_current_conditions.json",
+    "history_jsonl": "data\\nrhis\\coastal\\salt03_observations.jsonl",
+    "parameter_status_csv": "data\\nrhis\\coastal\\salt03_parameter_status.csv",
+    "readiness": "data\\nrhis\\coastal\\salt03_readiness.json"
+  },
+  "new_history_records": 0,
+  "observation_count": 0,
+  "raw_records": [
+    {
+      "endpoint": "parameters",
+      "path": "data\\nrhis\\raw\\coastal\\salt03\\20260720T033351Z\\parameters.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    }
+  ],
+  "ready_for_reporting": false,
+  "schema_version": 1,
+  "selected_parameters": [],
+  "station_code": "SALT03"
+}
