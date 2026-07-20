@@ -1,0 +1,29 @@
+{
+  "build": "069",
+  "checked_at": "2026-07-20T10:28:26.001279Z",
+  "healthy": true,
+  "problems": [],
+  "schema_version": 1,
+  "severity": "info",
+  "source_build": "066",
+  "source_files": {
+    "latest_cycle": "C:\\GitHub\\NRHIS\\data\\nrhis\\operations_cycles\\latest_operations_cycle.json",
+    "scheduler_receipt": "C:\\GitHub\\NRHIS\\data\\nrhis\\scheduler\\latest_scheduler_run.json"
+  },
+  "status": "clear",
+  "summary": "NRHIS scheduler health is clear.",
+  "tasks": [
+    {
+      "healthy": true,
+      "installed": true,
+      "state": "Ready",
+      "task_name": "NRHIS Operations - Morning"
+    },
+    {
+      "healthy": true,
+      "installed": true,
+      "state": "Ready",
+      "task_name": "NRHIS Operations - Evening"
+    }
+  ]
+}

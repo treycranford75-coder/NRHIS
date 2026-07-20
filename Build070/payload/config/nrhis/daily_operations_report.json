@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "build": "070",
+  "report_title": "NRHIS Daily Nueces-Frio Operations Report",
+  "timezone": "America/Chicago",
+  "required_qa_passes": 2,
+  "inputs": {
+    "operations_cycle": "data/nrhis/operations_cycles/latest_operations_cycle.json",
+    "integrated_snapshot": "data/nrhis/operations/integrated_operations_snapshot.json",
+    "usgs_current": "data/nrhis/current/usgs_current_conditions.json",
+    "reservoir_summary": "data/nrhis/reservoirs/reservoir_operations_summary.json",
+    "reservoir_water_budget": "data/nrhis/reservoirs/reservoir_water_budget_summary.json",
+    "reservoir_response": "data/nrhis/reservoirs/reservoir_response_summary.json",
+    "salt03": "data/nrhis/waterquality/salt03_current.json",
+    "scheduler_health": "data/nrhis/scheduler/scheduler_health.json",
+    "scheduler_alert": "data/nrhis/scheduler/scheduler_alert.json"
+  },
+  "outputs": {
+    "json": "data/nrhis/publication/daily_operations_report.json",
+    "markdown": "data/nrhis/publication/daily_operations_report.md",
+    "html": "data/nrhis/publication/daily_operations_report.html",
+    "history_jsonl": "data/nrhis/publication/daily_operations_report_history.jsonl",
+    "receipt": "data/nrhis/receipts/daily_operations_report_receipt.json"
+  },
+  "stations": [
+    {"site_no": "08210000", "label": "Nueces River at Three Rivers"},
+    {"site_no": "08211000", "label": "Nueces River near Mathis"},
+    {"site_no": "08211200", "label": "Nueces River at Bluntzer"},
+    {"site_no": "08211500", "label": "Nueces River at Calallen"}
+  ],
+  "reservoirs": [
+    {"id": "choke_canyon", "label": "Choke Canyon Reservoir"},
+    {"id": "lake_corpus_christi", "label": "Lake Corpus Christi"}
+  ]
+}
