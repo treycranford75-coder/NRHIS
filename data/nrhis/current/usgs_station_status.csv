@@ -1,7 +1,7 @@
 site_no,configured_name,observations,missing,stale_parameters,provisional_parameters,latest_observed_at
-08194000,"Nueces River at Cotulla, TX",2,False,0,2,2026-07-20T04:00:00Z
-08206600,"Frio River at Tilden, TX",2,False,0,2,2026-07-20T03:15:00Z
-08210000,"Nueces River near Three Rivers, TX",2,False,0,2,2026-07-20T03:15:00Z
-08211000,"Nueces River near Mathis, TX",2,False,0,2,2026-07-20T04:00:00Z
-08211200,"Nueces River at Bluntzer, TX",4,False,0,4,2026-07-20T04:00:00Z
-08211500,"Nueces River at Calallen, TX",2,False,0,2,2026-07-20T03:30:00Z
+08194000,"Nueces River at Cotulla, TX",2,False,0,2,2026-07-20T10:00:00Z
+08206600,"Frio River at Tilden, TX",2,False,0,2,2026-07-20T09:15:00Z
+08210000,"Nueces River near Three Rivers, TX",2,False,0,2,2026-07-20T09:15:00Z
+08211000,"Nueces River near Mathis, TX",2,False,0,2,2026-07-20T10:00:00Z
+08211200,"Nueces River at Bluntzer, TX",4,False,0,4,2026-07-20T10:00:00Z
+08211500,"Nueces River at Calallen, TX",2,False,0,2,2026-07-20T09:30:00Z

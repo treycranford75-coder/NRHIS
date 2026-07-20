@@ -1,0 +1,17 @@
+{
+  "build": "052",
+  "checkpoint": "C:\\GitHub\\NRHIS\\data\\nrhis\\backfill\\checkpoint.json",
+  "chunk_days": 2,
+  "chunks": [],
+  "chunks_completed": 0,
+  "completed_at": "2026-07-20T10:17:15.263801Z",
+  "effective_start": "2026-07-21",
+  "history_csv": "C:\\GitHub\\NRHIS\\data\\nrhis\\normalized\\usgs_historical_observations.csv",
+  "history_jsonl": "C:\\GitHub\\NRHIS\\data\\nrhis\\normalized\\usgs_historical_observations.jsonl",
+  "new_records": 0,
+  "requested_end": "2026-07-20",
+  "requested_start": "2026-07-18",
+  "schema_version": 1,
+  "started_at": "2026-07-20T10:17:09.905930Z",
+  "total_history_records": 511041
+}

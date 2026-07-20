@@ -1,9 +1,9 @@
 {
   "build": "061",
-  "generated_at": "2026-07-20T04:18:21.705589Z",
+  "generated_at": "2026-07-20T10:17:28.438578Z",
   "public_data": {
     "build": "060",
-    "generated_at": "2026-07-20T04:18:21.119357Z",
+    "generated_at": "2026-07-20T10:17:27.842222Z",
     "overall_status": "not_ready",
     "release_gate": {
       "conditional_stations": [],
@@ -27,16 +27,16 @@
         "budget_residual_acft": null,
         "calculated_net_change_acft": null,
         "conservation_capacity_acft": 662820.0,
-        "current_percent_full": 8.0,
-        "current_storage_acft": 52792.0,
+        "current_percent_full": 7.9,
+        "current_storage_acft": 52630.0,
         "environmental_releases_acft": null,
         "estimated_event_gain_central_acft": null,
         "estimated_event_gain_high_acft": null,
         "estimated_event_gain_low_acft": null,
-        "evaporation_7day_acft": 271.306,
-        "evaporation_acft_per_day": 135.653,
-        "evaporation_mgd": 44.203,
-        "evaporation_month_to_date_acft": 271.306,
+        "evaporation_7day_acft": 271.013,
+        "evaporation_acft_per_day": 135.36,
+        "evaporation_mgd": 44.107,
+        "evaporation_month_to_date_acft": 271.013,
         "inflow_acft": null,
         "municipal_diversions_acft": null,
         "observed_storage_change_acft": 0.0,
@@ -50,23 +50,23 @@
         "response_caveat": "Estimate based on the latest available hydrographs, routing assumptions, reservoir conditions, and forecasts; values will change as new data arrive.",
         "response_confidence": "low",
         "status_reasons": "24-hour water budget incomplete; estimated reservoir response confidence is low",
-        "surface_area_acres": 5426.1
+        "surface_area_acres": 5414.4
       },
       {
         "budget_complete": false,
         "budget_residual_acft": null,
         "calculated_net_change_acft": null,
         "conservation_capacity_acft": 256062.0,
-        "current_percent_full": 33.1,
-        "current_storage_acft": 84714.0,
+        "current_percent_full": 33.0,
+        "current_storage_acft": 84494.0,
         "environmental_releases_acft": null,
         "estimated_event_gain_central_acft": null,
         "estimated_event_gain_high_acft": null,
         "estimated_event_gain_low_acft": null,
-        "evaporation_7day_acft": 551.204,
-        "evaporation_acft_per_day": 275.602,
-        "evaporation_mgd": 89.805,
-        "evaporation_month_to_date_acft": 551.204,
+        "evaporation_7day_acft": 550.761,
+        "evaporation_acft_per_day": 275.159,
+        "evaporation_mgd": 89.661,
+        "evaporation_month_to_date_acft": 550.761,
         "inflow_acft": null,
         "municipal_diversions_acft": null,
         "observed_storage_change_acft": 0.0,
@@ -80,7 +80,7 @@
         "response_caveat": "Estimate based on the latest available hydrographs, routing assumptions, reservoir conditions, and forecasts; values will change as new data arrive.",
         "response_confidence": "low",
         "status_reasons": "24-hour water budget incomplete; estimated reservoir response confidence is low",
-        "surface_area_acres": 11024.07
+        "surface_area_acres": 11006.36
       }
     ],
     "schema_version": 1,
@@ -230,13 +230,14 @@
   },
   "release_gate": {
     "publish_allowed": false,
-    "qa_passes_completed": 2,
+    "qa_passes_completed": 0,
     "qa_passes_required": 2,
     "reasons": [
       "missing required section: river",
       "missing required section: forecast",
       "missing required section: coastal",
-      "integrated source snapshot is not ready"
+      "integrated source snapshot is not ready",
+      "QA incomplete: 0 of 2 verification passes completed"
     ],
     "status": "not_ready"
   },

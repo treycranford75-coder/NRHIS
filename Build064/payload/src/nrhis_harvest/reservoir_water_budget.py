@@ -1,4 +1,5 @@
 """Reservoir evaporation and 24-hour water-budget products for NRHIS Build056."""
+
 from __future__ import annotations
 
 import csv
@@ -61,19 +62,27 @@ def _load_optional(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def evaporation_acft(surface_area_acres: float | None, inches_per_day: float | None) -> float | None:
+def evaporation_acft(
+    surface_area_acres: float | None, inches_per_day: float | None
+) -> float | None:
     if surface_area_acres is None or inches_per_day is None:
         return None
     return round(surface_area_acres * inches_per_day / 12.0, 3)
 
 
-def _daily_evap(evap_data: Any, reservoir_id: str, report_date: str) -> tuple[float | None, str, str]:
+def _daily_evap(
+    evap_data: Any, reservoir_id: str, report_date: str
+) -> tuple[float | None, str, str]:
     if isinstance(evap_data, list):
         for row in evap_data:
             if row.get("reservoir_id") == reservoir_id and row.get("date") == report_date:
                 value = _num(row.get("evaporation_inches"))
                 if value is not None:
-                    return value, str(row.get("source") or "daily evaporation dataset"), "daily observed/estimated evaporation"
+                    return (
+                        value,
+                        str(row.get("source") or "daily evaporation dataset"),
+                        "daily observed/estimated evaporation",
+                    )
     return None, "", ""
 
 
@@ -99,11 +108,21 @@ def build_budget(
             method = f"monthly climatology for month {report_date.month}; estimate"
         area = _num(reservoir.get("surface_area_acres"))
         evap_af = evaporation_acft(area, evap_in)
-        matching = [r for r in history_rows if r.get("reservoir_id") == rid and r.get("report_date", "") <= report_date.isoformat()]
+        matching = [
+            r
+            for r in history_rows
+            if r.get("reservoir_id") == rid and r.get("report_date", "") <= report_date.isoformat()
+        ]
         matching.sort(key=lambda r: r.get("report_date", ""))
         recent = matching[-6:]
-        recent_total = sum(_num(r.get("evaporation_acft_per_day")) or 0 for r in recent) + (evap_af or 0)
-        month_total = sum((_num(r.get("evaporation_acft_per_day")) or 0) for r in matching if str(r.get("report_date", "")).startswith(report_date.strftime("%Y-%m"))) + (evap_af or 0)
+        recent_total = sum(_num(r.get("evaporation_acft_per_day")) or 0 for r in recent) + (
+            evap_af or 0
+        )
+        month_total = sum(
+            (_num(r.get("evaporation_acft_per_day")) or 0)
+            for r in matching
+            if str(r.get("report_date", "")).startswith(report_date.strftime("%Y-%m"))
+        ) + (evap_af or 0)
         flux = flux_lookup.get(rid, {})
         inflow = _num(flux.get("inflow_acft"))
         diversions = _num(flux.get("municipal_diversions_acft"))
@@ -117,27 +136,35 @@ def build_budget(
             calculated = round(inflow - diversions - releases - other - evap_af, 3)
             if observed is not None:
                 residual = round(observed - calculated, 3)
-        result.append(ReservoirBudget(
-            reservoir_id=rid,
-            reservoir_name=str(reservoir.get("reservoir_name") or config["reservoirs"].get(rid, {}).get("display_name") or rid),
-            report_date=report_date.isoformat(),
-            surface_area_acres=area,
-            evaporation_inches_per_day=evap_in,
-            evaporation_source=source,
-            evaporation_method=method,
-            evaporation_acft_per_day=evap_af,
-            evaporation_mgd=round(evap_af * ACRE_FOOT_GALLONS / 1_000_000, 3) if evap_af is not None else None,
-            evaporation_7day_acft=round(recent_total, 3),
-            evaporation_month_to_date_acft=round(month_total, 3),
-            inflow_acft=inflow,
-            municipal_diversions_acft=diversions,
-            environmental_releases_acft=releases,
-            other_outflow_acft=other,
-            observed_storage_change_acft=observed,
-            calculated_net_change_acft=calculated,
-            budget_residual_acft=residual,
-            budget_complete=complete,
-        ))
+        result.append(
+            ReservoirBudget(
+                reservoir_id=rid,
+                reservoir_name=str(
+                    reservoir.get("reservoir_name")
+                    or config["reservoirs"].get(rid, {}).get("display_name")
+                    or rid
+                ),
+                report_date=report_date.isoformat(),
+                surface_area_acres=area,
+                evaporation_inches_per_day=evap_in,
+                evaporation_source=source,
+                evaporation_method=method,
+                evaporation_acft_per_day=evap_af,
+                evaporation_mgd=round(evap_af * ACRE_FOOT_GALLONS / 1_000_000, 3)
+                if evap_af is not None
+                else None,
+                evaporation_7day_acft=round(recent_total, 3),
+                evaporation_month_to_date_acft=round(month_total, 3),
+                inflow_acft=inflow,
+                municipal_diversions_acft=diversions,
+                environmental_releases_acft=releases,
+                other_outflow_acft=other,
+                observed_storage_change_acft=observed,
+                calculated_net_change_acft=calculated,
+                budget_residual_acft=residual,
+                budget_complete=complete,
+            )
+        )
     return result
 
 
@@ -151,8 +178,19 @@ def run(config_path: Path, data_root: Path, *, report_date: date | None = None) 
     history_path = Path(config["history_path"])
     history_rows = []
     if history_path.exists():
-        history_rows = [json.loads(line) for line in history_path.read_text(encoding="utf-8").splitlines() if line.strip()]
-    budgets = build_budget(reservoirs, config, report_date=report_date, evaporation_data=evap_data, flux_data=flux_data, history_rows=history_rows)
+        history_rows = [
+            json.loads(line)
+            for line in history_path.read_text(encoding="utf-8").splitlines()
+            if line.strip()
+        ]
+    budgets = build_budget(
+        reservoirs,
+        config,
+        report_date=report_date,
+        evaporation_data=evap_data,
+        flux_data=flux_data,
+        history_rows=history_rows,
+    )
     rows = [asdict(x) for x in budgets]
     out_dir = data_root / "reservoirs"
     json_path = out_dir / "reservoir_water_budget_current.json"
@@ -161,7 +199,8 @@ def run(config_path: Path, data_root: Path, *, report_date: date | None = None) 
     csv_path.parent.mkdir(parents=True, exist_ok=True)
     with csv_path.open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=list(rows[0].keys()))
-        writer.writeheader(); writer.writerows(rows)
+        writer.writeheader()
+        writer.writerows(rows)
     existing_ids = {(r.get("reservoir_id"), r.get("report_date")) for r in history_rows}
     new_rows = [r for r in rows if (r["reservoir_id"], r["report_date"]) not in existing_ids]
     if new_rows:
@@ -175,13 +214,26 @@ def run(config_path: Path, data_root: Path, *, report_date: date | None = None) 
         "report_date": report_date.isoformat(),
         "reservoir_count": len(rows),
         "all_budgets_complete": all(r["budget_complete"] for r in rows),
-        "combined_evaporation_acft_per_day": round(sum(r["evaporation_acft_per_day"] or 0 for r in rows), 3),
+        "combined_evaporation_acft_per_day": round(
+            sum(r["evaporation_acft_per_day"] or 0 for r in rows), 3
+        ),
         "combined_evaporation_mgd": round(sum(r["evaporation_mgd"] or 0 for r in rows), 3),
         "reservoirs": rows,
     }
     summary_path = out_dir / "reservoir_water_budget_summary.json"
     _atomic_write(summary_path, json.dumps(summary, indent=2, sort_keys=True) + "\n")
-    receipt = {"schema_version": 1, "build": "056", "completed_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"), "new_history_records": len(new_rows), "files": {"current_json": str(json_path), "current_csv": str(csv_path), "summary": str(summary_path), "history": str(history_path)}}
+    receipt = {
+        "schema_version": 1,
+        "build": "056",
+        "completed_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+        "new_history_records": len(new_rows),
+        "files": {
+            "current_json": str(json_path),
+            "current_csv": str(csv_path),
+            "summary": str(summary_path),
+            "history": str(history_path),
+        },
+    }
     receipt_path = data_root / "receipts" / "reservoir_water_budget_receipt.json"
     _atomic_write(receipt_path, json.dumps(receipt, indent=2, sort_keys=True) + "\n")
     receipt["receipt_path"] = str(receipt_path)

@@ -1,0 +1,1071 @@
+﻿[
+  {
+    "cell": null,
+    "code": "E402",
+    "end_location": {
+      "column": 59,
+      "row": 13
+    },
+    "filename": "C:\\GitHub\\NRHIS\\Build064\\payload\\scripts\\build_reservoir_operations_summary.py",
+    "fix": null,
+    "location": {
+      "column": 1,
+      "row": 13
+    },
+    "message": "Module level import not at top of file",
+    "name": "module-import-not-at-top-of-file",
+    "noqa_row": 13,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/module-import-not-at-top-of-file"
+  },
+  {
+    "cell": null,
+    "code": "E401",
+    "end_location": {
+      "column": 22,
+      "row": 2
+    },
+    "filename": "C:\\GitHub\\NRHIS\\Build064\\payload\\scripts\\estimate_reservoir_response.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import argparse\r\nimport json",
+          "end_location": {
+            "column": 22,
+            "row": 2
+          },
+          "location": {
+            "column": 1,
+            "row": 2
+          }
+        }
+      ],
+      "message": "Split imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 2
+    },
+    "message": "Multiple imports on one line",
+    "name": "multiple-imports-on-one-line",
+    "noqa_row": 2,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-imports-on-one-line"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 29,
+      "row": 5
+    },
+    "filename": "C:\\GitHub\\NRHIS\\Build064\\payload\\scripts\\estimate_reservoir_response.py",
+    "fix": null,
+    "location": {
+      "column": 28,
+      "row": 5
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 5,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 105,
+      "row": 5
+    },
+    "filename": "C:\\GitHub\\NRHIS\\Build064\\payload\\scripts\\estimate_reservoir_response.py",
+    "fix": null,
+    "location": {
+      "column": 104,
+      "row": 5
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 5,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 18,
+      "row": 6
+    },
+    "filename": "C:\\GitHub\\NRHIS\\Build064\\payload\\scripts\\estimate_reservoir_response.py",
+    "fix": null,
+    "location": {
+      "column": 17,
+      "row": 6
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 6,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E401",
+    "end_location": {
+      "column": 22,
+      "row": 2
+    },
+    "filename": "C:\\GitHub\\NRHIS\\Build064\\payload\\scripts\\reservoir_water_budget.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import argparse\r\nimport json",
+          "end_location": {
+            "column": 22,
+            "row": 2
+          },
+          "location": {
+            "column": 1,
+            "row": 2
+          }
+        }
+      ],
+      "message": "Split imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 2
+    },
+    "message": "Multiple imports on one line",
+    "name": "multiple-imports-on-one-line",
+    "noqa_row": 2,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-imports-on-one-line"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 29,
+      "row": 6
+    },
+    "filename": "C:\\GitHub\\NRHIS\\Build064\\payload\\scripts\\reservoir_water_budget.py",
+    "fix": null,
+    "location": {
+      "column": 28,
+      "row": 6
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 6,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 108,
+      "row": 6
+    },
+    "filename": "C:\\GitHub\\NRHIS\\Build064\\payload\\scripts\\reservoir_water_budget.py",
+    "fix": null,
+    "location": {
+      "column": 107,
+      "row": 6
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 6,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 160,
+      "row": 6
+    },
+    "filename": "C:\\GitHub\\NRHIS\\Build064\\payload\\scripts\\reservoir_water_budget.py",
+    "fix": null,
+    "location": {
+      "column": 159,
+      "row": 6
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 6,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 18,
+      "row": 7
+    },
+    "filename": "C:\\GitHub\\NRHIS\\Build064\\payload\\scripts\\reservoir_water_budget.py",
+    "fix": null,
+    "location": {
+      "column": 17,
+      "row": 7
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 7,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 30,
+      "row": 147
+    },
+    "filename": "C:\\GitHub\\NRHIS\\Build064\\payload\\src\\nrhis_harvest\\reservoir_response.py",
+    "fix": null,
+    "location": {
+      "column": 29,
+      "row": 147
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 147,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 30,
+      "row": 164
+    },
+    "filename": "C:\\GitHub\\NRHIS\\Build064\\payload\\src\\nrhis_harvest\\reservoir_water_budget.py",
+    "fix": null,
+    "location": {
+      "column": 29,
+      "row": 164
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 164,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E401",
+    "end_location": {
+      "column": 20,
+      "row": 2
+    },
+    "filename": "C:\\GitHub\\NRHIS\\Build064\\payload\\tests\\test_basin_operational_snapshot_build055.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import json\r\nimport shutil",
+          "end_location": {
+            "column": 20,
+            "row": 2
+          },
+          "location": {
+            "column": 1,
+            "row": 2
+          }
+        }
+      ],
+      "message": "Split imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 2
+    },
+    "message": "Multiple imports on one line",
+    "name": "multiple-imports-on-one-line",
+    "noqa_row": 2,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-imports-on-one-line"
+  },
+  {
+    "cell": null,
+    "code": "E402",
+    "end_location": {
+      "column": 59,
+      "row": 13
+    },
+    "filename": "C:\\GitHub\\NRHIS\\Build065\\payload\\scripts\\build_reservoir_operations_summary.py",
+    "fix": null,
+    "location": {
+      "column": 1,
+      "row": 13
+    },
+    "message": "Module level import not at top of file",
+    "name": "module-import-not-at-top-of-file",
+    "noqa_row": 13,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/module-import-not-at-top-of-file"
+  },
+  {
+    "cell": null,
+    "code": "E401",
+    "end_location": {
+      "column": 22,
+      "row": 2
+    },
+    "filename": "C:\\GitHub\\NRHIS\\Build065\\payload\\scripts\\estimate_reservoir_response.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import argparse\r\nimport json",
+          "end_location": {
+            "column": 22,
+            "row": 2
+          },
+          "location": {
+            "column": 1,
+            "row": 2
+          }
+        }
+      ],
+      "message": "Split imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 2
+    },
+    "message": "Multiple imports on one line",
+    "name": "multiple-imports-on-one-line",
+    "noqa_row": 2,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-imports-on-one-line"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 29,
+      "row": 5
+    },
+    "filename": "C:\\GitHub\\NRHIS\\Build065\\payload\\scripts\\estimate_reservoir_response.py",
+    "fix": null,
+    "location": {
+      "column": 28,
+      "row": 5
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 5,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 105,
+      "row": 5
+    },
+    "filename": "C:\\GitHub\\NRHIS\\Build065\\payload\\scripts\\estimate_reservoir_response.py",
+    "fix": null,
+    "location": {
+      "column": 104,
+      "row": 5
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 5,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 18,
+      "row": 6
+    },
+    "filename": "C:\\GitHub\\NRHIS\\Build065\\payload\\scripts\\estimate_reservoir_response.py",
+    "fix": null,
+    "location": {
+      "column": 17,
+      "row": 6
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 6,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E401",
+    "end_location": {
+      "column": 22,
+      "row": 2
+    },
+    "filename": "C:\\GitHub\\NRHIS\\Build065\\payload\\scripts\\reservoir_water_budget.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import argparse\r\nimport json",
+          "end_location": {
+            "column": 22,
+            "row": 2
+          },
+          "location": {
+            "column": 1,
+            "row": 2
+          }
+        }
+      ],
+      "message": "Split imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 2
+    },
+    "message": "Multiple imports on one line",
+    "name": "multiple-imports-on-one-line",
+    "noqa_row": 2,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-imports-on-one-line"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 29,
+      "row": 6
+    },
+    "filename": "C:\\GitHub\\NRHIS\\Build065\\payload\\scripts\\reservoir_water_budget.py",
+    "fix": null,
+    "location": {
+      "column": 28,
+      "row": 6
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 6,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 108,
+      "row": 6
+    },
+    "filename": "C:\\GitHub\\NRHIS\\Build065\\payload\\scripts\\reservoir_water_budget.py",
+    "fix": null,
+    "location": {
+      "column": 107,
+      "row": 6
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 6,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 160,
+      "row": 6
+    },
+    "filename": "C:\\GitHub\\NRHIS\\Build065\\payload\\scripts\\reservoir_water_budget.py",
+    "fix": null,
+    "location": {
+      "column": 159,
+      "row": 6
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 6,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 18,
+      "row": 7
+    },
+    "filename": "C:\\GitHub\\NRHIS\\Build065\\payload\\scripts\\reservoir_water_budget.py",
+    "fix": null,
+    "location": {
+      "column": 17,
+      "row": 7
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 7,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 30,
+      "row": 147
+    },
+    "filename": "C:\\GitHub\\NRHIS\\Build065\\payload\\src\\nrhis_harvest\\reservoir_response.py",
+    "fix": null,
+    "location": {
+      "column": 29,
+      "row": 147
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 147,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 30,
+      "row": 164
+    },
+    "filename": "C:\\GitHub\\NRHIS\\Build065\\payload\\src\\nrhis_harvest\\reservoir_water_budget.py",
+    "fix": null,
+    "location": {
+      "column": 29,
+      "row": 164
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 164,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E401",
+    "end_location": {
+      "column": 20,
+      "row": 2
+    },
+    "filename": "C:\\GitHub\\NRHIS\\Build065\\payload\\tests\\test_basin_operational_snapshot_build055.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import json\r\nimport shutil",
+          "end_location": {
+            "column": 20,
+            "row": 2
+          },
+          "location": {
+            "column": 1,
+            "row": 2
+          }
+        }
+      ],
+      "message": "Split imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 2
+    },
+    "message": "Multiple imports on one line",
+    "name": "multiple-imports-on-one-line",
+    "noqa_row": 2,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-imports-on-one-line"
+  },
+  {
+    "cell": null,
+    "code": "E401",
+    "end_location": {
+      "column": 27,
+      "row": 2
+    },
+    "filename": "C:\\GitHub\\NRHIS\\Build067\\payload\\scripts\\test_nrhis_scheduler_health.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import argparse\nimport csv\nimport json",
+          "end_location": {
+            "column": 27,
+            "row": 2
+          },
+          "location": {
+            "column": 1,
+            "row": 2
+          }
+        }
+      ],
+      "message": "Split imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 2
+    },
+    "message": "Multiple imports on one line",
+    "name": "multiple-imports-on-one-line",
+    "noqa_row": 2,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-imports-on-one-line"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 30,
+      "row": 55
+    },
+    "filename": "C:\\GitHub\\NRHIS\\Build067\\payload\\scripts\\test_nrhis_scheduler_health.py",
+    "fix": null,
+    "location": {
+      "column": 29,
+      "row": 55
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 55,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 49,
+      "row": 7
+    },
+    "filename": "C:\\GitHub\\NRHIS\\Build067\\payload\\tests\\test_scheduler_receipt_alignment_build067.py",
+    "fix": null,
+    "location": {
+      "column": 48,
+      "row": 7
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 7,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 79,
+      "row": 7
+    },
+    "filename": "C:\\GitHub\\NRHIS\\Build067\\payload\\tests\\test_scheduler_receipt_alignment_build067.py",
+    "fix": null,
+    "location": {
+      "column": 78,
+      "row": 7
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 7,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E402",
+    "end_location": {
+      "column": 59,
+      "row": 13
+    },
+    "filename": "C:\\GitHub\\NRHIS\\scripts\\build_reservoir_operations_summary.py",
+    "fix": null,
+    "location": {
+      "column": 1,
+      "row": 13
+    },
+    "message": "Module level import not at top of file",
+    "name": "module-import-not-at-top-of-file",
+    "noqa_row": 13,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/module-import-not-at-top-of-file"
+  },
+  {
+    "cell": null,
+    "code": "E401",
+    "end_location": {
+      "column": 22,
+      "row": 2
+    },
+    "filename": "C:\\GitHub\\NRHIS\\scripts\\estimate_reservoir_response.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import argparse\nimport json",
+          "end_location": {
+            "column": 22,
+            "row": 2
+          },
+          "location": {
+            "column": 1,
+            "row": 2
+          }
+        }
+      ],
+      "message": "Split imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 2
+    },
+    "message": "Multiple imports on one line",
+    "name": "multiple-imports-on-one-line",
+    "noqa_row": 2,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-imports-on-one-line"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 29,
+      "row": 5
+    },
+    "filename": "C:\\GitHub\\NRHIS\\scripts\\estimate_reservoir_response.py",
+    "fix": null,
+    "location": {
+      "column": 28,
+      "row": 5
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 5,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 105,
+      "row": 5
+    },
+    "filename": "C:\\GitHub\\NRHIS\\scripts\\estimate_reservoir_response.py",
+    "fix": null,
+    "location": {
+      "column": 104,
+      "row": 5
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 5,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 18,
+      "row": 6
+    },
+    "filename": "C:\\GitHub\\NRHIS\\scripts\\estimate_reservoir_response.py",
+    "fix": null,
+    "location": {
+      "column": 17,
+      "row": 6
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 6,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E401",
+    "end_location": {
+      "column": 22,
+      "row": 2
+    },
+    "filename": "C:\\GitHub\\NRHIS\\scripts\\reservoir_water_budget.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import argparse\nimport json",
+          "end_location": {
+            "column": 22,
+            "row": 2
+          },
+          "location": {
+            "column": 1,
+            "row": 2
+          }
+        }
+      ],
+      "message": "Split imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 2
+    },
+    "message": "Multiple imports on one line",
+    "name": "multiple-imports-on-one-line",
+    "noqa_row": 2,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-imports-on-one-line"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 29,
+      "row": 6
+    },
+    "filename": "C:\\GitHub\\NRHIS\\scripts\\reservoir_water_budget.py",
+    "fix": null,
+    "location": {
+      "column": 28,
+      "row": 6
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 6,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 108,
+      "row": 6
+    },
+    "filename": "C:\\GitHub\\NRHIS\\scripts\\reservoir_water_budget.py",
+    "fix": null,
+    "location": {
+      "column": 107,
+      "row": 6
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 6,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 160,
+      "row": 6
+    },
+    "filename": "C:\\GitHub\\NRHIS\\scripts\\reservoir_water_budget.py",
+    "fix": null,
+    "location": {
+      "column": 159,
+      "row": 6
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 6,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 18,
+      "row": 7
+    },
+    "filename": "C:\\GitHub\\NRHIS\\scripts\\reservoir_water_budget.py",
+    "fix": null,
+    "location": {
+      "column": 17,
+      "row": 7
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 7,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E401",
+    "end_location": {
+      "column": 27,
+      "row": 2
+    },
+    "filename": "C:\\GitHub\\NRHIS\\scripts\\test_nrhis_scheduler_health.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import argparse\nimport csv\nimport json",
+          "end_location": {
+            "column": 27,
+            "row": 2
+          },
+          "location": {
+            "column": 1,
+            "row": 2
+          }
+        }
+      ],
+      "message": "Split imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 2
+    },
+    "message": "Multiple imports on one line",
+    "name": "multiple-imports-on-one-line",
+    "noqa_row": 2,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-imports-on-one-line"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 30,
+      "row": 55
+    },
+    "filename": "C:\\GitHub\\NRHIS\\scripts\\test_nrhis_scheduler_health.py",
+    "fix": null,
+    "location": {
+      "column": 29,
+      "row": 55
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 55,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 30,
+      "row": 147
+    },
+    "filename": "C:\\GitHub\\NRHIS\\src\\nrhis_harvest\\reservoir_response.py",
+    "fix": null,
+    "location": {
+      "column": 29,
+      "row": 147
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 147,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 30,
+      "row": 164
+    },
+    "filename": "C:\\GitHub\\NRHIS\\src\\nrhis_harvest\\reservoir_water_budget.py",
+    "fix": null,
+    "location": {
+      "column": 29,
+      "row": 164
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 164,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E401",
+    "end_location": {
+      "column": 20,
+      "row": 2
+    },
+    "filename": "C:\\GitHub\\NRHIS\\tests\\test_basin_operational_snapshot_build055.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "import json\nimport shutil",
+          "end_location": {
+            "column": 20,
+            "row": 2
+          },
+          "location": {
+            "column": 1,
+            "row": 2
+          }
+        }
+      ],
+      "message": "Split imports"
+    },
+    "location": {
+      "column": 1,
+      "row": 2
+    },
+    "message": "Multiple imports on one line",
+    "name": "multiple-imports-on-one-line",
+    "noqa_row": 2,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-imports-on-one-line"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 49,
+      "row": 7
+    },
+    "filename": "C:\\GitHub\\NRHIS\\tests\\test_scheduler_receipt_alignment_build067.py",
+    "fix": null,
+    "location": {
+      "column": 48,
+      "row": 7
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 7,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  },
+  {
+    "cell": null,
+    "code": "E702",
+    "end_location": {
+      "column": 79,
+      "row": 7
+    },
+    "filename": "C:\\GitHub\\NRHIS\\tests\\test_scheduler_receipt_alignment_build067.py",
+    "fix": null,
+    "location": {
+      "column": 78,
+      "row": 7
+    },
+    "message": "Multiple statements on one line (semicolon)",
+    "name": "multiple-statements-on-one-line-semicolon",
+    "noqa_row": 7,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/multiple-statements-on-one-line-semicolon"
+  }
+]

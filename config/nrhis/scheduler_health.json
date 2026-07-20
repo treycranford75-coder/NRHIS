@@ -1,16 +1,37 @@
 {
-  "schema_version": 1,
-  "build": "066",
-  "task_name_prefix": "NRHIS Operations - ",
-  "expected_slots": [
-    {"name": "Morning", "hour": 7, "minute": 0},
-    {"name": "Evening", "hour": 18, "minute": 0}
-  ],
-  "grace_minutes": 90,
-  "receipt_max_age_hours": 14,
-  "operations_cycle_latest": "data/nrhis/operations_cycles/latest_operations_cycle.json",
-  "scheduler_receipt": "data/nrhis/scheduler/latest_scheduler_run.json",
-  "output_json": "data/nrhis/scheduler/scheduler_health.json",
-  "output_csv": "data/nrhis/scheduler/scheduler_health.csv",
-  "output_receipt": "data/nrhis/receipts/scheduler_health_receipt.json"
+    "schema_version":  1,
+    "build":  "066",
+    "tasks":  [
+                  {
+                      "task_name":  "NRHIS Operations - Morning",
+                      "hour":  7,
+                      "minute":  0
+                  },
+                  {
+                      "task_name":  "NRHIS Operations - Evening",
+                      "hour":  18,
+                      "minute":  0
+                  }
+              ],
+    "grace_minutes":  90,
+    "receipt_max_age_hours":  14,
+    "operations_cycle_latest":  "data/nrhis/operations_cycles/latest_operations_cycle.json",
+    "scheduler_receipt":  "data/nrhis/scheduler/latest_scheduler_run.json",
+    "output_json":  "data/nrhis/scheduler/scheduler_health.json",
+    "output_csv":  "data/nrhis/scheduler/scheduler_health.csv",
+    "output_receipt":  "data/nrhis/receipts/scheduler_health_receipt.json",
+    "expected_slots":  [
+                           {
+                               "name":  "Morning",
+                               "task_name":  "NRHIS Operations - Morning",
+                               "hour":  7,
+                               "minute":  0
+                           },
+                           {
+                               "name":  "Evening",
+                               "task_name":  "NRHIS Operations - Evening",
+                               "hour":  18,
+                               "minute":  0
+                           }
+                       ]
 }

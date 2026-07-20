@@ -1,0 +1,11 @@
+{
+  "build": "066",
+  "completed_at": "2026-07-20T10:28:26.001279Z",
+  "files": {
+    "csv": "C:\\GitHub\\NRHIS\\data\\nrhis\\scheduler\\scheduler_health.csv",
+    "json": "C:\\GitHub\\NRHIS\\data\\nrhis\\scheduler\\scheduler_health.json"
+  },
+  "problem_count": 0,
+  "schema_version": 1,
+  "status": "healthy"
+}
