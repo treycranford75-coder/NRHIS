@@ -1,0 +1,14 @@
+{
+  "schema_version": 22,
+  "build": "058",
+  "name": "NRHIS Sprint 2 Build058 Reservoir Operations Summary",
+  "entry_point": "Apply-Build058.ps1",
+  "branch": "feature/sprint2-build058",
+  "merge_target": "develop",
+  "tag": "v0.1.1-rc58+build058",
+  "features": [
+    "unified reservoir current conditions, water budget, and response summary",
+    "reservoir reporting-readiness status with explicit reasons",
+    "JSON, CSV, readiness, and machine-readable receipt outputs"
+  ]
+}

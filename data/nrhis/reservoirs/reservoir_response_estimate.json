@@ -1,0 +1,40 @@
+[
+  {
+    "basis": "No usable NWPS peak-flow forecast was available for the configured upstream stations.",
+    "caveat": "Estimate based on the latest available hydrographs, routing assumptions, reservoir conditions, and forecasts; values will change as new data arrive.",
+    "confidence": "low",
+    "conservation_capacity_acft": 662820.0,
+    "current_percent_full": 8.0,
+    "current_storage_acft": 52846.0,
+    "estimated_event_gain_central_acft": null,
+    "estimated_event_gain_high_acft": null,
+    "estimated_event_gain_low_acft": null,
+    "projected_percent_full_central": null,
+    "projected_percent_full_high": null,
+    "projected_percent_full_low": null,
+    "projected_storage_central_acft": null,
+    "projected_storage_high_acft": null,
+    "projected_storage_low_acft": null,
+    "reservoir_id": "ChokeCanyon",
+    "reservoir_name": "Choke Canyon Reservoir"
+  },
+  {
+    "basis": "No usable NWPS peak-flow forecast was available for the configured upstream stations.",
+    "caveat": "Estimate based on the latest available hydrographs, routing assumptions, reservoir conditions, and forecasts; values will change as new data arrive.",
+    "confidence": "low",
+    "conservation_capacity_acft": 256062.0,
+    "current_percent_full": 33.1,
+    "current_storage_acft": 84825.0,
+    "estimated_event_gain_central_acft": null,
+    "estimated_event_gain_high_acft": null,
+    "estimated_event_gain_low_acft": null,
+    "projected_percent_full_central": null,
+    "projected_percent_full_high": null,
+    "projected_percent_full_low": null,
+    "projected_storage_central_acft": null,
+    "projected_storage_high_acft": null,
+    "projected_storage_low_acft": null,
+    "reservoir_id": "CorpusChristi",
+    "reservoir_name": "Lake Corpus Christi"
+  }
+]
