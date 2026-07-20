@@ -48,7 +48,7 @@ if ($LASTEXITCODE -ne 0) {
     throw 'GitHub CLI is not authenticated. Run: gh auth login'
 }
 
-$state = (& gh pr view $PullRequestUrl --json state --jq '.state').Trim()
+$state = (@(& gh pr view $PullRequestUrl --json state --jq '.state') -join "`n").Trim()
 if ($LASTEXITCODE -ne 0) { throw "Unable to read pull-request state: $PullRequestUrl" }
 
 if ($state -ne 'MERGED') {
@@ -85,7 +85,7 @@ if ($LASTEXITCODE -ne 0) { throw 'Git fetch failed after merge.' }
 git pull --ff-only origin $BaseBranch
 if ($LASTEXITCODE -ne 0) { throw "Unable to fast-forward local $BaseBranch after merge." }
 
-$localBranch = (& git branch --list $featureBranch).Trim()
+$localBranch = (@(& git branch --list $featureBranch) -join "`n").Trim()
 if (-not [string]::IsNullOrWhiteSpace($localBranch)) {
     & git branch -D $featureBranch
     if ($LASTEXITCODE -ne 0) { throw "Unable to delete local feature branch: $featureBranch" }
@@ -94,7 +94,7 @@ else {
     Write-Host "Local feature branch already absent: $featureBranch" -ForegroundColor DarkGray
 }
 
-$remoteBranch = (& git ls-remote --heads origin "refs/heads/$featureBranch").Trim()
+$remoteBranch = (@(& git ls-remote --heads origin "refs/heads/$featureBranch") -join "`n").Trim()
 if ($LASTEXITCODE -ne 0) { throw "Unable to inspect remote feature branch: $featureBranch" }
 if (-not [string]::IsNullOrWhiteSpace($remoteBranch)) {
     & git push origin --delete $featureBranch
