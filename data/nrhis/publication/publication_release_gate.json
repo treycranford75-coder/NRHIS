@@ -1,0 +1,12 @@
+{
+  "publish_allowed": false,
+  "qa_passes_completed": 2,
+  "qa_passes_required": 2,
+  "reasons": [
+    "missing required section: river",
+    "missing required section: forecast",
+    "missing required section: coastal",
+    "integrated source snapshot is not ready"
+  ],
+  "status": "not_ready"
+}

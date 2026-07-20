@@ -1,0 +1,6 @@
+{
+  "graphic_generation_authorized": false,
+  "pass_1": "source values, timestamps, units, calculations, labels, and status categories verified",
+  "pass_2": "final values and narrative independently rechecked immediately before publication",
+  "post_generation_visual_qa_required": true
+}

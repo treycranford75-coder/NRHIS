@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "api_base": "https://api.water.noaa.gov/nwps/v1",
+  "timeout_seconds": 60,
+  "forecast_stale_minutes": 360,
+  "source_policy": {
+    "observations": "USGS Instantaneous Values remains authoritative for current observed values.",
+    "forecast_and_thresholds": "NOAA/NWS NWPS is used for official forecasts, flood categories, and thresholds."
+  },
+  "gauges": [
+    {"identifier": "08194000", "usgs_site_no": "08194000", "name": "Nueces River at Cotulla"},
+    {"identifier": "08194500", "usgs_site_no": "08194500", "name": "Nueces River near Tilden"},
+    {"identifier": "08210000", "usgs_site_no": "08210000", "name": "Nueces River near Three Rivers"},
+    {"identifier": "08211000", "usgs_site_no": "08211000", "name": "Nueces River near Mathis"},
+    {"identifier": "08211200", "usgs_site_no": "08211200", "name": "Nueces River at Bluntzer"},
+    {"identifier": "08211500", "usgs_site_no": "08211500", "name": "Nueces River at Calallen"}
+  ]
+}
