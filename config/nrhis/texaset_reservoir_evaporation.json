@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "source": "Texas A&M AgriLife Extension TexasET Network",
+  "source_variable": "grass-reference evapotranspiration (ETo)",
+  "units": {
+    "eto": "in/day",
+    "surface_area": "acres",
+    "volume": "acre-feet/day",
+    "municipal_equivalent": "million gallons/day"
+  },
+  "reservoirs": {
+    "lake_corpus_christi": {
+      "display_name": "Lake Corpus Christi",
+      "regional_weights": {
+        "coastal_bend": 1.0
+      },
+      "open_water_coefficient": {
+        "low": 0.85,
+        "high": 1.15
+      },
+      "confidence": "moderate"
+    },
+    "choke_canyon_reservoir": {
+      "display_name": "Choke Canyon Reservoir",
+      "regional_weights": {
+        "coastal_bend": 0.5,
+        "winter_garden": 0.5
+      },
+      "open_water_coefficient": {
+        "low": 0.85,
+        "high": 1.15
+      },
+      "confidence": "moderate"
+    }
+  },
+  "qa": {
+    "require_current_surface_area": true,
+    "maximum_texaset_age_hours": 36,
+    "label_as_estimate": true,
+    "reject_negative_values": true
+  }
+}
