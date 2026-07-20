@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, asdict
 from datetime import date, datetime, timezone
-from typing import Any, Iterable, Mapping, Sequence
+from typing import Any, Iterable, Mapping
 
 
 @dataclass(frozen=True)
@@ -103,12 +103,12 @@ def render_daily_operations_markdown(rollup: Mapping[str, Any]) -> str:
         lines.extend(
             [
                 f"### {item['reservoir']}",
-                f"- Daily loss ({latest['day']}): {latest['low_acre_feet']:,.2f}–{latest['high_acre_feet']:,.2f} acre-feet; "
-                f"{latest['low_million_gallons']:,.3f}–{latest['high_million_gallons']:,.3f} million gallons",
-                f"- Trailing {item['trailing_day_count']} days: {item['trailing_low_acre_feet']:,.2f}–{item['trailing_high_acre_feet']:,.2f} acre-feet; "
-                f"{item['trailing_low_million_gallons']:,.3f}–{item['trailing_high_million_gallons']:,.3f} million gallons",
-                f"- Month to date ({item['month_to_date_day_count']} days): {item['month_to_date_low_acre_feet']:,.2f}–{item['month_to_date_high_acre_feet']:,.2f} acre-feet; "
-                f"{item['month_to_date_low_million_gallons']:,.3f}–{item['month_to_date_high_million_gallons']:,.3f} million gallons",
+                f"- Daily loss ({latest['day']}): {latest['low_acre_feet']:,.2f}â€“{latest['high_acre_feet']:,.2f} acre-feet; "
+                f"{latest['low_million_gallons']:,.3f}â€“{latest['high_million_gallons']:,.3f} million gallons",
+                f"- Trailing {item['trailing_day_count']} days: {item['trailing_low_acre_feet']:,.2f}â€“{item['trailing_high_acre_feet']:,.2f} acre-feet; "
+                f"{item['trailing_low_million_gallons']:,.3f}â€“{item['trailing_high_million_gallons']:,.3f} million gallons",
+                f"- Month to date ({item['month_to_date_day_count']} days): {item['month_to_date_low_acre_feet']:,.2f}â€“{item['month_to_date_high_acre_feet']:,.2f} acre-feet; "
+                f"{item['month_to_date_low_million_gallons']:,.3f}â€“{item['month_to_date_high_million_gallons']:,.3f} million gallons",
                 f"- Method: {latest['method']}",
                 f"- Source: {latest['source']}",
                 f"- Confidence: {latest['confidence']}",
