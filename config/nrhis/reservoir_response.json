@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "build": "057",
+  "routing_capture_factors": {
+    "ChokeCanyon": {"low": 0.45, "central": 0.60, "high": 0.75},
+    "CorpusChristi": {"low": 0.50, "central": 0.68, "high": 0.82}
+  },
+  "routing_windows_hours": {
+    "ChokeCanyon": 120,
+    "CorpusChristi": 168
+  },
+  "reservoirs": {
+    "ChokeCanyon": {"display_name": "Choke Canyon Reservoir"},
+    "CorpusChristi": {"display_name": "Lake Corpus Christi"}
+  }
+}
