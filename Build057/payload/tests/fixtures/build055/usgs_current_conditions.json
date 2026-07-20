@@ -1,0 +1,82 @@
+[
+  {
+    "site_no": "08210000",
+    "site_name": "Three Rivers",
+    "parameter_code": "00060",
+    "parameter_name": "discharge",
+    "unit": "ft3/s",
+    "observed_at": "2026-07-19T20:00:00Z",
+    "value": 25.0,
+    "qualifiers": [
+      "P"
+    ],
+    "provisional": true,
+    "stale": false,
+    "estimated_tds_mg_l": null,
+    "source": "USGS Instantaneous Values API"
+  },
+  {
+    "site_no": "08210000",
+    "site_name": "Three Rivers",
+    "parameter_code": "00065",
+    "parameter_name": "gage_height",
+    "unit": "ft",
+    "observed_at": "2026-07-19T20:00:00Z",
+    "value": 2.1,
+    "qualifiers": [
+      "P"
+    ],
+    "provisional": true,
+    "stale": false,
+    "estimated_tds_mg_l": null,
+    "source": "USGS Instantaneous Values API"
+  },
+  {
+    "site_no": "08211200",
+    "site_name": "Bluntzer",
+    "parameter_code": "00060",
+    "parameter_name": "discharge",
+    "unit": "ft3/s",
+    "observed_at": "2026-07-19T20:00:00Z",
+    "value": 64.0,
+    "qualifiers": [
+      "P"
+    ],
+    "provisional": true,
+    "stale": false,
+    "estimated_tds_mg_l": null,
+    "source": "USGS Instantaneous Values API"
+  },
+  {
+    "site_no": "08211200",
+    "site_name": "Bluntzer",
+    "parameter_code": "00065",
+    "parameter_name": "gage_height",
+    "unit": "ft",
+    "observed_at": "2026-07-19T20:00:00Z",
+    "value": 3.0,
+    "qualifiers": [
+      "P"
+    ],
+    "provisional": true,
+    "stale": false,
+    "estimated_tds_mg_l": null,
+    "source": "USGS Instantaneous Values API"
+  },
+  {
+    "site_no": "08211200",
+    "site_name": "Bluntzer",
+    "parameter_code": "00095",
+    "parameter_name": "specific_conductance",
+    "unit": "uS/cm",
+    "observed_at": "2026-07-19T20:00:00Z",
+    "value": 1800.0,
+    "qualifiers": [
+      "P"
+    ],
+    "provisional": true,
+    "stale": false,
+    "estimated_tds_mg_l": 1170.0,
+    "source": "USGS Instantaneous Values API"
+  }
+]
