@@ -1,0 +1,14 @@
+{
+  "schema_version": 24,
+  "build": "060",
+  "name": "NRHIS Sprint 2 Build060 Integrated Operations Snapshot",
+  "entry_point": "Apply-Build060.ps1",
+  "branch": "feature/sprint2-build060",
+  "merge_target": "develop",
+  "tag": "v0.1.1-rc60+build060",
+  "features": [
+    "integrated USGS river, NWPS forecast, reservoir operations, and SALT03 coastal snapshot",
+    "reporting readiness and mandatory public-graphic release gate",
+    "JSON, CSV, readiness, and machine-readable receipt outputs"
+  ]
+}

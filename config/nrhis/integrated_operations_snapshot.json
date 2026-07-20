@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "coastal_station_code": "SALT03",
+  "coastal_station_name": "SALT03 Nueces Bay",
+  "public_graphic_requires_ready_status": true,
+  "technical_report_allows_conditional_status": true
+}
