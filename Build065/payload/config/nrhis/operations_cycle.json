@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "build": "063",
+  "scripts_directory": "scripts",
+  "evidence_directory": "data/nrhis/operations_cycles",
+  "powershell_executable": "powershell.exe",
+  "stop_on_required_failure": true,
+  "disabled_steps": [],
+  "required_steps": {
+    "usgs_current": true,
+    "usgs_incremental": true,
+    "nwps_forecasts": true,
+    "twdb_reservoirs": true,
+    "reservoir_water_budget": true,
+    "reservoir_response": true,
+    "reservoir_operations": true,
+    "salt03_coastal": true,
+    "integrated_snapshot": true,
+    "publication_bundle": true
+  },
+  "step_timeout_seconds": 300
+}
