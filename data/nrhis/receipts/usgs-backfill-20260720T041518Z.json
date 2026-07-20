@@ -1,0 +1,36 @@
+{
+  "build": "052",
+  "checkpoint": "C:\\GitHub\\NRHIS\\data\\nrhis\\backfill\\checkpoint.json",
+  "chunk_days": 2,
+  "chunks": [
+    {
+      "end": "2026-07-19",
+      "new_records": 2606,
+      "raw_file": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\usgs_iv_backfill\\usgs-iv-2026-07-18-2026-07-19.json",
+      "raw_sha256": "f17cb2db144f9dff2a68b9c6374ec93ab3833b714ae343bfb9fcb3ec6cdcf8a8",
+      "records_received": 2606,
+      "request_url": "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08194000%2C08206600%2C08210000%2C08211000%2C08211200%2C08211500&parameterCd=00060%2C00065%2C00010%2C00095&startDT=2026-07-18&endDT=2026-07-19&siteStatus=all",
+      "start": "2026-07-18"
+    },
+    {
+      "end": "2026-07-20",
+      "new_records": 0,
+      "raw_file": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\usgs_iv_backfill\\usgs-iv-2026-07-20-2026-07-20.json",
+      "raw_sha256": "cceb448628fe8c8c5226104087a56a19f798906358cf7a8c960153bd2a17f83b",
+      "records_received": 0,
+      "request_url": "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08194000%2C08206600%2C08210000%2C08211000%2C08211200%2C08211500&parameterCd=00060%2C00065%2C00010%2C00095&startDT=2026-07-20&endDT=2026-07-20&siteStatus=all",
+      "start": "2026-07-20"
+    }
+  ],
+  "chunks_completed": 2,
+  "completed_at": "2026-07-20T04:15:28.893842Z",
+  "effective_start": "2026-07-18",
+  "history_csv": "C:\\GitHub\\NRHIS\\data\\nrhis\\normalized\\usgs_historical_observations.csv",
+  "history_jsonl": "C:\\GitHub\\NRHIS\\data\\nrhis\\normalized\\usgs_historical_observations.jsonl",
+  "new_records": 2606,
+  "requested_end": "2026-07-20",
+  "requested_start": "2026-07-18",
+  "schema_version": 1,
+  "started_at": "2026-07-20T04:15:18.816981Z",
+  "total_history_records": 511041
+}

@@ -1,15 +1,15 @@
 site_no,site_name,parameter_code,parameter_name,unit,observed_at,value,qualifiers,provisional,stale,estimated_tds_mg_l,source
-08194000,"Nueces Rv at Cotulla, TX",00060,discharge,ft3/s,2026-07-20T03:00:00Z,302.0,P,True,False,,USGS Instantaneous Values API
-08194000,"Nueces Rv at Cotulla, TX",00065,gage_height,ft,2026-07-20T03:00:00Z,8.04,P,True,False,,USGS Instantaneous Values API
+08194000,"Nueces Rv at Cotulla, TX",00060,discharge,ft3/s,2026-07-20T04:00:00Z,317.0,P,True,False,,USGS Instantaneous Values API
+08194000,"Nueces Rv at Cotulla, TX",00065,gage_height,ft,2026-07-20T04:00:00Z,8.15,P,True,False,,USGS Instantaneous Values API
 08206600,"Frio Rv at Tilden, TX",00060,discharge,ft3/s,2026-07-20T03:15:00Z,307.0,P,True,False,,USGS Instantaneous Values API
 08206600,"Frio Rv at Tilden, TX",00065,gage_height,ft,2026-07-20T03:15:00Z,8.27,P,True,False,,USGS Instantaneous Values API
 08210000,"Nueces Rv nr Three Rivers, TX",00060,discharge,ft3/s,2026-07-20T03:15:00Z,25.0,P,True,False,,USGS Instantaneous Values API
 08210000,"Nueces Rv nr Three Rivers, TX",00065,gage_height,ft,2026-07-20T03:15:00Z,1.32,P,True,False,,USGS Instantaneous Values API
-08211000,"Nueces Rv nr Mathis, TX",00060,discharge,ft3/s,2026-07-20T03:00:00Z,93.9,P,True,False,,USGS Instantaneous Values API
-08211000,"Nueces Rv nr Mathis, TX",00065,gage_height,ft,2026-07-20T03:00:00Z,1.09,P,True,False,,USGS Instantaneous Values API
-08211200,"Nueces Rv at Bluntzer, TX",00010,water_temperature,deg C,2026-07-20T03:00:00Z,31.5,P,True,False,,USGS Instantaneous Values API
-08211200,"Nueces Rv at Bluntzer, TX",00060,discharge,ft3/s,2026-07-20T03:00:00Z,76.6,P,True,False,,USGS Instantaneous Values API
-08211200,"Nueces Rv at Bluntzer, TX",00065,gage_height,ft,2026-07-20T03:00:00Z,7.11,P,True,False,,USGS Instantaneous Values API
-08211200,"Nueces Rv at Bluntzer, TX",00095,specific_conductance,uS/cm @25C,2026-07-20T03:00:00Z,1140.0,P,True,False,741.0,USGS Instantaneous Values API
-08211500,"Nueces Rv at Calallen, TX",00060,discharge,ft3/s,2026-07-20T02:30:00Z,0.0,P,True,False,,USGS Instantaneous Values API
-08211500,"Nueces Rv at Calallen, TX",00065,gage_height,ft,2026-07-20T02:30:00Z,2.45,P,True,False,,USGS Instantaneous Values API
+08211000,"Nueces Rv nr Mathis, TX",00060,discharge,ft3/s,2026-07-20T04:00:00Z,93.9,P,True,False,,USGS Instantaneous Values API
+08211000,"Nueces Rv nr Mathis, TX",00065,gage_height,ft,2026-07-20T04:00:00Z,1.09,P,True,False,,USGS Instantaneous Values API
+08211200,"Nueces Rv at Bluntzer, TX",00010,water_temperature,deg C,2026-07-20T04:00:00Z,31.5,P,True,False,,USGS Instantaneous Values API
+08211200,"Nueces Rv at Bluntzer, TX",00060,discharge,ft3/s,2026-07-20T04:00:00Z,75.8,P,True,False,,USGS Instantaneous Values API
+08211200,"Nueces Rv at Bluntzer, TX",00065,gage_height,ft,2026-07-20T04:00:00Z,7.1,P,True,False,,USGS Instantaneous Values API
+08211200,"Nueces Rv at Bluntzer, TX",00095,specific_conductance,uS/cm @25C,2026-07-20T04:00:00Z,1140.0,P,True,False,741.0,USGS Instantaneous Values API
+08211500,"Nueces Rv at Calallen, TX",00060,discharge,ft3/s,2026-07-20T03:30:00Z,0.0,P,True,False,,USGS Instantaneous Values API
+08211500,"Nueces Rv at Calallen, TX",00065,gage_height,ft,2026-07-20T03:30:00Z,2.44,P,True,False,,USGS Instantaneous Values API

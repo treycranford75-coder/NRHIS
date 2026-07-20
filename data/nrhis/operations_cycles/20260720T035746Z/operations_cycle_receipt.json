@@ -1,0 +1,33 @@
+{
+  "blocked": true,
+  "build": "062",
+  "completed_at": "2026-07-20T03:57:47.122477Z",
+  "cycle_id": "20260720T035746Z",
+  "publication_authorized": false,
+  "qa_passes_completed": 0,
+  "required_failures": [
+    "usgs_current"
+  ],
+  "schema_version": 1,
+  "started_at": "2026-07-20T03:57:46.859323Z",
+  "status": "failed",
+  "steps": [
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "C:\\GitHub\\NRHIS\\scripts\\Harvest-USGS-Production.ps1"
+      ],
+      "completed_at": "2026-07-20T03:57:47.120755Z",
+      "exit_code": 1,
+      "log_path": "C:\\GitHub\\NRHIS\\data\\nrhis\\operations_cycles\\20260720T035746Z\\logs\\usgs_current.log",
+      "name": "usgs_current",
+      "required": true,
+      "started_at": "2026-07-20T03:57:46.859423Z",
+      "status": "failed"
+    }
+  ]
+}

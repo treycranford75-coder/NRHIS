@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "build": "056",
+  "completed_at": "2026-07-20T04:16:39.966163Z",
+  "new_history_records": 2,
+  "files": {
+    "current_json": "data\\nrhis\\reservoirs\\reservoir_water_budget_current.json",
+    "current_csv": "data\\nrhis\\reservoirs\\reservoir_water_budget_current.csv",
+    "summary": "data\\nrhis\\reservoirs\\reservoir_water_budget_summary.json",
+    "history": "data\\nrhis\\reservoirs\\reservoir_water_budget_history.jsonl"
+  },
+  "receipt_path": "data\\nrhis\\receipts\\reservoir_water_budget_receipt.json"
+}

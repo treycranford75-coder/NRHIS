@@ -1,19 +1,19 @@
 {
   "build": "058",
   "conditional_count": 2,
-  "generated_at": "2026-07-20T03:38:06.801505Z",
+  "generated_at": "2026-07-20T04:18:19.627506Z",
   "not_ready_count": 0,
   "overall_status": "conditional",
   "ready_count": 0,
   "reservoir_count": 2,
   "reservoirs": [
     {
-      "reasons": "24-hour water budget incomplete; estimated reservoir response confidence is low; water-budget record missing",
+      "reasons": "24-hour water budget incomplete; estimated reservoir response confidence is low",
       "reservoir_id": "ChokeCanyon",
       "status": "conditional"
     },
     {
-      "reasons": "24-hour water budget incomplete; estimated reservoir response confidence is low; water-budget record missing",
+      "reasons": "24-hour water budget incomplete; estimated reservoir response confidence is low",
       "reservoir_id": "CorpusChristi",
       "status": "conditional"
     }

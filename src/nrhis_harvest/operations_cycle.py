@@ -1,4 +1,5 @@
-"""Build062 twice-daily NRHIS operations-cycle orchestration."""
+"""Build063 resilient twice-daily NRHIS operations-cycle orchestration."""
+
 from __future__ import annotations
 
 import json
@@ -79,14 +80,34 @@ def build_steps(config: dict, *, qa_passes_completed: int) -> list[CycleStep]:
     return steps
 
 
-def _default_runner(command: Sequence[str], cwd: Path) -> subprocess.CompletedProcess[str]:
-    return subprocess.run(
-        list(command),
-        cwd=cwd,
-        check=False,
-        capture_output=True,
-        text=True,
-    )
+def _default_runner(
+    command: Sequence[str],
+    cwd: Path,
+    timeout_seconds: int = 300,
+) -> subprocess.CompletedProcess[str]:
+    try:
+        return subprocess.run(
+            list(command),
+            cwd=cwd,
+            check=False,
+            capture_output=True,
+            text=True,
+            stdin=subprocess.DEVNULL,
+            timeout=timeout_seconds,
+        )
+    except subprocess.TimeoutExpired as exc:
+        stdout = exc.stdout or ""
+        stderr = exc.stderr or ""
+        if isinstance(stdout, bytes):
+            stdout = stdout.decode("utf-8", errors="replace")
+        if isinstance(stderr, bytes):
+            stderr = stderr.decode("utf-8", errors="replace")
+        return subprocess.CompletedProcess(
+            args=list(command),
+            returncode=124,
+            stdout=stdout,
+            stderr=stderr + f"\nNRHIS step timed out after {timeout_seconds} seconds.\n",
+        )
 
 
 def run_cycle(
@@ -95,7 +116,7 @@ def run_cycle(
     *,
     qa_passes_completed: int = 0,
     cycle_name: str | None = None,
-    runner: Callable[[Sequence[str], Path], subprocess.CompletedProcess[str]] = _default_runner,
+    runner: Callable[[Sequence[str], Path], subprocess.CompletedProcess[str]] | None = None,
     now: Callable[[], datetime] = utc_now,
 ) -> dict:
     config = json.loads(config_path.read_text(encoding="utf-8"))
@@ -105,12 +126,16 @@ def run_cycle(
 
     started = now()
     cycle_id = cycle_name or started.strftime("%Y%m%dT%H%M%SZ")
-    evidence_root = repository_root / config.get("evidence_directory", "data/nrhis/operations_cycles")
+    evidence_root = repository_root / config.get(
+        "evidence_directory", "data/nrhis/operations_cycles"
+    )
     cycle_root = evidence_root / cycle_id
     logs_root = cycle_root / "logs"
     scripts_root = repository_root / config.get("scripts_directory", "scripts")
     shell = str(config.get("powershell_executable", "powershell.exe"))
     stop_on_required_failure = bool(config.get("stop_on_required_failure", True))
+    timeout_seconds = int(config.get("step_timeout_seconds", 300))
+    invoke = runner or (lambda command, cwd: _default_runner(command, cwd, timeout_seconds))
 
     results: list[StepResult] = []
     blocked = False
@@ -136,6 +161,7 @@ def run_cycle(
             command = [
                 shell,
                 "-NoProfile",
+                "-NonInteractive",
                 "-ExecutionPolicy",
                 "Bypass",
                 "-File",
@@ -143,7 +169,7 @@ def run_cycle(
                 *step.arguments,
             ]
             started_step = now()
-            completed = runner(command, repository_root)
+            completed = invoke(command, repository_root)
             completed_step = now()
             log_path = logs_root / f"{step.name}.log"
             output = (completed.stdout or "") + (completed.stderr or "")
@@ -169,7 +195,7 @@ def run_cycle(
     publication_authorized = status == "completed" and qa_passes_completed >= 2
     receipt = {
         "schema_version": 1,
-        "build": "062",
+        "build": "063",
         "cycle_id": cycle_id,
         "started_at": _stamp(started),
         "completed_at": _stamp(completed_at),
@@ -177,6 +203,7 @@ def run_cycle(
         "blocked": blocked,
         "qa_passes_completed": qa_passes_completed,
         "publication_authorized": publication_authorized,
+        "step_timeout_seconds": timeout_seconds,
         "required_failures": required_failures,
         "steps": [asdict(item) for item in results],
     }

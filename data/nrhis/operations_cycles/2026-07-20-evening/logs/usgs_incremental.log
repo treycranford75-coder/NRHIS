@@ -1,0 +1,32 @@
+{
+  "backfill": {
+    "build": "052",
+    "checkpoint": "C:\\GitHub\\NRHIS\\data\\nrhis\\backfill\\checkpoint.json",
+    "chunk_days": 2,
+    "chunks": [],
+    "chunks_completed": 0,
+    "completed_at": "2026-07-20T04:18:10.332356Z",
+    "effective_start": "2026-07-21",
+    "history_csv": "C:\\GitHub\\NRHIS\\data\\nrhis\\normalized\\usgs_historical_observations.csv",
+    "history_jsonl": "C:\\GitHub\\NRHIS\\data\\nrhis\\normalized\\usgs_historical_observations.jsonl",
+    "new_records": 0,
+    "receipt": "C:\\GitHub\\NRHIS\\data\\nrhis\\receipts\\usgs-backfill-20260720T041805Z.json",
+    "requested_end": "2026-07-19",
+    "requested_start": "2024-02-01",
+    "schema_version": 1,
+    "started_at": "2026-07-20T04:18:05.161996Z",
+    "total_history_records": 511041
+  },
+  "build": "052",
+  "incremental_end": "2026-07-19",
+  "incremental_start": "2024-02-01",
+  "overlap_days": 2,
+  "quality": {
+    "detected_gaps": 0,
+    "missing_station_parameters": 24,
+    "ready_for_reporting": false,
+    "stale_station_parameters": 24
+  },
+  "receipt_path": "C:\\GitHub\\NRHIS\\data\\nrhis\\receipts\\usgs_incremental_update_receipt.json",
+  "schema_version": 1
+}

@@ -1,6 +1,6 @@
 {
   "build": "060",
-  "completed_at": "2026-07-20T03:38:07.290406Z",
+  "completed_at": "2026-07-20T04:18:21.119357Z",
   "files": {
     "csv": "data\\nrhis\\operational\\integrated_operations_snapshot.csv",
     "json": "data\\nrhis\\operational\\integrated_operations_snapshot.json",

@@ -1,0 +1,21 @@
+{
+  "build": "050",
+  "completed_at": "2026-07-20T03:53:33.119782Z",
+  "configured_sites": 6,
+  "files": {
+    "current_csv": "C:\\GitHub\\NRHIS\\data\\nrhis\\current\\usgs_current_conditions.csv",
+    "current_json": "C:\\GitHub\\NRHIS\\data\\nrhis\\current\\usgs_current_conditions.json",
+    "history": "C:\\GitHub\\NRHIS\\data\\nrhis\\normalized\\usgs_observations.jsonl",
+    "raw": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\usgs_iv\\usgs-iv-20260720T035332Z.json",
+    "station_status_csv": "C:\\GitHub\\NRHIS\\data\\nrhis\\current\\usgs_station_status.csv"
+  },
+  "missing_sites": [],
+  "new_history_records": 2,
+  "observations": 14,
+  "raw_sha256": "244771c27fc736cb5acf7010cb42735e73abbbfbc334deeef6891c10ef399f73",
+  "request_url": "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08194000%2C08206600%2C08210000%2C08211000%2C08211200%2C08211500&parameterCd=00060%2C00065%2C00010%2C00095&period=P2D&siteStatus=all",
+  "returned_sites": 6,
+  "schema_version": 1,
+  "stale_observations": 0,
+  "started_at": "2026-07-20T03:53:32.425519Z"
+}

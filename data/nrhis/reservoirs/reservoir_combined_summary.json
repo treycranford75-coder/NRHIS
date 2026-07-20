@@ -3,7 +3,7 @@
   "combined_conservation_capacity_acft": 918882.0,
   "combined_conservation_storage_acft": 137506.0,
   "combined_percent_full": 15.0,
-  "generated_at": "2026-07-20T03:38:05.280440Z",
+  "generated_at": "2026-07-20T04:18:17.521420Z",
   "reservoir_count": 2,
   "reservoirs": [
     {
@@ -16,7 +16,7 @@
       "reservoir_name": "Choke Canyon Reservoir",
       "source": "TWDB Water Data for Texas",
       "stale": false,
-      "storage_change_acft": -54.0,
+      "storage_change_acft": 0.0,
       "surface_area_acres": 5426.1,
       "volume_acft": 52793.0
     },
@@ -30,7 +30,7 @@
       "reservoir_name": "Lake Corpus Christi",
       "source": "TWDB Water Data for Texas",
       "stale": false,
-      "storage_change_acft": -111.0,
+      "storage_change_acft": 0.0,
       "surface_area_acres": 11024.07,
       "volume_acft": 84992.0
     }

@@ -58,3 +58,9 @@ htmlcov/
 # Build005 legacy wrapper runtime output
 reports/legacy-pass1/*
 !reports/legacy-pass1/.gitkeep
+
+# NRHIS generated operational datasets
+data/nrhis/normalized/usgs_historical_observations.csv
+data/nrhis/normalized/usgs_historical_observations.jsonl
+data/nrhis/raw/
+data/nrhis/operations_cycles/

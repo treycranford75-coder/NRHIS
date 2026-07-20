@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "build": "060",
+  "completed_at": "2026-07-20T04:18:21.119357Z",
+  "overall_status": "not_ready",
+  "station_count": 7,
+  "reservoir_count": 2,
+  "files": {
+    "json": "data\\nrhis\\operational\\integrated_operations_snapshot.json",
+    "csv": "data\\nrhis\\operational\\integrated_operations_snapshot.csv",
+    "readiness": "data\\nrhis\\operational\\integrated_reporting_readiness.json"
+  },
+  "receipt_path": "data\\nrhis\\receipts\\integrated_operations_snapshot_receipt.json"
+}

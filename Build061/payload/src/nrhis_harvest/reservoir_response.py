@@ -1,4 +1,5 @@
 """Estimated reservoir response calculations for NRHIS Build057."""
+
 from __future__ import annotations
 
 import csv
@@ -46,7 +47,9 @@ def cfs_hours_to_acft(flow_cfs: float | None, hours: float | None) -> float | No
     return round(flow_cfs * hours * 3600.0 / CUBIC_FEET_PER_ACRE_FOOT, 2)
 
 
-def _forecast_volume(rows: list[dict[str, Any]], station_ids: set[str], window_hours: float) -> float | None:
+def _forecast_volume(
+    rows: list[dict[str, Any]], station_ids: set[str], window_hours: float
+) -> float | None:
     volumes: list[float] = []
     for row in rows:
         if str(row.get("station_id")) not in station_ids:
@@ -80,7 +83,9 @@ def estimate_responses(
         gross = _forecast_volume(forecasts, station_map.get(rid, set()), window or 0)
         factors = config.get("routing_capture_factors", {}).get(rid, {})
         gains = {
-            key: round(gross * float(factors[key]), 2) if gross is not None and key in factors else None
+            key: round(gross * float(factors[key]), 2)
+            if gross is not None and key in factors
+            else None
             for key in ("low", "central", "high")
         }
         projected = {
@@ -109,7 +114,9 @@ def estimate_responses(
         results.append(
             ReservoirResponse(
                 reservoir_id=rid,
-                reservoir_name=str(reservoir.get("reservoir_name") or config["reservoirs"][rid]["display_name"]),
+                reservoir_name=str(
+                    reservoir.get("reservoir_name") or config["reservoirs"][rid]["display_name"]
+                ),
                 current_storage_acft=storage,
                 conservation_capacity_acft=capacity,
                 current_percent_full=percent,
@@ -135,7 +142,9 @@ def run(config_path: Path, data_root: Path) -> dict[str, Any]:
     reservoirs_path = data_root / "reservoirs" / "reservoir_current_conditions.json"
     forecasts_path = data_root / "nwps" / "nwps_forecasts.json"
     reservoirs = json.loads(reservoirs_path.read_text(encoding="utf-8"))
-    forecasts = json.loads(forecasts_path.read_text(encoding="utf-8")) if forecasts_path.exists() else []
+    forecasts = (
+        json.loads(forecasts_path.read_text(encoding="utf-8")) if forecasts_path.exists() else []
+    )
     rows = [asdict(x) for x in estimate_responses(reservoirs, forecasts, config)]
     out_dir = data_root / "reservoirs"
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -143,8 +152,11 @@ def run(config_path: Path, data_root: Path) -> dict[str, Any]:
     csv_path = out_dir / "reservoir_response_estimate.csv"
     json_path.write_text(json.dumps(rows, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     with csv_path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(rows[0].keys()) if rows else ["reservoir_id"])
-        writer.writeheader(); writer.writerows(rows)
+        writer = csv.DictWriter(
+            handle, fieldnames=list(rows[0].keys()) if rows else ["reservoir_id"]
+        )
+        writer.writeheader()
+        writer.writerows(rows)
     receipt = {
         "schema_version": 1,
         "build": "057",

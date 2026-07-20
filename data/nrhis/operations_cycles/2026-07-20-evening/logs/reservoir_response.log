@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "build": "057",
+  "completed_at": "2026-07-20T04:18:19.030421Z",
+  "reservoir_count": 2,
+  "files": {
+    "json": "data\\nrhis\\reservoirs\\reservoir_response_estimate.json",
+    "csv": "data\\nrhis\\reservoirs\\reservoir_response_estimate.csv"
+  },
+  "receipt_path": "data\\nrhis\\receipts\\reservoir_response_estimate_receipt.json"
+}
