@@ -1,18 +1,18 @@
 {
   "build": "055",
-  "completed_at": "2026-07-20T04:18:17.823681Z",
+  "completed_at": "2026-07-20T10:17:24.575660Z",
   "files": {
     "combined_summary": "C:\\GitHub\\NRHIS\\data\\nrhis\\reservoirs\\reservoir_combined_summary.json",
     "current_csv": "C:\\GitHub\\NRHIS\\data\\nrhis\\reservoirs\\reservoir_current_conditions.csv",
     "current_json": "C:\\GitHub\\NRHIS\\data\\nrhis\\reservoirs\\reservoir_current_conditions.json",
     "history_jsonl": "C:\\GitHub\\NRHIS\\data\\nrhis\\reservoirs\\reservoir_observations.jsonl",
-    "raw": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\twdb_reservoirs\\reservoirs-20260720T041817Z.geojson"
+    "raw": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\twdb_reservoirs\\reservoirs-20260720T101724Z.geojson"
   },
   "new_history_records": 0,
-  "raw_sha256": "d32d10085b4ada700da264507ee4a0e5fed27a42c89d0cf71702c2e0b838b509",
+  "raw_sha256": "aca52b95e61185cc3f7c6d03337515bc6b67993e98b7bcfce6d50e3602a47fd7",
   "request_url": "https://waterdatafortexas.org/reservoirs/municipal/corpus-christi/recent-conditions.geojson",
   "reservoir_count": 2,
   "schema_version": 1,
   "stale_reservoirs": [],
-  "started_at": "2026-07-20T04:18:17.521420Z"
+  "started_at": "2026-07-20T10:17:24.254262Z"
 }

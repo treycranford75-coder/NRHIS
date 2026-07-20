@@ -1,30 +1,30 @@
 [
   {
     "conservation_capacity_acft": 662820.0,
-    "conservation_storage_acft": 52792.0,
-    "elevation_ft": 179.29,
-    "observed_date": "2026-07-19",
-    "percent_full": 8.0,
+    "conservation_storage_acft": 52630.0,
+    "elevation_ft": 179.26,
+    "observed_date": "2026-07-20",
+    "percent_full": 7.9,
     "reservoir_id": "ChokeCanyon",
     "reservoir_name": "Choke Canyon Reservoir",
     "source": "TWDB Water Data for Texas",
     "stale": false,
     "storage_change_acft": 0.0,
-    "surface_area_acres": 5426.1,
-    "volume_acft": 52793.0
+    "surface_area_acres": 5414.4,
+    "volume_acft": 52631.0
   },
   {
     "conservation_capacity_acft": 256062.0,
-    "conservation_storage_acft": 84714.0,
-    "elevation_ft": 83.14,
-    "observed_date": "2026-07-19",
-    "percent_full": 33.1,
+    "conservation_storage_acft": 84494.0,
+    "elevation_ft": 83.12,
+    "observed_date": "2026-07-20",
+    "percent_full": 33.0,
     "reservoir_id": "CorpusChristi",
     "reservoir_name": "Lake Corpus Christi",
     "source": "TWDB Water Data for Texas",
     "stale": false,
     "storage_change_acft": 0.0,
-    "surface_area_acres": 11024.07,
-    "volume_acft": 84992.0
+    "surface_area_acres": 11006.36,
+    "volume_acft": 84772.0
   }
 ]

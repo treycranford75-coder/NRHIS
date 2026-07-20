@@ -1,0 +1,12 @@
+﻿{
+    "schema_version":  1,
+    "build":  "064",
+    "schedule_slot":  "manual",
+    "cycle_name":  "2026-07-20-manual",
+    "started_at":  "2026-07-20T10:17:07.1956651Z",
+    "completed_at":  "2026-07-20T10:17:28.5573496Z",
+    "status":  "completed",
+    "exit_code":  0,
+    "qa_passes_completed":  0,
+    "log_path":  "C:\\GitHub\\NRHIS\\data\\nrhis\\scheduler_logs\\2026-07-20-manual-20260720T101707Z.log"
+}

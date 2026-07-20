@@ -1,3 +1,3 @@
 reservoir_id,reservoir_name,report_date,surface_area_acres,evaporation_inches_per_day,evaporation_source,evaporation_method,evaporation_acft_per_day,evaporation_mgd,evaporation_7day_acft,evaporation_month_to_date_acft,inflow_acft,municipal_diversions_acft,environmental_releases_acft,other_outflow_acft,observed_storage_change_acft,calculated_net_change_acft,budget_residual_acft,budget_complete
-ChokeCanyon,Choke Canyon Reservoir,2026-07-20,5426.1,0.3,configured monthly climatology fallback,monthly climatology for month 7; estimate,135.653,44.203,271.306,271.306,,,,0.0,0.0,,,False
-CorpusChristi,Lake Corpus Christi,2026-07-20,11024.07,0.3,configured monthly climatology fallback,monthly climatology for month 7; estimate,275.602,89.805,551.204,551.204,,,,0.0,0.0,,,False
+ChokeCanyon,Choke Canyon Reservoir,2026-07-20,5414.4,0.3,configured monthly climatology fallback,monthly climatology for month 7; estimate,135.36,44.107,271.013,271.013,,,,0.0,0.0,,,False
+CorpusChristi,Lake Corpus Christi,2026-07-20,11006.36,0.3,configured monthly climatology fallback,monthly climatology for month 7; estimate,275.159,89.661,550.761,550.761,,,,0.0,0.0,,,False

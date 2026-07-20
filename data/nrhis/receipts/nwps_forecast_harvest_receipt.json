@@ -13,88 +13,88 @@
       "bytes": 32599,
       "endpoint": "metadata",
       "identifier": "08194000",
-      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T041810Z\\08194000_metadata.json",
-      "sha256": "481639c65d430229e668af131fb92dc88d39c5488fa7924cee9d7b9c9e648799"
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T101716Z\\08194000_metadata.json",
+      "sha256": "cef2cb0ad173ab5185f80902636dfa30253a1755915c86e8245f908a73b7f40a"
     },
     {
-      "bytes": 447910,
+      "bytes": 447880,
       "endpoint": "stageflow",
       "identifier": "08194000",
-      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T041810Z\\08194000_stageflow.json",
-      "sha256": "f096fdafd5b3f319ea077ef3b84f0d9c07b1cebcad590729e0e0f9fc6d026812"
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T101716Z\\08194000_stageflow.json",
+      "sha256": "25d7b407a1b56548792c0df07a8bab9a6eb5d0ad57ef3fe506a77f98d5a8a38f"
     },
     {
-      "bytes": 42647,
+      "bytes": 42648,
       "endpoint": "metadata",
       "identifier": "08194500",
-      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T041810Z\\08194500_metadata.json",
-      "sha256": "8357dccc65c900ad111a7c673777847805bdb99d45027bf9bb9524f0418a5e38"
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T101716Z\\08194500_metadata.json",
+      "sha256": "0b897f83208f797fb2a50671122373d6db4951c74a1c49244321fc1325189a50"
     },
     {
-      "bytes": 469694,
+      "bytes": 469687,
       "endpoint": "stageflow",
       "identifier": "08194500",
-      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T041810Z\\08194500_stageflow.json",
-      "sha256": "6281ce1b5d6d50ff936f313f3109ce32447c3c6671e3b377136682974c78c552"
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T101716Z\\08194500_stageflow.json",
+      "sha256": "42131bcebf9a10b117df3c59f405448f94139e63a7b44879cf9147f48266d027"
     },
     {
       "bytes": 38720,
       "endpoint": "metadata",
       "identifier": "08210000",
-      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T041810Z\\08210000_metadata.json",
-      "sha256": "946dcef66171a03706013b4d9db049ec1b15c5f5b8d6eb9489998014379a8625"
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T101716Z\\08210000_metadata.json",
+      "sha256": "f11b46c1abb2f6ddc6d469c65006b824a9c7573554b8dd97ce15ceee4510c228"
     },
     {
-      "bytes": 458934,
+      "bytes": 458962,
       "endpoint": "stageflow",
       "identifier": "08210000",
-      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T041810Z\\08210000_stageflow.json",
-      "sha256": "c9d61f880afa7829236e2e99f9204c1fa39f153a3ef3921bc83f0f714210f049"
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T101716Z\\08210000_stageflow.json",
+      "sha256": "abc7d99726f22673234e93461eb9612f23093cb02e13462c08a5fe9991db7b93"
     },
     {
       "bytes": 26955,
       "endpoint": "metadata",
       "identifier": "08211000",
-      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T041810Z\\08211000_metadata.json",
-      "sha256": "713c15f4d2a6f88b6b677a01227fab649b893b5107aa493b303417cd998ebe14"
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T101716Z\\08211000_metadata.json",
+      "sha256": "8133c8ed20c0c6fd123e6d0f4aee6ffc6aa7ec638257e3ddf19498a3320634ad"
     },
     {
       "bytes": 400648,
       "endpoint": "stageflow",
       "identifier": "08211000",
-      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T041810Z\\08211000_stageflow.json",
-      "sha256": "e6beb76c0d55cbc5f4fe31d9a0c5917b863937d927227e311e914a1794304f43"
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T101716Z\\08211000_stageflow.json",
+      "sha256": "d547dc74d23c4889d4d7268974ad3f01d22db398cbeb216ffdaa8d68b16ba392"
     },
     {
-      "bytes": 31706,
+      "bytes": 31704,
       "endpoint": "metadata",
       "identifier": "08211200",
-      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T041810Z\\08211200_metadata.json",
-      "sha256": "f944c001ffc8009f4445d3fc41c72803203a4510af77097769d86efab777f952"
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T101716Z\\08211200_metadata.json",
+      "sha256": "a0536f5f612acc882d1bc8cf4bc813c4da91902df19eec7f095e9866f524fe64"
     },
     {
-      "bytes": 467507,
+      "bytes": 467468,
       "endpoint": "stageflow",
       "identifier": "08211200",
-      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T041810Z\\08211200_stageflow.json",
-      "sha256": "b1b45e0051c29722854fcb0f6ef429cfa06b30fc17996fc7239c41d364f4964b"
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T101716Z\\08211200_stageflow.json",
+      "sha256": "d80808a1ff546afb6d207a19358d2312268c2081fbad3afc2bc454ebb5077eb2"
     },
     {
       "bytes": 34502,
       "endpoint": "metadata",
       "identifier": "08211500",
-      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T041810Z\\08211500_metadata.json",
-      "sha256": "4a3b474ea45f4c0303c1c6f09aef413f93d5233f7089480651a1b8c7b035c673"
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T101716Z\\08211500_metadata.json",
+      "sha256": "aa381182dde2bf8e037487773dc870580082ca8c358d151f854d0bf2b3f99232"
     },
     {
-      "bytes": 466375,
+      "bytes": 466335,
       "endpoint": "stageflow",
       "identifier": "08211500",
-      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T041810Z\\08211500_stageflow.json",
-      "sha256": "6f557609a4701420ca668c3d000b6a2f873746eb23ddc7999d4d5d44b915d5e7"
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T101716Z\\08211500_stageflow.json",
+      "sha256": "43c29b4de89b28141546fd43903b3cabdfe129506feff2cd68e0032e61c960ea"
     }
   ],
-  "retrieved_at": "2026-07-20T04:18:10.970517Z",
+  "retrieved_at": "2026-07-20T10:17:16.007631Z",
   "schema_version": 1,
   "summary": {
     "configured_gauges": 6,
