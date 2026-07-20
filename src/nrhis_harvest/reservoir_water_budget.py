@@ -114,3 +114,20 @@ def render_water_budget_markdown(report: Mapping[str, Any]) -> str:
         )
     lines.extend(["**Operational caveat:** " + str(report.get("caveat", "")), ""])
     return "\n".join(lines)
+# Backward-compatible API retained for historical NRHIS water-budget callers.
+def build_budget(*args, **kwargs):
+    from . import reservoir_water_budget_legacy as legacy
+
+    return legacy.build_budget(*args, **kwargs)
+
+
+def evaporation_acft(*args, **kwargs):
+    from . import reservoir_water_budget_legacy as legacy
+
+    return legacy.evaporation_acft(*args, **kwargs)
+
+
+def _daily_evap(*args, **kwargs):
+    from . import reservoir_water_budget_legacy as legacy
+
+    return legacy._daily_evap(*args, **kwargs)
