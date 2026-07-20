@@ -1,0 +1,6 @@
+{
+  "build": "088",
+  "entrypoint": "Apply-Build088.ps1",
+  "repository_root_parameter": true,
+  "one_step": true
+}

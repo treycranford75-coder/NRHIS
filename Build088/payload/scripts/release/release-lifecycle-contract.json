@@ -1,0 +1,73 @@
+{
+    "schema_version":  1,
+    "contract_name":  "NRHIS release lifecycle",
+    "target":  "scripts/release/Invoke-NrhisSelfContainedBuild.ps1",
+    "required_capabilities":  [
+                                  {
+                                      "id":  "pr-state-read",
+                                      "description":  "Reads pull-request state before deciding whether merge work is needed.",
+                                      "all_patterns":  [
+                                                           "gh pr view",
+                                                           "state,mergedAt,mergeCommit,url"
+                                                       ]
+                                  },
+                                  {
+                                      "id":  "ci-registration-retry",
+                                      "description":  "Treats temporarily absent CI checks as pending and retries before stopping.",
+                                      "all_patterns":  [
+                                                           "gh pr checks",
+                                                           "no checks reported",
+                                                           "CheckRegistrationAttempts"
+                                                       ]
+                                  },
+                                  {
+                                      "id":  "ci-failure-block",
+                                      "description":  "Real CI failures remain a hard merge gate.",
+                                      "all_patterns":  [
+                                                           "gh pr checks",
+                                                           "$exitCode",
+                                                           "throw"
+                                                       ]
+                                  },
+                                  {
+                                      "id":  "automatic-merge",
+                                      "description":  "Merges the pull request only after required checks pass.",
+                                      "all_patterns":  [
+                                                           "gh pr merge"
+                                                       ]
+                                  },
+                                  {
+                                      "id":  "idempotent-branch-cleanup",
+                                      "description":  "Missing local or remote branches are treated as successful cleanup.",
+                                      "all_patterns":  [
+                                                           "--force-with-lease",
+                                                           "switch",
+                                                           "origin/$BaseBranch"
+                                                       ]
+                                  },
+                                  {
+                                      "id":  "completion-and-archive",
+                                      "description":  "Runs completion and archive helpers with receipt preflight.",
+                                      "all_patterns":  [
+                                                           "gh release",
+                                                           "completion-receipt.json"
+                                                       ]
+                                  },
+                                  {
+                                      "id":  "resumable-state",
+                                      "description":  "Persists lifecycle state and emits a recovery command.",
+                                      "all_patterns":  [
+                                                           "gh release view",
+                                                           "existingRelease"
+                                                       ]
+                                  },
+                                  {
+                                      "id":  "closure-output",
+                                      "description":  "Closes with the standard next-build prompt.",
+                                      "all_patterns":  [
+                                                           "completion-closure-receipt.json",
+                                                           "completed and verified"
+                                                       ]
+                                  }
+                              ]
+}
