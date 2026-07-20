@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "contract_name": "NRHIS release lifecycle",
+  "target": "scripts/release/Finish-NrhisBuildLifecycle.ps1",
+  "required_capabilities": [
+    {
+      "id": "pr-state-read",
+      "description": "Reads pull-request state before deciding whether merge work is needed.",
+      "all_patterns": [
+        "gh pr view",
+        "--json state",
+        "MERGED"
+      ]
+    },
+    {
+      "id": "ci-registration-retry",
+      "description": "Treats temporarily absent CI checks as pending and retries before stopping.",
+      "all_patterns": [
+        "$checkRegistrationAttempts = 12",
+        "$checkRegistrationDelaySeconds = 10",
+        "no checks reported",
+        "Start-Sleep -Seconds $checkRegistrationDelaySeconds",
+        "-Status 'pending'"
+      ]
+    },
+    {
+      "id": "ci-failure-block",
+      "description": "Real CI failures remain a hard merge gate.",
+      "all_patterns": [
+        "gh pr checks $PullRequestUrl --watch --fail-fast",
+        "-Status 'failed'",
+        "CI failed. Automatic merge blocked."
+      ]
+    },
+    {
+      "id": "automatic-merge",
+      "description": "Merges the pull request only after required checks pass.",
+      "all_patterns": [
+        "gh pr merge $PullRequestUrl --merge",
+        "Required CI checks passed"
+      ]
+    },
+    {
+      "id": "idempotent-branch-cleanup",
+      "description": "Missing local or remote branches are treated as successful cleanup.",
+      "all_patterns": [
+        "git branch --list $featureBranch",
+        "Local feature branch already absent",
+        "git ls-remote --heads origin",
+        "Remote feature branch already absent"
+      ]
+    },
+    {
+      "id": "completion-and-archive",
+      "description": "Runs completion and archive helpers with receipt preflight.",
+      "all_patterns": [
+        "Complete-Build$BuildNumber.ps1",
+        "-RepositoryRoot $repo",
+        "status -ne 'verified'",
+        "verified -ne $true",
+        "Archive-NrhisInstallerArtifacts.ps1"
+      ]
+    },
+    {
+      "id": "resumable-state",
+      "description": "Persists lifecycle state and emits a recovery command.",
+      "all_patterns": [
+        "lifecycle-state.json",
+        "Resume-NrhisBuildLifecycle.ps1",
+        "Write-LifecycleState"
+      ]
+    },
+    {
+      "id": "closure-output",
+      "description": "Closes with the standard next-build prompt.",
+      "all_patterns": [
+        "completed and verified.",
+        "lets move on to next build",
+        "Waiting for Build$nextBuild root ZIP."
+      ]
+    }
+  ]
+}
