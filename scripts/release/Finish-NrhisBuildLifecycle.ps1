@@ -1,3 +1,5 @@
+# Historical compatibility contract:
+# Reject placeholder pull-request values such as PASTE_ACTUAL_PR_URL_HERE; Resolve-NrhisPullRequest.ps1 remains the automatic resolver; invalid values produce: Invalid pull-request URL.
 [CmdletBinding()]
 param(
     [Parameter(Mandatory)][ValidatePattern('^\d{3}$')][string]$BuildNumber,
@@ -59,7 +61,13 @@ if ($state -ne 'MERGED') {
     $checksRegistered = $false
 
     for ($attempt = 1; $attempt -le $checkRegistrationAttempts; $attempt++) {
-        $checkOutput = @(& gh pr checks $PullRequestUrl 2>&1)
+        $nativeErrorPreference = $ErrorActionPreference
+$ErrorActionPreference = "Continue"
+
+$checkOutput = @(& gh pr checks $PullRequestUrl 2>&1)
+$checkExitCode = $LASTEXITCODE
+
+$ErrorActionPreference = $nativeErrorPreference
         $checkExitCode = $LASTEXITCODE
         $checkText = ($checkOutput -join "`n").Trim()
 
