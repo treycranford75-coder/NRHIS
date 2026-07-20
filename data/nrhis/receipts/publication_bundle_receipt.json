@@ -1,0 +1,13 @@
+{
+  "build": "061",
+  "completed_at": "2026-07-20T03:41:32.276248Z",
+  "files": {
+    "bundle": "data\\nrhis\\publication\\twice_daily_publication_bundle.json",
+    "gate": "data\\nrhis\\publication\\publication_release_gate.json",
+    "public_rows": "data\\nrhis\\publication\\publication_public_rows.csv",
+    "qa": "data\\nrhis\\publication\\publication_qa_checklist.json"
+  },
+  "publication_status": "not_ready",
+  "publish_allowed": false,
+  "schema_version": 1
+}

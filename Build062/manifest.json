@@ -1,0 +1,14 @@
+{
+  "schema_version": 26,
+  "build": "062",
+  "name": "NRHIS Sprint 2 Build062 Twice-Daily Operations Cycle Runner",
+  "entry_point": "Apply-Build062.ps1",
+  "branch": "feature/sprint2-build062",
+  "merge_target": "develop",
+  "tag": "v0.1.1-rc62+build062",
+  "features": [
+    "ordered twice-daily source-to-publication operations cycle",
+    "required-step fail-fast behavior with per-step logs",
+    "cycle receipt, latest pointer, and two-pass QA publication authorization"
+  ]
+}
