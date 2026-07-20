@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "build": "072",
+  "inputs": {
+    "json": "data/nrhis/publication/daily_operations_report.json",
+    "markdown": "data/nrhis/publication/daily_operations_report.md",
+    "html": "data/nrhis/publication/daily_operations_report.html"
+  },
+  "publication_root": "data/nrhis/publication/packages",
+  "receipt_path": "data/nrhis/receipts/daily_operations_package_receipt.json",
+  "output_names": {
+    "json": "daily_operations_report.json",
+    "markdown": "daily_operations_report.md",
+    "html": "daily_operations_report.html"
+  }
+}
