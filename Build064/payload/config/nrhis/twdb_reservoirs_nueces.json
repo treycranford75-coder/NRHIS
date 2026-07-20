@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "api_url": "https://waterdatafortexas.org/reservoirs/municipal/corpus-christi/recent-conditions.geojson",
+  "timeout_seconds": 60,
+  "stale_days": 3,
+  "reservoirs": [
+    {
+      "condensed_name": "ChokeCanyon",
+      "display_name": "Choke Canyon Reservoir",
+      "display_order": 10
+    },
+    {
+      "condensed_name": "CorpusChristi",
+      "display_name": "Lake Corpus Christi",
+      "display_order": 20
+    }
+  ]
+}

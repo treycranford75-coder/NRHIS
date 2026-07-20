@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "build": "055",
+  "stations": [
+    {
+      "site_no": "08194000",
+      "name": "Nueces River at Cotulla",
+      "segment": "Upper Nueces",
+      "display_order": 10,
+      "required_parameters": [
+        "00060",
+        "00065"
+      ]
+    },
+    {
+      "site_no": "08194500",
+      "name": "Nueces River near Tilden",
+      "segment": "Middle Nueces",
+      "display_order": 20,
+      "required_parameters": [
+        "00060",
+        "00065"
+      ]
+    },
+    {
+      "site_no": "08210000",
+      "name": "Nueces River near Three Rivers",
+      "segment": "Reservoir inflow",
+      "display_order": 30,
+      "required_parameters": [
+        "00060",
+        "00065"
+      ]
+    },
+    {
+      "site_no": "08211000",
+      "name": "Nueces River near Mathis",
+      "segment": "Below Wesley Seale Dam",
+      "display_order": 40,
+      "required_parameters": [
+        "00060",
+        "00065"
+      ]
+    },
+    {
+      "site_no": "08211200",
+      "name": "Nueces River at Bluntzer",
+      "segment": "Lower Nueces",
+      "display_order": 50,
+      "required_parameters": [
+        "00060",
+        "00065",
+        "00095"
+      ]
+    },
+    {
+      "site_no": "08211500",
+      "name": "Nueces River at Calallen",
+      "segment": "Lower Nueces / saltwater barrier",
+      "display_order": 60,
+      "required_parameters": [
+        "00060",
+        "00065",
+        "00095"
+      ]
+    }
+  ]
+}
