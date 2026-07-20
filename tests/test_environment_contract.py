@@ -26,15 +26,13 @@ def test_pyproject_declares_supported_python_and_dependencies() -> None:
     assert project["requires-python"] == ">=3.11"
 
     runtime_dependencies = {
-        _normalized_dependency_name(item)
-        for item in project.get("dependencies", [])
+        _normalized_dependency_name(item) for item in project.get("dependencies", [])
     }
     assert REQUIRED_RUNTIME_DEPENDENCIES <= runtime_dependencies
 
     optional_dependencies = project.get("optional-dependencies", {})
     dev_dependencies = {
-        _normalized_dependency_name(item)
-        for item in optional_dependencies.get("dev", [])
+        _normalized_dependency_name(item) for item in optional_dependencies.get("dev", [])
     }
     assert REQUIRED_DEV_DEPENDENCIES <= dev_dependencies
 

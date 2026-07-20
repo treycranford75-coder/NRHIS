@@ -8,7 +8,9 @@ from nrhis_harvest.nwps_forecast_harvest import harvest
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Harvest NOAA/NWS NWPS forecasts and flood thresholds for NRHIS.")
+    parser = argparse.ArgumentParser(
+        description="Harvest NOAA/NWS NWPS forecasts and flood thresholds for NRHIS."
+    )
     parser.add_argument("--config", type=Path, required=True)
     parser.add_argument("--output-root", type=Path, required=True)
     parser.add_argument("--timeout-seconds", type=int)

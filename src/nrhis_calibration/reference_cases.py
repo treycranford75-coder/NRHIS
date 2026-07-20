@@ -108,9 +108,7 @@ def validate_reference_case(
     require_approved: bool = False,
 ) -> tuple[str, ...]:
     if require_approved and not reference_case.approved:
-        raise ReferenceCaseError(
-            f"reference case {reference_case.case_id!r} is not approved"
-        )
+        raise ReferenceCaseError(f"reference case {reference_case.case_id!r} is not approved")
 
     base = Path(manifest_directory)
     verified: list[str] = []
@@ -121,9 +119,7 @@ def validate_reference_case(
             raise ReferenceCaseError(f"reference artifact is missing: {artifact.path}")
         actual_hash = sha256_file(artifact_path)
         if actual_hash != artifact.sha256:
-            raise ReferenceCaseError(
-                f"reference artifact hash mismatch: {artifact.path}"
-            )
+            raise ReferenceCaseError(f"reference artifact hash mismatch: {artifact.path}")
         verified.append(artifact.path)
 
     return tuple(verified)

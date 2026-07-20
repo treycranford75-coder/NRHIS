@@ -85,11 +85,11 @@ def evaluate_sprint_closeout(
     checks.append("release tags unique" if unique_tags else "duplicate release tag detected")
 
     unique_commits = len({record.commit for record in ordered}) == len(ordered)
-    checks.append("release commits unique" if unique_commits else "duplicate release commit detected")
-
-    coverage_ok = all(
-        record.coverage_percent >= minimum_coverage_percent for record in ordered
+    checks.append(
+        "release commits unique" if unique_commits else "duplicate release commit detected"
     )
+
+    coverage_ok = all(record.coverage_percent >= minimum_coverage_percent for record in ordered)
     checks.append(
         f"coverage floor {minimum_coverage_percent:.2f}% satisfied"
         if coverage_ok
@@ -161,9 +161,7 @@ def load_release_records(path: str | Path) -> tuple[ReleaseRecord, ...]:
                 pre_release=bool(item.get("pre_release", True)),
             )
         except (KeyError, TypeError, ValueError) as exc:
-            raise SprintCloseoutError(
-                f"release record {index} is malformed"
-            ) from exc
+            raise SprintCloseoutError(f"release record {index} is malformed") from exc
         _validate_record(record)
         records.append(record)
 

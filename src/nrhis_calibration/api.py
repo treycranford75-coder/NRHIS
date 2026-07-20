@@ -32,8 +32,7 @@ class CalibrationRunResult:
 class CalibrationRunner(Protocol):
     implementation_name: str
 
-    def run(self, request: CalibrationRunRequest) -> CalibrationRunResult:
-        ...
+    def run(self, request: CalibrationRunRequest) -> CalibrationRunResult: ...
 
 
 class LegacyPass1CalibrationRunner:

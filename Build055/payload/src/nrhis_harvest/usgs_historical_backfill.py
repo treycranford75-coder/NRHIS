@@ -4,6 +4,7 @@ Build052 extends the production current-condition harvester with chunked date-ra
 retrieval. It uses only the Python standard library, archives each upstream response,
 keeps an append-only duplicate-safe history, and records a resumable checkpoint.
 """
+
 from __future__ import annotations
 
 import csv
@@ -98,7 +99,9 @@ def build_url(
 def fetch_json(url: str, timeout_seconds: int = 60) -> bytes:
     request = urllib.request.Request(
         url,
-        headers={"User-Agent": "NRHIS/0.1 Build052 (+https://github.com/treycranford75-coder/NRHIS)"},
+        headers={
+            "User-Agent": "NRHIS/0.1 Build052 (+https://github.com/treycranford75-coder/NRHIS)"
+        },
     )
     with urllib.request.urlopen(request, timeout=timeout_seconds) as response:  # noqa: S310
         if getattr(response, "status", 200) != 200:
@@ -127,10 +130,15 @@ def parse_payload(payload: dict[str, Any]) -> list[HistoricalObservation]:
             parameter_code,
             (str(variable.get("variableDescription", parameter_code)), ""),
         )
-        unit = str((variable.get("unit") or {}).get("unitCode", fallback_unit)).strip() or fallback_unit
+        unit = (
+            str((variable.get("unit") or {}).get("unitCode", fallback_unit)).strip()
+            or fallback_unit
+        )
         for group in series.get("values") or []:
             for item in group.get("value") or []:
-                observed_at = parse_timestamp(str(item["dateTime"])).isoformat().replace("+00:00", "Z")
+                observed_at = (
+                    parse_timestamp(str(item["dateTime"])).isoformat().replace("+00:00", "Z")
+                )
                 raw_value = item.get("value")
                 try:
                     value = float(raw_value) if raw_value not in (None, "", "-999999") else None
@@ -196,7 +204,9 @@ def append_deduplicated(path: Path, records: Iterable[HistoricalObservation]) ->
         path.parent.mkdir(parents=True, exist_ok=True)
         with path.open("a", encoding="utf-8", newline="") as handle:
             for record in new_records:
-                handle.write(json.dumps(asdict(record), sort_keys=True, separators=(",", ":")) + "\n")
+                handle.write(
+                    json.dumps(asdict(record), sort_keys=True, separators=(",", ":")) + "\n"
+                )
     return len(new_records)
 
 
@@ -262,7 +272,9 @@ def backfill(
             raw = fetch_json(url, timeout_seconds=timeout_seconds)
             payload = json.loads(raw.decode("utf-8"))
             records = parse_payload(payload)
-            raw_path = output_root / "raw" / "usgs_iv_backfill" / f"usgs-iv-{chunk_start}-{chunk_end}.json"
+            raw_path = (
+                output_root / "raw" / "usgs_iv_backfill" / f"usgs-iv-{chunk_start}-{chunk_end}.json"
+            )
             atomic_write_text(raw_path, json.dumps(payload, indent=2, sort_keys=True) + "\n")
             new_records = append_deduplicated(history_path, records)
             new_records_total += new_records
@@ -313,7 +325,9 @@ def backfill(
         "history_csv": str(csv_path),
         "chunks": chunk_receipts,
     }
-    receipt_path = output_root / "receipts" / f"usgs-backfill-{run_started.strftime('%Y%m%dT%H%M%SZ')}.json"
+    receipt_path = (
+        output_root / "receipts" / f"usgs-backfill-{run_started.strftime('%Y%m%dT%H%M%SZ')}.json"
+    )
     atomic_write_text(receipt_path, json.dumps(receipt, indent=2, sort_keys=True) + "\n")
     receipt["receipt"] = str(receipt_path)
     return receipt

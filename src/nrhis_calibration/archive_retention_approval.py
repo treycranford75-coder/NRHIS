@@ -43,9 +43,7 @@ def approve_retention_plan(
     plan_file = Path(plan_path).resolve()
 
     if not plan_file.is_file():
-        raise ArchiveRetentionApprovalError(
-            f"Retention plan is missing: {plan_file}"
-        )
+        raise ArchiveRetentionApprovalError(f"Retention plan is missing: {plan_file}")
     if not reviewer.strip():
         raise ArchiveRetentionApprovalError("reviewer must be non-empty")
     if not rationale.strip():
@@ -55,32 +53,20 @@ def approve_retention_plan(
     selected = tuple(dict.fromkeys(approved_actions))
 
     if not selected:
-        raise ArchiveRetentionApprovalError(
-            "At least one approved action is required"
-        )
+        raise ArchiveRetentionApprovalError("At least one approved action is required")
 
     invalid = sorted(set(selected) - allowed)
     if invalid:
-        raise ArchiveRetentionApprovalError(
-            f"Unsupported approved action(s): {invalid}"
-        )
+        raise ArchiveRetentionApprovalError(f"Unsupported approved action(s): {invalid}")
 
     plan = load_retention_plan(plan_file)
     unapproved = sorted(
-        {
-            decision.action
-            for decision in plan.decisions
-            if decision.action not in selected
-        }
+        {decision.action for decision in plan.decisions if decision.action not in selected}
     )
     if unapproved:
-        raise ArchiveRetentionApprovalError(
-            f"Plan contains unapproved action(s): {unapproved}"
-        )
+        raise ArchiveRetentionApprovalError(f"Plan contains unapproved action(s): {unapproved}")
 
-    approved_at = datetime.now(timezone.utc).replace(
-        microsecond=0
-    ).isoformat()
+    approved_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 
     return ArchiveRetentionApproval(
         plan_sha256=_sha256(plan_file),
@@ -111,19 +97,13 @@ def validate_retention_approval(
     approval_file = Path(approval_path).resolve()
 
     if not plan_file.is_file():
-        raise ArchiveRetentionApprovalError(
-            f"Retention plan is missing: {plan_file}"
-        )
+        raise ArchiveRetentionApprovalError(f"Retention plan is missing: {plan_file}")
     if not approval_file.is_file():
-        raise ArchiveRetentionApprovalError(
-            f"Retention approval is missing: {approval_file}"
-        )
+        raise ArchiveRetentionApprovalError(f"Retention approval is missing: {approval_file}")
 
     document = json.loads(approval_file.read_text(encoding="utf-8"))
     if not isinstance(document, dict):
-        raise ArchiveRetentionApprovalError(
-            "Retention approval must be a JSON object"
-        )
+        raise ArchiveRetentionApprovalError("Retention approval must be a JSON object")
 
     approval = ArchiveRetentionApproval(
         plan_sha256=str(document["plan_sha256"]),
@@ -135,14 +115,10 @@ def validate_retention_approval(
     )
 
     if approval.plan_sha256.upper() != _sha256(plan_file):
-        raise ArchiveRetentionApprovalError(
-            "Retention plan hash does not match approval"
-        )
+        raise ArchiveRetentionApprovalError("Retention plan hash does not match approval")
 
     plan = load_retention_plan(plan_file)
     if approval.decision_count != len(plan.decisions):
-        raise ArchiveRetentionApprovalError(
-            "Retention plan decision count does not match approval"
-        )
+        raise ArchiveRetentionApprovalError("Retention plan decision count does not match approval")
 
     return approval

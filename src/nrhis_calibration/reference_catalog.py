@@ -97,9 +97,7 @@ def filter_catalog(
     if implementation is not None:
         normalized = implementation.strip().lower()
         entries = tuple(
-            entry
-            for entry in entries
-            if entry.implementation.strip().lower() == normalized
+            entry for entry in entries if entry.implementation.strip().lower() == normalized
         )
 
     if approved is not None:

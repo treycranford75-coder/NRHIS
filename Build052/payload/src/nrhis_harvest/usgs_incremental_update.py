@@ -1,4 +1,5 @@
 """Incremental USGS update and basin data-quality assessment for NRHIS Build052."""
+
 from __future__ import annotations
 
 import csv
@@ -40,7 +41,9 @@ def _load_history(path: Path) -> list[dict[str, Any]]:
             try:
                 rows.append(json.loads(line))
             except json.JSONDecodeError as exc:
-                raise IncrementalUpdateError(f"Invalid history JSONL at line {line_number}") from exc
+                raise IncrementalUpdateError(
+                    f"Invalid history JSONL at line {line_number}"
+                ) from exc
     return rows
 
 
@@ -139,7 +142,9 @@ def build_quality_summary(
                     "station_name": station["name"],
                     "parameter_code": str(parameter_code),
                     "observations_in_window": len(observations),
-                    "latest_observed_at": latest.isoformat().replace("+00:00", "Z") if latest else "",
+                    "latest_observed_at": latest.isoformat().replace("+00:00", "Z")
+                    if latest
+                    else "",
                     "age_minutes": age_minutes,
                     "missing": not observations,
                     "stale": stale,
@@ -163,7 +168,10 @@ def build_quality_summary(
     }
 
     quality_dir = output_root / "quality"
-    _atomic_write(quality_dir / "usgs_data_quality_summary.json", json.dumps(summary, indent=2, sort_keys=True) + "\n")
+    _atomic_write(
+        quality_dir / "usgs_data_quality_summary.json",
+        json.dumps(summary, indent=2, sort_keys=True) + "\n",
+    )
     _write_csv(
         quality_dir / "usgs_parameter_status.csv",
         parameter_status,

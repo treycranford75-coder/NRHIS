@@ -7,7 +7,9 @@ from pathlib import Path
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Harvest current USGS observations for the NRHIS Nueces Basin station set.")
+    parser = argparse.ArgumentParser(
+        description="Harvest current USGS observations for the NRHIS Nueces Basin station set."
+    )
     parser.add_argument("--config", type=Path, required=True)
     parser.add_argument("--output-root", type=Path, required=True)
     parser.add_argument("--period", default="P2D")
@@ -19,7 +21,9 @@ def main() -> int:
     from nrhis_harvest.usgs_basin_harvest import HarvestError, harvest
 
     try:
-        receipt = harvest(args.config, args.output_root, period=args.period, timeout_seconds=args.timeout)
+        receipt = harvest(
+            args.config, args.output_root, period=args.period, timeout_seconds=args.timeout
+        )
     except (HarvestError, OSError, ValueError, json.JSONDecodeError) as exc:
         print(f"USGS harvest failed: {exc}", file=sys.stderr)
         return 1

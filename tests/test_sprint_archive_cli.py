@@ -1,4 +1,4 @@
-﻿import json
+import json
 import sys
 from pathlib import Path
 
@@ -41,11 +41,7 @@ def test_sprint_archive_cli_create_and_validate(
     create_output = capsys.readouterr().out
     assert "Artifacts: 2" in create_output
 
-    manifest = (
-        archive_root
-        / "sprint2-closeout"
-        / "sprint_archive_manifest.json"
-    )
+    manifest = archive_root / "sprint2-closeout" / "sprint_archive_manifest.json"
     monkeypatch.setattr(
         sys,
         "argv",

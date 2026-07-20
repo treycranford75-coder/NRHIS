@@ -145,7 +145,12 @@ def run_legacy_pass1(
     stdout_path.write_text(stdout_text, encoding="utf-8")
     stderr_path.write_text(stderr_text, encoding="utf-8")
     metadata_path.write_text(
-        json.dumps({**asdict(result), "succeeded": result.succeeded, "dry_run": dry_run}, indent=2, sort_keys=True) + "\n",
+        json.dumps(
+            {**asdict(result), "succeeded": result.succeeded, "dry_run": dry_run},
+            indent=2,
+            sort_keys=True,
+        )
+        + "\n",
         encoding="utf-8",
     )
     return result

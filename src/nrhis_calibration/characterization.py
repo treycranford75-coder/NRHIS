@@ -124,9 +124,7 @@ def compare_json(
             return
 
         if left != right:
-            differences.append(
-                CharacterizationDifference(location, left, right, "value mismatch")
-            )
+            differences.append(CharacterizationDifference(location, left, right, "value mismatch"))
 
     visit(expected, actual, "$")
     return CharacterizationReport(not differences, tuple(differences))

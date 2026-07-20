@@ -1,4 +1,4 @@
-﻿"""Command-line adapter for the legacy Pass1 compatibility wrapper."""
+"""Command-line adapter for the legacy Pass1 compatibility wrapper."""
 
 from __future__ import annotations
 

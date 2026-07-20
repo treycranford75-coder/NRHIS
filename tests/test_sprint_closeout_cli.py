@@ -15,15 +15,17 @@ def test_sprint_closeout_cli_accepts_inventory(
     inventory = tmp_path / "inventory.json"
     inventory.write_text(
         json.dumps(
-            [{
-                "build_number": 15,
-                "tag": "v0.1.1-rc15+build015",
-                "commit": "eb8bdd1",
-                "title": "Release Acceptance Gate",
-                "test_count": 78,
-                "coverage_percent": 85.54,
-                "pre_release": True,
-            }]
+            [
+                {
+                    "build_number": 15,
+                    "tag": "v0.1.1-rc15+build015",
+                    "commit": "eb8bdd1",
+                    "title": "Release Acceptance Gate",
+                    "test_count": 78,
+                    "coverage_percent": 85.54,
+                    "pre_release": True,
+                }
+            ]
         )
         + "\n",
         encoding="utf-8",

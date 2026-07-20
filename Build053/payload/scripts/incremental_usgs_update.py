@@ -9,7 +9,9 @@ from nrhis_harvest.usgs_incremental_update import incremental_update
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Run restart-safe incremental USGS update and quality checks.")
+    parser = argparse.ArgumentParser(
+        description="Run restart-safe incremental USGS update and quality checks."
+    )
     parser.add_argument("--config", type=Path, required=True)
     parser.add_argument("--output-root", type=Path, required=True)
     parser.add_argument("--end-date", default=date.today().isoformat())

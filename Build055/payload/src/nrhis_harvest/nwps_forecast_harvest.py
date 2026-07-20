@@ -1,4 +1,5 @@
 """NOAA/NWS NWPS forecast and flood-threshold harvest for NRHIS Build055."""
+
 from __future__ import annotations
 
 import csv
@@ -92,14 +93,24 @@ def _number(value: Any) -> float | None:
 
 
 def _timestamp(row: dict[str, Any]) -> str | None:
-    for key in ("validTime", "valid_time", "dateTime", "datetime", "timestamp", "time", "issuedTime"):
+    for key in (
+        "validTime",
+        "valid_time",
+        "dateTime",
+        "datetime",
+        "timestamp",
+        "time",
+        "issuedTime",
+    ):
         value = row.get(key)
         if isinstance(value, str) and value.strip():
             return value.strip()
     return None
 
 
-def _find_named_lists(node: Any, wanted: set[str], path: tuple[str, ...] = ()) -> list[tuple[tuple[str, ...], list[Any]]]:
+def _find_named_lists(
+    node: Any, wanted: set[str], path: tuple[str, ...] = ()
+) -> list[tuple[tuple[str, ...], list[Any]]]:
     matches: list[tuple[tuple[str, ...], list[Any]]] = []
     if isinstance(node, dict):
         for key, value in node.items():
@@ -169,11 +180,21 @@ def normalize_categories(metadata: dict[str, Any]) -> list[dict[str, Any]]:
     return rows
 
 
-def classify_peak(peak_stage: float | None, peak_flow: float | None, thresholds: Iterable[dict[str, Any]]) -> str:
+def classify_peak(
+    peak_stage: float | None, peak_flow: float | None, thresholds: Iterable[dict[str, Any]]
+) -> str:
     rank = "not_defined"
     for threshold in thresholds:
-        stage_hit = peak_stage is not None and threshold.get("stage") is not None and peak_stage >= threshold["stage"]
-        flow_hit = peak_flow is not None and threshold.get("flow") is not None and peak_flow >= threshold["flow"]
+        stage_hit = (
+            peak_stage is not None
+            and threshold.get("stage") is not None
+            and peak_stage >= threshold["stage"]
+        )
+        flow_hit = (
+            peak_flow is not None
+            and threshold.get("flow") is not None
+            and peak_flow >= threshold["flow"]
+        )
         if stage_hit or flow_hit:
             rank = str(threshold["category"])
     return rank
@@ -181,7 +202,12 @@ def classify_peak(peak_stage: float | None, peak_flow: float | None, thresholds:
 
 def _peak(rows: list[dict[str, Any]]) -> dict[str, Any]:
     if not rows:
-        return {"peak_stage": None, "peak_stage_time": None, "peak_flow": None, "peak_flow_time": None}
+        return {
+            "peak_stage": None,
+            "peak_stage_time": None,
+            "peak_flow": None,
+            "peak_flow_time": None,
+        }
     stage_rows = [row for row in rows if row["stage"] is not None]
     flow_rows = [row for row in rows if row["flow"] is not None]
     stage_peak = max(stage_rows, key=lambda row: row["stage"]) if stage_rows else None
@@ -194,7 +220,13 @@ def _peak(rows: list[dict[str, Any]]) -> dict[str, Any]:
     }
 
 
-def harvest(config_path: Path, output_root: Path, *, timeout_seconds: int | None = None, retrieved_at: datetime | None = None) -> dict[str, Any]:
+def harvest(
+    config_path: Path,
+    output_root: Path,
+    *,
+    timeout_seconds: int | None = None,
+    retrieved_at: datetime | None = None,
+) -> dict[str, Any]:
     with config_path.open("r", encoding="utf-8") as handle:
         config = json.load(handle)
     gauges = config.get("gauges")
@@ -231,7 +263,9 @@ def harvest(config_path: Path, output_root: Path, *, timeout_seconds: int | None
             station_status["stageflow_ok"] = True
             for endpoint, raw in (("metadata", metadata_raw), ("stageflow", stageflow_raw)):
                 raw_path = output_root / "raw" / "nwps" / stamp / f"{identifier}_{endpoint}.json"
-                _atomic_write(raw_path, raw.decode("utf-8") + ("\n" if not raw.endswith(b"\n") else ""))
+                _atomic_write(
+                    raw_path, raw.decode("utf-8") + ("\n" if not raw.endswith(b"\n") else "")
+                )
                 raw_records.append(
                     {
                         "identifier": identifier,
@@ -260,17 +294,30 @@ def harvest(config_path: Path, output_root: Path, *, timeout_seconds: int | None
             station_status["forecast_points"] = len(forecasts)
             station_status["forecast_available"] = bool(forecasts)
             station_status["observed_points_in_nwps"] = len(observations)
-            station_status["forecast_category"] = classify_peak(peak["peak_stage"], peak["peak_flow"], thresholds)
+            station_status["forecast_category"] = classify_peak(
+                peak["peak_stage"], peak["peak_flow"], thresholds
+            )
         except Exception as exc:  # station-level isolation is intentional
             station_status["error"] = str(exc)
         station_rows.append(station_status)
 
     products = output_root / "nwps"
-    _atomic_write(products / "nwps_forecasts.json", json.dumps(forecast_rows, indent=2, sort_keys=True) + "\n")
+    _atomic_write(
+        products / "nwps_forecasts.json", json.dumps(forecast_rows, indent=2, sort_keys=True) + "\n"
+    )
     _write_csv(
         products / "nwps_forecasts.csv",
         forecast_rows,
-        ["identifier", "usgs_site_no", "station_name", "series", "valid_time", "stage", "flow", "source_path"],
+        [
+            "identifier",
+            "usgs_site_no",
+            "station_name",
+            "series",
+            "valid_time",
+            "stage",
+            "flow",
+            "source_path",
+        ],
     )
     _write_csv(
         products / "nwps_flood_thresholds.csv",
@@ -281,9 +328,20 @@ def harvest(config_path: Path, output_root: Path, *, timeout_seconds: int | None
         products / "nwps_station_status.csv",
         station_rows,
         [
-            "identifier", "usgs_site_no", "station_name", "metadata_ok", "stageflow_ok",
-            "forecast_points", "forecast_available", "observed_points_in_nwps", "peak_stage",
-            "peak_stage_time", "peak_flow", "peak_flow_time", "forecast_category", "error",
+            "identifier",
+            "usgs_site_no",
+            "station_name",
+            "metadata_ok",
+            "stageflow_ok",
+            "forecast_points",
+            "forecast_available",
+            "observed_points_in_nwps",
+            "peak_stage",
+            "peak_stage_time",
+            "peak_flow",
+            "peak_flow_time",
+            "forecast_category",
+            "error",
         ],
     )
     readiness = {
@@ -292,14 +350,20 @@ def harvest(config_path: Path, output_root: Path, *, timeout_seconds: int | None
         "retrieved_at": _iso(run_time),
         "source_policy": config.get("source_policy", {}),
         "configured_gauges": len(gauges),
-        "successful_gauges": sum(1 for row in station_rows if row["metadata_ok"] and row["stageflow_ok"]),
+        "successful_gauges": sum(
+            1 for row in station_rows if row["metadata_ok"] and row["stageflow_ok"]
+        ),
         "gauges_with_forecasts": sum(1 for row in station_rows if row["forecast_available"]),
         "forecast_points": len(forecast_rows),
         "threshold_records": len(threshold_rows),
-        "ready_for_reporting": all(row["metadata_ok"] and row["stageflow_ok"] for row in station_rows),
+        "ready_for_reporting": all(
+            row["metadata_ok"] and row["stageflow_ok"] for row in station_rows
+        ),
         "stations": station_rows,
     }
-    _atomic_write(products / "nwps_readiness.json", json.dumps(readiness, indent=2, sort_keys=True) + "\n")
+    _atomic_write(
+        products / "nwps_readiness.json", json.dumps(readiness, indent=2, sort_keys=True) + "\n"
+    )
     receipt = {
         "schema_version": 1,
         "build": "053",
@@ -313,7 +377,17 @@ def harvest(config_path: Path, output_root: Path, *, timeout_seconds: int | None
             "station_status_csv": str(products / "nwps_station_status.csv"),
             "readiness_json": str(products / "nwps_readiness.json"),
         },
-        "summary": {key: readiness[key] for key in ("configured_gauges", "successful_gauges", "gauges_with_forecasts", "forecast_points", "threshold_records", "ready_for_reporting")},
+        "summary": {
+            key: readiness[key]
+            for key in (
+                "configured_gauges",
+                "successful_gauges",
+                "gauges_with_forecasts",
+                "forecast_points",
+                "threshold_records",
+                "ready_for_reporting",
+            )
+        },
     }
     receipt_path = output_root / "receipts" / "nwps_forecast_harvest_receipt.json"
     _atomic_write(receipt_path, json.dumps(receipt, indent=2, sort_keys=True) + "\n")

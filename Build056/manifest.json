@@ -1,0 +1,25 @@
+{
+  "schema_version": 20,
+  "build": "056",
+  "name": "NRHIS Sprint 2 Build056 Reservoir Evaporation and Water Budget",
+  "entry_point": "Apply-Build056.ps1",
+  "branch": "feature/sprint2-build056",
+  "merge_target": "develop",
+  "tag": "v0.1.1-rc56+build056",
+  "features": [
+    "daily evaporation for Choke Canyon Reservoir and Lake Corpus Christi in acre-feet/day and MGD",
+    "7-day and month-to-date evaporation totals",
+    "daily-data preference with explicitly labeled monthly climatology fallback",
+    "24-hour inflow, diversion, environmental release, other outflow, evaporation, and net storage budget",
+    "budget completeness and residual checks without fabricated missing flux values"
+  ],
+  "preserves": [
+    "production and historical USGS harvest",
+    "incremental USGS quality gate",
+    "NWPS forecasts and flood thresholds",
+    "integrated basin operational snapshot",
+    "protected repository execution outside OneDrive",
+    "workflow contract and CI parity gates",
+    "pre-release publication, verification, archival, and next-build chaining"
+  ]
+}

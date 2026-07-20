@@ -1,4 +1,5 @@
 """TWDB/Water Data for Texas reservoir harvest for NRHIS Build055."""
+
 from __future__ import annotations
 
 import csv
@@ -80,7 +81,9 @@ def _number(value: Any) -> float | None:
 def fetch_bytes(url: str, timeout_seconds: int = 60) -> bytes:
     request = urllib.request.Request(
         url,
-        headers={"User-Agent": "NRHIS/0.1 Build055 (+https://github.com/treycranford75-coder/NRHIS)"},
+        headers={
+            "User-Agent": "NRHIS/0.1 Build055 (+https://github.com/treycranford75-coder/NRHIS)"
+        },
     )
     with urllib.request.urlopen(request, timeout=timeout_seconds) as response:  # noqa: S310
         if getattr(response, "status", 200) != 200:
@@ -132,15 +135,23 @@ def parse_geojson(
         try:
             observed = date.fromisoformat(observed_date)
         except ValueError as exc:
-            raise ReservoirHarvestError(f"Invalid reservoir timestamp for {reservoir_id}: {observed_date}") from exc
+            raise ReservoirHarvestError(
+                f"Invalid reservoir timestamp for {reservoir_id}: {observed_date}"
+            ) from exc
         age_days = (now.date() - observed).days
         storage = _number(props.get("conservation_storage"))
         previous = prior.get(reservoir_id)
-        change = round(storage - previous, 2) if storage is not None and previous is not None else None
+        change = (
+            round(storage - previous, 2) if storage is not None and previous is not None else None
+        )
         observations.append(
             ReservoirObservation(
                 reservoir_id=reservoir_id,
-                reservoir_name=str(props.get("full_name") or configured[reservoir_id].get("display_name") or reservoir_id),
+                reservoir_name=str(
+                    props.get("full_name")
+                    or configured[reservoir_id].get("display_name")
+                    or reservoir_id
+                ),
                 observed_date=observed_date,
                 elevation_ft=_number(props.get("elevation")),
                 conservation_storage_acft=storage,
@@ -154,7 +165,9 @@ def parse_geojson(
         )
     missing = sorted(set(configured) - {item.reservoir_id for item in observations})
     if missing:
-        raise ReservoirHarvestError(f"Configured reservoirs missing from source payload: {', '.join(missing)}")
+        raise ReservoirHarvestError(
+            f"Configured reservoirs missing from source payload: {', '.join(missing)}"
+        )
     order = {key: int(value.get("display_order", 999)) for key, value in configured.items()}
     return sorted(observations, key=lambda item: order.get(item.reservoir_id, 999))
 
@@ -176,7 +189,9 @@ def append_deduplicated_jsonl(path: Path, observations: Iterable[ReservoirObserv
     return len(new_rows)
 
 
-def harvest(config_path: Path, data_root: Path, *, timeout_seconds: int | None = None) -> dict[str, Any]:
+def harvest(
+    config_path: Path, data_root: Path, *, timeout_seconds: int | None = None
+) -> dict[str, Any]:
     config = json.loads(config_path.read_text(encoding="utf-8"))
     url = str(config["api_url"])
     timeout = int(timeout_seconds or config.get("timeout_seconds", 60))
@@ -208,7 +223,9 @@ def harvest(config_path: Path, data_root: Path, *, timeout_seconds: int | None =
         "reservoir_count": len(observations),
         "combined_conservation_storage_acft": round(total_storage, 2),
         "combined_conservation_capacity_acft": round(total_capacity, 2),
-        "combined_percent_full": round(total_storage / total_capacity * 100, 1) if total_capacity else None,
+        "combined_percent_full": round(total_storage / total_capacity * 100, 1)
+        if total_capacity
+        else None,
         "stale_reservoirs": [item.reservoir_id for item in observations if item.stale],
         "reservoirs": rows,
     }
