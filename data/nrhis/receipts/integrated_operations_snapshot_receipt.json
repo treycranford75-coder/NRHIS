@@ -1,0 +1,13 @@
+{
+  "build": "060",
+  "completed_at": "2026-07-20T03:38:07.290406Z",
+  "files": {
+    "csv": "data\\nrhis\\operational\\integrated_operations_snapshot.csv",
+    "json": "data\\nrhis\\operational\\integrated_operations_snapshot.json",
+    "readiness": "data\\nrhis\\operational\\integrated_reporting_readiness.json"
+  },
+  "overall_status": "not_ready",
+  "reservoir_count": 2,
+  "schema_version": 1,
+  "station_count": 7
+}

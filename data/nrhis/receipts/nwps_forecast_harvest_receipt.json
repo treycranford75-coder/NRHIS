@@ -10,91 +10,91 @@
   },
   "raw_responses": [
     {
-      "bytes": 32599,
+      "bytes": 32598,
       "endpoint": "metadata",
       "identifier": "08194000",
-      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260719T211010Z\\08194000_metadata.json",
-      "sha256": "578e81a9304a25af108466cc22967e78de3bce8263e8d8563ef6bf95c6d46217"
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T033755Z\\08194000_metadata.json",
+      "sha256": "636135bb599d224f3b0adab008f88d765b1e3dde33941405b1aebf857a910e2a"
     },
     {
-      "bytes": 448099,
+      "bytes": 448402,
       "endpoint": "stageflow",
       "identifier": "08194000",
-      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260719T211010Z\\08194000_stageflow.json",
-      "sha256": "5f1529b89fbd6475ba4196fd955722a9ce8484dcef95fd562bb561c0071bca2e"
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T033755Z\\08194000_stageflow.json",
+      "sha256": "ea2f8efa9faed463160ceeb410052f299a25478a9fd04f93ea4b342f08d4e3d7"
     },
     {
-      "bytes": 42648,
+      "bytes": 42647,
       "endpoint": "metadata",
       "identifier": "08194500",
-      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260719T211010Z\\08194500_metadata.json",
-      "sha256": "63d2045d0ec9687fa9ddebcc7408499292cfa50e5ae7add59c200401edb67f8a"
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T033755Z\\08194500_metadata.json",
+      "sha256": "c29b667beae59b215eff1c62e4212ea78f732d83c9f6e5f42a1118060bf1dcfd"
     },
     {
-      "bytes": 469868,
+      "bytes": 469534,
       "endpoint": "stageflow",
       "identifier": "08194500",
-      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260719T211010Z\\08194500_stageflow.json",
-      "sha256": "a5f5f8db0ce61e62e7cc72f8ae591929a33370a90cb2752c27455739c6d22014"
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T033755Z\\08194500_stageflow.json",
+      "sha256": "0fdaaba31fb2e2fdab3730b2129e8fe6b8634c2b9b9e3bbb2dc1d21a3daf9381"
     },
     {
-      "bytes": 38718,
+      "bytes": 38720,
       "endpoint": "metadata",
       "identifier": "08210000",
-      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260719T211010Z\\08210000_metadata.json",
-      "sha256": "01584890d238eac8c30cc538e4844641bba67adf3f166ac338360c94b67ca1d1"
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T033755Z\\08210000_metadata.json",
+      "sha256": "c078b908854e9b773a678a0c764a3b457f61d8ebe5c212cc33c2f8cc731c6af5"
     },
     {
-      "bytes": 459735,
+      "bytes": 459421,
       "endpoint": "stageflow",
       "identifier": "08210000",
-      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260719T211010Z\\08210000_stageflow.json",
-      "sha256": "3915aeba59b5f217e52f0e9a19bd5ad69b766e2a91653dd720aff18923242fda"
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T033755Z\\08210000_stageflow.json",
+      "sha256": "f696858b60bd9f84973cd8b834988c31624d2bb5168a7949444377fcb521edcc"
     },
     {
       "bytes": 26955,
       "endpoint": "metadata",
       "identifier": "08211000",
-      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260719T211010Z\\08211000_metadata.json",
-      "sha256": "102b0b58354114843d3c32bb3758b8c59ac31e3177e917d439b2af590db88335"
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T033755Z\\08211000_metadata.json",
+      "sha256": "713c15f4d2a6f88b6b677a01227fab649b893b5107aa493b303417cd998ebe14"
     },
     {
-      "bytes": 400159,
+      "bytes": 400485,
       "endpoint": "stageflow",
       "identifier": "08211000",
-      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260719T211010Z\\08211000_stageflow.json",
-      "sha256": "0a2ebce99c85377055f8dcc2ab3ec16dcc88919eb8e663357b08faae2810186a"
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T033755Z\\08211000_stageflow.json",
+      "sha256": "d15a2f82ad7451ebed439d018ba69173ed85f3cf83281ecdd82311b53363c9c5"
     },
     {
       "bytes": 31706,
       "endpoint": "metadata",
       "identifier": "08211200",
-      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260719T211010Z\\08211200_metadata.json",
-      "sha256": "752cbb9afc614c8c7f4d67cb6bc8e0bc34cebdc48bc3dbb12e5e314073048c6c"
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T033755Z\\08211200_metadata.json",
+      "sha256": "b46ed50708a3dc4992fabb3c952ca676c80cadf4578ee66f625bf923edc27b4a"
     },
     {
-      "bytes": 467660,
+      "bytes": 467999,
       "endpoint": "stageflow",
       "identifier": "08211200",
-      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260719T211010Z\\08211200_stageflow.json",
-      "sha256": "eca9959eff2f6c8201f3daab110c942a2e1750e83f0f8c9ff9e3d535bf160911"
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T033755Z\\08211200_stageflow.json",
+      "sha256": "0c90b4e4afac8fcc7ffc04ee0de7098047ff2b9564670fe5031cdab3d86faa7d"
     },
     {
       "bytes": 34502,
       "endpoint": "metadata",
       "identifier": "08211500",
-      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260719T211010Z\\08211500_metadata.json",
-      "sha256": "18662b3718bbd93d8cc5cc22dcaf2a5147474f2de6ff8abbe50f754792529257"
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T033755Z\\08211500_metadata.json",
+      "sha256": "4a3b474ea45f4c0303c1c6f09aef413f93d5233f7089480651a1b8c7b035c673"
     },
     {
-      "bytes": 466590,
+      "bytes": 466219,
       "endpoint": "stageflow",
       "identifier": "08211500",
-      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260719T211010Z\\08211500_stageflow.json",
-      "sha256": "e1dd1cc7b7c99d5a745cfc11bd391862a1e8db58b2215e629a8355e9e06030f0"
+      "path": "C:\\GitHub\\NRHIS\\data\\nrhis\\raw\\nwps\\20260720T033755Z\\08211500_stageflow.json",
+      "sha256": "e5c46401805ab57d8440dc2833e635fd9460f8850fe41b9005d2301a03926874"
     }
   ],
-  "retrieved_at": "2026-07-19T21:10:10.470265Z",
+  "retrieved_at": "2026-07-20T03:37:55.789281Z",
   "schema_version": 1,
   "summary": {
     "configured_gauges": 6,

@@ -1,7 +1,7 @@
 [
   {
     "estimated_tds_mg_l": null,
-    "observed_at": "2026-07-19T20:00:00Z",
+    "observed_at": "2026-07-20T03:00:00Z",
     "parameter_code": "00060",
     "parameter_name": "discharge",
     "provisional": true,
@@ -13,11 +13,11 @@
     "source": "USGS Instantaneous Values API",
     "stale": false,
     "unit": "ft3/s",
-    "value": 248.0
+    "value": 302.0
   },
   {
     "estimated_tds_mg_l": null,
-    "observed_at": "2026-07-19T20:00:00Z",
+    "observed_at": "2026-07-20T03:00:00Z",
     "parameter_code": "00065",
     "parameter_name": "gage_height",
     "provisional": true,
@@ -29,11 +29,11 @@
     "source": "USGS Instantaneous Values API",
     "stale": false,
     "unit": "ft",
-    "value": 7.61
+    "value": 8.04
   },
   {
     "estimated_tds_mg_l": null,
-    "observed_at": "2026-07-19T20:15:00Z",
+    "observed_at": "2026-07-20T03:15:00Z",
     "parameter_code": "00060",
     "parameter_name": "discharge",
     "provisional": true,
@@ -45,11 +45,11 @@
     "source": "USGS Instantaneous Values API",
     "stale": false,
     "unit": "ft3/s",
-    "value": 261.0
+    "value": 307.0
   },
   {
     "estimated_tds_mg_l": null,
-    "observed_at": "2026-07-19T20:15:00Z",
+    "observed_at": "2026-07-20T03:15:00Z",
     "parameter_code": "00065",
     "parameter_name": "gage_height",
     "provisional": true,
@@ -61,11 +61,11 @@
     "source": "USGS Instantaneous Values API",
     "stale": false,
     "unit": "ft",
-    "value": 7.68
+    "value": 8.27
   },
   {
     "estimated_tds_mg_l": null,
-    "observed_at": "2026-07-19T20:15:00Z",
+    "observed_at": "2026-07-20T03:15:00Z",
     "parameter_code": "00060",
     "parameter_name": "discharge",
     "provisional": true,
@@ -77,11 +77,11 @@
     "source": "USGS Instantaneous Values API",
     "stale": false,
     "unit": "ft3/s",
-    "value": 23.6
+    "value": 25.0
   },
   {
     "estimated_tds_mg_l": null,
-    "observed_at": "2026-07-19T20:15:00Z",
+    "observed_at": "2026-07-20T03:15:00Z",
     "parameter_code": "00065",
     "parameter_name": "gage_height",
     "provisional": true,
@@ -93,11 +93,11 @@
     "source": "USGS Instantaneous Values API",
     "stale": false,
     "unit": "ft",
-    "value": 1.3
+    "value": 1.32
   },
   {
     "estimated_tds_mg_l": null,
-    "observed_at": "2026-07-19T20:00:00Z",
+    "observed_at": "2026-07-20T03:00:00Z",
     "parameter_code": "00060",
     "parameter_name": "discharge",
     "provisional": true,
@@ -109,11 +109,11 @@
     "source": "USGS Instantaneous Values API",
     "stale": false,
     "unit": "ft3/s",
-    "value": 93.0
+    "value": 93.9
   },
   {
     "estimated_tds_mg_l": null,
-    "observed_at": "2026-07-19T20:00:00Z",
+    "observed_at": "2026-07-20T03:00:00Z",
     "parameter_code": "00065",
     "parameter_name": "gage_height",
     "provisional": true,
@@ -125,11 +125,11 @@
     "source": "USGS Instantaneous Values API",
     "stale": false,
     "unit": "ft",
-    "value": 1.08
+    "value": 1.09
   },
   {
     "estimated_tds_mg_l": null,
-    "observed_at": "2026-07-19T20:00:00Z",
+    "observed_at": "2026-07-20T03:00:00Z",
     "parameter_code": "00010",
     "parameter_name": "water_temperature",
     "provisional": true,
@@ -141,11 +141,11 @@
     "source": "USGS Instantaneous Values API",
     "stale": false,
     "unit": "deg C",
-    "value": 31.8
+    "value": 31.5
   },
   {
     "estimated_tds_mg_l": null,
-    "observed_at": "2026-07-19T20:00:00Z",
+    "observed_at": "2026-07-20T03:00:00Z",
     "parameter_code": "00060",
     "parameter_name": "discharge",
     "provisional": true,
@@ -157,11 +157,11 @@
     "source": "USGS Instantaneous Values API",
     "stale": false,
     "unit": "ft3/s",
-    "value": 77.4
+    "value": 76.6
   },
   {
     "estimated_tds_mg_l": null,
-    "observed_at": "2026-07-19T20:00:00Z",
+    "observed_at": "2026-07-20T03:00:00Z",
     "parameter_code": "00065",
     "parameter_name": "gage_height",
     "provisional": true,
@@ -173,11 +173,11 @@
     "source": "USGS Instantaneous Values API",
     "stale": false,
     "unit": "ft",
-    "value": 7.12
+    "value": 7.11
   },
   {
-    "estimated_tds_mg_l": 754.0,
-    "observed_at": "2026-07-19T20:00:00Z",
+    "estimated_tds_mg_l": 741.0,
+    "observed_at": "2026-07-20T03:00:00Z",
     "parameter_code": "00095",
     "parameter_name": "specific_conductance",
     "provisional": true,
@@ -189,11 +189,11 @@
     "source": "USGS Instantaneous Values API",
     "stale": false,
     "unit": "uS/cm @25C",
-    "value": 1160.0
+    "value": 1140.0
   },
   {
     "estimated_tds_mg_l": null,
-    "observed_at": "2026-07-19T20:30:00Z",
+    "observed_at": "2026-07-20T02:30:00Z",
     "parameter_code": "00060",
     "parameter_name": "discharge",
     "provisional": true,
@@ -209,7 +209,7 @@
   },
   {
     "estimated_tds_mg_l": null,
-    "observed_at": "2026-07-19T20:30:00Z",
+    "observed_at": "2026-07-20T02:30:00Z",
     "parameter_code": "00065",
     "parameter_name": "gage_height",
     "provisional": true,
@@ -221,6 +221,6 @@
     "source": "USGS Instantaneous Values API",
     "stale": false,
     "unit": "ft",
-    "value": 2.64
+    "value": 2.45
   }
 ]

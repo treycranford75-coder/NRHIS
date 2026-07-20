@@ -1,0 +1,17 @@
+{
+  "conditional_stations": [],
+  "not_ready_reservoirs": [],
+  "not_ready_stations": [
+    "08194000",
+    "08194500",
+    "08210000",
+    "08211000",
+    "08211200",
+    "08211500",
+    "SALT03"
+  ],
+  "overall_status": "not_ready",
+  "public_graphic_allowed": false,
+  "rule": "Hold public graphics until required live observations pass QA.",
+  "technical_report_allowed": false
+}
