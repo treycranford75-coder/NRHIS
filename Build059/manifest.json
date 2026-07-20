@@ -1,0 +1,14 @@
+{
+  "schema_version": 23,
+  "build": "059",
+  "name": "NRHIS Sprint 2 Build059 SALT03 Coastal Water-Quality Harvest",
+  "entry_point": "Apply-Build059.ps1",
+  "branch": "feature/sprint2-build059",
+  "merge_target": "develop",
+  "tag": "v0.1.1-rc59+build059",
+  "features": [
+    "Water Data for Texas coastal API harvest for SALT03 Nueces Bay",
+    "salinity, dissolved oxygen, water temperature, and available station parameters",
+    "current conditions, append-only history, stale/missing flags, and machine-readable receipts"
+  ]
+}

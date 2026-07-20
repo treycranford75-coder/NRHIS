@@ -1,0 +1,30 @@
+{
+  "parameters": [
+    {
+      "code": "seawater_salinity",
+      "name": "Salinity",
+      "units_abbreviation": "PSU"
+    },
+    {
+      "code": "water_temperature",
+      "name": "Water Temperature",
+      "units_abbreviation": "degC"
+    }
+  ],
+  "salinity": [
+    {
+      "value": 17.2,
+      "datetime_utc": "2026-07-20T00:00:00.000Z"
+    },
+    {
+      "value": 18.1,
+      "datetime_utc": "2026-07-20T01:00:00.000Z"
+    }
+  ],
+  "temperature": [
+    {
+      "value": 29.4,
+      "datetime_utc": "2026-07-20T01:00:00.000Z"
+    }
+  ]
+}
