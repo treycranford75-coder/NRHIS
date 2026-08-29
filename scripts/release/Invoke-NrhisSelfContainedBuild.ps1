@@ -294,7 +294,7 @@ try {
 
     $buildDirectory = Join-Path $repo "Build$BuildNumber"
     $packager = Join-Path $repo 'scripts/release/New-NrhisBuildPackage.ps1'
-    if (Test-Path $buildDirectory -PathType Container -and Test-Path $packager -PathType Leaf) {
+    if ((Test-Path $buildDirectory -PathType Container) -and (Test-Path $packager -PathType Leaf)) {
         & $packager -BuildNumber $BuildNumber -SourceDirectory $buildDirectory -OutputDirectory $installerArchive
         if ($LASTEXITCODE -ne 0) {
             throw "Build$BuildNumber installer archive generation failed."
