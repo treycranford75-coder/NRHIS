@@ -46,6 +46,13 @@ Write-Host "  Chunk size: $ChunkDays day(s)"
 Write-Host "  Requests:   approximately $chunks"
 Write-Host "  Output:     $OutputRoot"
 Write-Host ""
+Write-Host "Configured stations:" -ForegroundColor Cyan
+foreach ($station in @($config.stations)) {
+    Write-Host ("  {0}  {1}  [{2}]" -f $station.site_no, $station.name, $station.segment)
+}
+Write-Host "Configured parameter codes: $(@($config.parameter_codes) -join ', ')"
+Write-Host "USGS returns only series that actually exist for a station and period." -ForegroundColor DarkGray
+Write-Host ""
 Write-Host "Build090 checkpoint protection prevents a newer-range checkpoint from silently skipping this older history." -ForegroundColor Green
 
 if ($PlanOnly) {
