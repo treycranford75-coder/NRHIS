@@ -1,0 +1,1 @@
+Build091 makes NRHIS completion wrappers durable and prevents duplicate lifecycle chaining. Self-contained builds now generate, syntax-validate, stage, and commit `Complete-BuildNNN.ps1`, while the starter recognizes a completed self-contained lifecycle and exits cleanly instead of starting a second PR/merge path.
