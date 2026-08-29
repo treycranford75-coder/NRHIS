@@ -176,6 +176,23 @@ def load_json(path: Path) -> dict[str, Any]:
         return json.load(handle)
 
 
+def resolve_resume_start(
+    checkpoint: dict[str, Any], requested_start: date
+) -> tuple[date, bool, str | None]:
+    """Return a safe resume start without allowing a newer checkpoint to hide older history."""
+    completed_raw = checkpoint.get("completed_through")
+    checkpoint_start_raw = checkpoint.get("requested_start")
+    if not completed_raw or not checkpoint_start_raw:
+        return requested_start, False, "checkpoint_missing_scope"
+
+    checkpoint_start = parse_iso_date(str(checkpoint_start_raw))
+    if checkpoint_start != requested_start:
+        return requested_start, False, "checkpoint_requested_start_mismatch"
+
+    candidate = parse_iso_date(str(completed_raw)) + timedelta(days=1)
+    return max(requested_start, candidate), True, None
+
+
 def existing_identities(path: Path) -> set[str]:
     identities: set[str] = set()
     if not path.exists():
@@ -242,12 +259,13 @@ def backfill(
     requested_end = parse_iso_date(end_date)
     checkpoint_path = output_root / "backfill" / "checkpoint.json"
     effective_start = requested_start
+    checkpoint_used = False
+    checkpoint_ignored_reason: str | None = None
     if resume and checkpoint_path.exists():
         checkpoint = load_json(checkpoint_path)
-        if checkpoint.get("completed_through"):
-            candidate = parse_iso_date(str(checkpoint["completed_through"])) + timedelta(days=1)
-            if candidate > effective_start:
-                effective_start = candidate
+        effective_start, checkpoint_used, checkpoint_ignored_reason = resolve_resume_start(
+            checkpoint, requested_start
+        )
 
     history_path = output_root / "normalized" / "usgs_historical_observations.jsonl"
     csv_path = output_root / "normalized" / "usgs_historical_observations.csv"
@@ -304,6 +322,8 @@ def backfill(
         "requested_start": requested_start.isoformat(),
         "requested_end": requested_end.isoformat(),
         "effective_start": effective_start.isoformat(),
+        "checkpoint_used": checkpoint_used,
+        "checkpoint_ignored_reason": checkpoint_ignored_reason,
         "chunk_days": chunk_days,
         "chunks_completed": chunks_completed,
         "new_records": new_records_total,
