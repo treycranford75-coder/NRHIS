@@ -171,6 +171,30 @@ def atomic_write_text(path: Path, text: str) -> None:
             os.unlink(temp_name)
 
 
+def write_raw_evidence(path: Path, raw: bytes) -> Path:
+    """Preserve exact upstream bytes without overwriting differing evidence."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    digest = hashlib.sha256(raw).hexdigest()
+    candidate = path
+    if candidate.exists():
+        if hashlib.sha256(candidate.read_bytes()).hexdigest() == digest:
+            return candidate
+        candidate = path.with_name(f"{path.stem}-{digest[:12]}{path.suffix}")
+        if candidate.exists():
+            if hashlib.sha256(candidate.read_bytes()).hexdigest() == digest:
+                return candidate
+            raise BackfillError(f"Raw evidence hash collision at {candidate}")
+    fd, temp_name = tempfile.mkstemp(prefix=candidate.name, suffix=".tmp", dir=candidate.parent)
+    try:
+        with os.fdopen(fd, "wb") as handle:
+            handle.write(raw)
+        os.replace(temp_name, candidate)
+    finally:
+        if os.path.exists(temp_name):
+            os.unlink(temp_name)
+    return candidate
+
+
 def load_json(path: Path) -> dict[str, Any]:
     with path.open("r", encoding="utf-8") as handle:
         return json.load(handle)
@@ -206,9 +230,19 @@ def existing_identities(path: Path) -> set[str]:
     return identities
 
 
-def append_deduplicated(path: Path, records: Iterable[HistoricalObservation]) -> int:
-    known = existing_identities(path)
-    new_records = [record for record in records if record.identity not in known]
+def append_deduplicated(
+    path: Path,
+    records: Iterable[HistoricalObservation],
+    known: set[str] | None = None,
+) -> int:
+    if known is None:
+        known = existing_identities(path)
+    new_records: list[HistoricalObservation] = []
+    for record in records:
+        if record.identity in known:
+            continue
+        known.add(record.identity)
+        new_records.append(record)
     if new_records:
         path.parent.mkdir(parents=True, exist_ok=True)
         with path.open("a", encoding="utf-8", newline="") as handle:
@@ -269,6 +303,8 @@ def backfill(
 
     history_path = output_root / "normalized" / "usgs_historical_observations.jsonl"
     csv_path = output_root / "normalized" / "usgs_historical_observations.csv"
+    known_identities = existing_identities(history_path)
+    existing_records_at_start = len(known_identities)
     run_started = datetime.now(timezone.utc)
     chunk_receipts: list[dict[str, Any]] = []
     new_records_total = 0
@@ -281,8 +317,8 @@ def backfill(
             payload = json.loads(raw.decode("utf-8"))
             records = parse_payload(payload)
             raw_path = output_root / "raw" / "usgs_iv_backfill" / f"usgs-iv-{chunk_start}-{chunk_end}.json"
-            atomic_write_text(raw_path, json.dumps(payload, indent=2, sort_keys=True) + "\n")
-            new_records = append_deduplicated(history_path, records)
+            evidence_path = write_raw_evidence(raw_path, raw)
+            new_records = append_deduplicated(history_path, records, known_identities)
             new_records_total += new_records
             chunks_completed += 1
             chunk_receipts.append(
@@ -292,7 +328,7 @@ def backfill(
                     "request_url": url,
                     "records_received": len(records),
                     "new_records": new_records,
-                    "raw_file": str(raw_path),
+                    "raw_file": str(evidence_path),
                     "raw_sha256": hashlib.sha256(raw).hexdigest(),
                 }
             )
@@ -327,6 +363,8 @@ def backfill(
         "chunk_days": chunk_days,
         "chunks_completed": chunks_completed,
         "new_records": new_records_total,
+        "existing_records_at_start": existing_records_at_start,
+        "identity_index_final_size": len(known_identities),
         "total_history_records": total_history_records,
         "checkpoint": str(checkpoint_path),
         "history_jsonl": str(history_path),
