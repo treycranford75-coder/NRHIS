@@ -108,6 +108,16 @@ Write-Host "Launching Build$BuildNumber with a process-scoped execution-policy b
 & powershell.exe @childArguments
 if ($LASTEXITCODE -ne 0) { throw "Build$BuildNumber child process failed with exit code $LASTEXITCODE." }
 
+# A self-contained build may have already completed PR, merge, release, receipts, and cleanup.
+$closureReceipt = Join-Path $HOME "NRHIS-Release-Evidence\Build$BuildNumber\completion-closure-receipt.json"
+if (Test-Path $closureReceipt -PathType Leaf) {
+    $branchAfterChild = (@(& git branch --show-current) -join "`n").Trim()
+    if ($LASTEXITCODE -eq 0 -and $branchAfterChild -eq 'develop') {
+        Write-Host "Build$BuildNumber self-contained lifecycle already completed; legacy outer lifecycle skipped." -ForegroundColor Green
+        exit 0
+    }
+}
+
 if ($SkipPullRequest) {
     Write-Host "Build$BuildNumber applied and pushed. Pull-request creation skipped." -ForegroundColor Yellow
     exit 0

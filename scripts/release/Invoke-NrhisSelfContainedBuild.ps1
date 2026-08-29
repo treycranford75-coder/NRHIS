@@ -213,6 +213,30 @@ if ($currentBranch -ne $branch) {
     throw "Expected branch '$branch' but found '$currentBranch'. The wrapper must prepare the branch before invoking the runner."
 }
 
+
+$completionGenerator = Join-Path $repo 'scripts/release/New-NrhisCompletionWrapper.ps1'
+if (-not (Test-Path $completionGenerator -PathType Leaf)) {
+    throw "Completion-wrapper generator not found: $completionGenerator"
+}
+
+& powershell.exe -NoProfile -ExecutionPolicy Bypass -File $completionGenerator `
+    -BuildNumber $BuildNumber `
+    -RepositoryRoot $repo `
+    -Tag $ReleaseTag `
+    -ReleaseTitle $ReleaseTitle `
+    -NotesFile $ReleaseNotesFile
+if ($LASTEXITCODE -ne 0) {
+    throw "Build$BuildNumber completion-wrapper generation failed."
+}
+
+$wrapperRelativePath = "Build$BuildNumber/Complete-Build$BuildNumber.ps1"
+$wrapperPath = Join-Path $repo $wrapperRelativePath
+if (-not (Test-Path $wrapperPath -PathType Leaf)) {
+    throw "Build$BuildNumber completion wrapper was not generated: $wrapperPath"
+}
+$StagedPaths = @($StagedPaths) + $wrapperRelativePath
+$StagedPaths = @($StagedPaths | Select-Object -Unique)
+
 $temporaryNotes = Join-Path $env:TEMP "NRHIS-Build$BuildNumber-release-notes.md"
 Copy-Item -Path $ReleaseNotesFile -Destination $temporaryNotes -Force
 
