@@ -1,0 +1,12 @@
+{
+    "schema_version":  1,
+    "build":  "067",
+    "schedule_slot":  "evening",
+    "cycle_name":  "2026-08-27-evening",
+    "started_at":  "2026-08-27T23:00:02.8426127Z",
+    "completed_at":  "2026-08-27T23:00:05.1382071Z",
+    "status":  "failed",
+    "exit_code":  1,
+    "qa_passes_completed":  0,
+    "log_path":  "C:\\GitHub\\NRHIS\\data\\nrhis\\scheduler_logs\\2026-08-27-evening-20260827T230002Z.log"
+}

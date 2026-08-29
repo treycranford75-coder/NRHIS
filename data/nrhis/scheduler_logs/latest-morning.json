@@ -2,11 +2,11 @@
     "schema_version":  1,
     "build":  "067",
     "schedule_slot":  "morning",
-    "cycle_name":  "2026-07-20-morning",
-    "started_at":  "2026-07-20T12:00:01.0729426Z",
-    "completed_at":  "2026-07-20T12:00:02.0457492Z",
+    "cycle_name":  "2026-08-28-morning",
+    "started_at":  "2026-08-28T12:56:08.6450170Z",
+    "completed_at":  "2026-08-28T12:56:17.2832637Z",
     "status":  "failed",
     "exit_code":  1,
     "qa_passes_completed":  0,
-    "log_path":  "C:\\GitHub\\NRHIS\\data\\nrhis\\scheduler_logs\\2026-07-20-morning-20260720T120001Z.log"
+    "log_path":  "C:\\GitHub\\NRHIS\\data\\nrhis\\scheduler_logs\\2026-08-28-morning-20260828T125608Z.log"
 }
