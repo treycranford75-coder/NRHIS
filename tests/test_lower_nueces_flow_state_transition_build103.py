@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from datetime import datetime, timedelta, timezone
+from pathlib import Path
 import random
 
 from nrhis_analysis.lower_nueces_flow_state_transition import (
@@ -111,3 +112,113 @@ def test_event_lag_surface_recovers_known_shift() -> None:
     peak = _best_and_peak_windows(surface)
     assert peak["best_lag_hours"] == 5
     assert peak["best_pearson_r"] == 1.0
+
+
+
+def test_full_analysis_writes_outputs_from_local_hourly_data(
+    tmp_path, monkeypatch
+) -> None:
+    import nrhis_analysis.lower_nueces_flow_state_transition as mod
+
+    csv_path = tmp_path / "history.csv"
+    index_path = tmp_path / "index.json"
+    csv_path.write_text("placeholder\n", encoding="utf-8")
+    index_path.write_text("{}\n", encoding="utf-8")
+
+    start = datetime(2026, 1, 1, tzinfo=timezone.utc)
+
+    mathis = {
+        start + timedelta(hours=i):
+            float(20 + ((i * 17) % 83) + i / 1000)
+        for i in range(220)
+    }
+
+    bluntzer = {
+        hour + timedelta(hours=2): value
+        for hour, value in mathis.items()
+    }
+
+    calallen = {
+        hour + timedelta(hours=4): value
+        for hour, value in mathis.items()
+    }
+
+    hourly = {
+        "08211000": mathis,
+        "08211200": bluntzer,
+        "08211500": calallen,
+    }
+
+    coverage = {
+        site: {
+            "raw_discharge_records": len(values),
+            "valid_discharge_records": len(values),
+            "hourly_bins_retained": len(values),
+            "hourly_bins_excluded_low_count": 0,
+        }
+        for site, values in hourly.items()
+    }
+
+    monkeypatch.setattr(
+        mod,
+        "load_sparse_index",
+        lambda index, csv: {
+            "source_csv_bytes": csv_path.stat().st_size,
+            "source_csv_sha256": mod.sha256_file(csv_path),
+        },
+    )
+
+    monkeypatch.setattr(
+        mod,
+        "normalize_window",
+        lambda start_value, end_value: (
+            "2026-01-01T00:00:00Z",
+            "2026-01-10T00:00:00Z",
+        ),
+    )
+
+    monkeypatch.setattr(
+        mod,
+        "query_history",
+        lambda *args, **kwargs: [],
+    )
+
+    monkeypatch.setattr(
+        mod,
+        "_build_hourly_values",
+        lambda *args, **kwargs: (hourly, coverage),
+    )
+
+    output_dir = tmp_path / "analysis"
+
+    summary = mod.analyze_lower_nueces_flow_state_transition(
+        csv_path,
+        index_path,
+        output_dir,
+        start="2026-01-01",
+        end="2026-01-10",
+        max_lag_hours=8,
+        min_paired_hours=20,
+        percentile_step=25,
+        confirm_steps=2,
+        event_gap_tolerance_hours=0,
+        min_event_high_hours=10,
+        event_min_paired_hours=10,
+    )
+
+    assert summary["network_requests_made"] == 0
+    assert summary["threshold_scan_row_count"] > 0
+    assert summary["tercile_regime_row_count"] == 9
+    assert summary["coherent_flow_event_row_count"] >= 3
+    assert summary["coherent_flow_residual_row_count"] == 3
+
+    assert Path(summary["receipt"]).is_file()
+
+    assert (output_dir / "coherence_threshold_scan.csv").is_file()
+    assert (output_dir / "coherence_onset.csv").is_file()
+    assert (output_dir / "tercile_regime_coherence.csv").is_file()
+    assert (output_dir / "coherent_flow_event_lags.csv").is_file()
+    assert (output_dir / "coherent_flow_residual_summary.csv").is_file()
+    assert (
+        output_dir / "lower_nueces_flow_state_transition_summary.json"
+    ).is_file()
